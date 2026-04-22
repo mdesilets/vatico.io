@@ -132,6 +132,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // a null origin, so crossorigin forces a CORS fetch that SRI then rejects.
     // The manifest bytes are ours; SRI protects against CDN compromise, not this.
     template = template.replace(/\s+integrity="[^"]*"/gi, '').replace(/\s+crossorigin="[^"]*"/gi, '');
+    template = template.replace(/font-display:\s*swap/gi, 'font-display: block');
 
     const resourceScript = '<script>window.__resources = ' +
       JSON.stringify(resourceMap).split('</' + 'script>').join('<\\/' + 'script>') +
@@ -146,6 +147,24 @@ document.addEventListener('DOMContentLoaded', async function() {
       const i = headOpen.index + headOpen[0].length;
       template = template.slice(0, i) + resourceScript + template.slice(i);
     }
+
+    // Inject a style rule that keeps the real page invisible until fonts load,
+    // preventing the flash of unstyled text (FOUT) after replaceWith.
+    template = template.replace(
+      /<\/head>/i,
+      '<style id="__fout-guard">' +
+        'body{opacity:0!important}' +
+        '#__font-loader{position:fixed;inset:0;z-index:99999;background:#08090d;display:grid;place-items:center;transition:opacity .45s ease-out}' +
+      '</style></head>'
+    );
+    template = template.replace(
+      /<body([^>]*)>/i,
+      '<body$1><div id="__font-loader">' +
+        '<svg width="280" height="60" viewBox="0 0 280 60" xmlns="http://www.w3.org/2000/svg">' +
+          '<text x="140" y="46" text-anchor="middle" fill="#e4e8f4" font-family="Inter,system-ui,sans-serif" font-weight="900" font-size="52" letter-spacing="-2">vatico</text>' +
+        '</svg>' +
+      '</div>'
+    );
 
     // Parse the template and swap the root element. Scripts inserted via
     // DOMParser/replaceWith are inert per spec — re-create each with
@@ -175,6 +194,16 @@ document.addEventListener('DOMContentLoaded', async function() {
     // which fired before we swapped the document. Trigger manually if present.
     if (window.Babel && typeof window.Babel.transformScriptTags === 'function') {
       window.Babel.transformScriptTags();
+    }
+
+    // Reveal the page only after all fonts have loaded — eliminates FOUT.
+    await document.fonts.ready;
+    const guard = document.getElementById('__fout-guard');
+    if (guard) guard.remove();
+    const loader = document.getElementById('__font-loader');
+    if (loader) {
+      loader.style.opacity = '0';
+      loader.addEventListener('transitionend', () => loader.remove(), { once: true });
     }
   } catch (err) {
     setStatus('Error unpacking: ' + err.message);
