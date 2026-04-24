@@ -1,0 +1,445 @@
+/* ============================================================
+   Vatico Design System — Core Tokens
+   Dark-surface, data-dense, bright-blue primary accent.
+   ============================================================ */
+
+/* ---------- Inter (brand) — variable + static fallbacks ---------- */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/InterVariable.ttf") format("truetype-variations"),
+       url("fonts/InterVariable.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/InterVariable-Italic.ttf") format("truetype-variations"),
+       url("fonts/InterVariable-Italic.ttf") format("truetype");
+}
+/* Static fallbacks (covered weights 400/500/600/700/800/900 + italics) */
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/Inter-Regular.ttf")    format("truetype"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 400; font-display: swap; src: url("fonts/Inter-Italic.ttf")     format("truetype"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/Inter-Medium.ttf")     format("truetype"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 500; font-display: swap; src: url("fonts/Inter-MediumItalic.ttf") format("truetype"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/Inter-SemiBold.ttf")   format("truetype"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 600; font-display: swap; src: url("fonts/Inter-SemiBoldItalic.ttf") format("truetype"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/Inter-Bold.ttf")       format("truetype"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 700; font-display: swap; src: url("fonts/Inter-BoldItalic.ttf") format("truetype"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 800; font-display: swap; src: url("fonts/Inter-ExtraBold.ttf")  format("truetype"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 800; font-display: swap; src: url("fonts/Inter-ExtraBoldItalic.ttf") format("truetype"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 900; font-display: swap; src: url("fonts/Inter-Black.ttf")      format("truetype"); }
+
+/* ---------- Helvetica Neue LT Std (alt sans — full family) ---------- */
+/* Ultra Light 100 */
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 100; font-display: swap; src: url("fonts/HelveticaNeueLTStd-UltLt.otf") format("opentype"); }
+/* Thin 200 */
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 200; font-display: swap; src: url("fonts/HelveticaNeueLTStd-Th.otf")    format("opentype"); }
+/* Light 300 */
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 300; font-display: swap; src: url("fonts/HelveticaNeueLTStd-Lt.otf")    format("opentype"); }
+/* Roman 400 */
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 400; font-display: swap; src: url("fonts/HelveticaNeueLTStd-Roman.otf") format("opentype"); }
+/* Medium 500 */
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 500; font-display: swap; src: url("fonts/HelveticaNeueLTStd-Md.otf")    format("opentype"); }
+/* Black 900 */
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 900; font-display: swap; src: url("fonts/HelveticaNeueLTStd-Blk.otf")   format("opentype"); }
+
+/* Condensed width (stretch 75%) */
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 100; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-UltLtCn.otf") format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 100; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-UltLtCnO.otf") format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 200; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-ThCn.otf")    format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 200; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-ThCnO.otf")    format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 300; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-LtCn.otf")    format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 300; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-LtCnO.otf")    format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 400; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-Cn.otf")      format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 400; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-CnO.otf")     format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 500; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-MdCn.otf")    format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 500; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-MdCnO.otf")   format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 900; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-BlkCn.otf")   format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 900; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-BlkCnO.otf")  format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 950; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-XBlkCn.otf")  format("opentype"); }
+
+/* Extended width (stretch 125%) */
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 100; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-UltLtEx.otf") format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 100; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-UltLtExO.otf") format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 200; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-ThEx.otf")    format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 200; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-ThExO.otf")    format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 300; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-LtEx.otf")    format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 300; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-LtExO.otf")   format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 400; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-Ex.otf")      format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 400; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-ExO.otf")     format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 500; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-MdEx.otf")    format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 500; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-MdExO.otf")   format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 700; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-BdEx.otf")    format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 700; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-BdExO.otf")   format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 900; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-BlkEx.otf")   format("opentype"); }
+@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 900; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-BlkExO.otf")  format("opentype"); }
+
+/* Special — Bold Outline (decorative, weight 700 outline) */
+@font-face { font-family: "Helvetica Neue LT Std Outline"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/HelveticaNeueLTStd-BdOu.otf") format("opentype"); }
+
+/* ---------- Arial (web-safe fallback, bundled) ---------- */
+@font-face { font-family: "Arial"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/arial.ttf") format("truetype"); }
+
+:root {
+  /* ---------- Backgrounds & Surfaces ---------- */
+  --bg:        #08090d;   /* Page background — near-black */
+  --surface:   #0d0f15;   /* Footer / image-area well */
+  --card:      #12151c;   /* Standard card surface */
+  --card-2:    #0b0e1a;   /* Hero gradient midstop */
+  --ink:       #000000;   /* Pure black for reversed artwork plates */
+
+  /* ---------- Borders ---------- */
+  --border:    #1c2032;   /* Default hairline border */
+  --border-2:  #252b3b;   /* Stronger separator / lifted border */
+
+  /* ---------- Text ---------- */
+  --text:      #e4e8f4;   /* Primary foreground (near-white, cool) */
+  --muted:     #5a6180;   /* Eyebrow / label text */
+  --muted-2:   #8892b0;   /* Body-copy secondary */
+
+  /* ---------- Accents ---------- */
+  --blue:      #3B82F6;   /* PRIMARY — links, buttons, focus */
+  --green:     #10B981;   /* Positive / Confirmed */
+  --amber:     #F59E0B;   /* Opportunity / Warning sample */
+  --purple:    #A855F7;   /* Long-range / TAM / Market context */
+  --slate:     #64748B;   /* Neutral / No signal */
+  --cyan:      #00A3E0;   /* Alt accent (gradient) */
+
+  /* ---------- Tints (8% alpha pills / code chips) ---------- */
+  --blue-t:    rgba(59,130,246,0.08);
+  --green-t:   rgba(16,185,129,0.10);
+  --amber-t:   rgba(245,158,11,0.08);
+  --purple-t:  rgba(168,85,247,0.10);
+
+  /* ---------- Gradients ---------- */
+  --grad-hero: linear-gradient(100deg, #10B981 0%, #3B82F6 50%, #A855F7 100%);
+  --grad-alt:  linear-gradient(100deg, #00A3E0 0%, #3B82F6 50%, #A855F7 100%);
+  --grad-bg:   linear-gradient(160deg, #08090d 0%, #0b0e1a 55%, #08090d 100%);
+
+  /* ---------- Radii ---------- */
+  --r-sm: 5px;    /* code chip / inline pill */
+  --r-md: 8px;    /* small overlays */
+  --r-lg: 12px;   /* small swatches */
+  --r-xl: 14px;   /* small cards */
+  --r-2xl: 18px;  /* standard cards */
+  --r-pill: 100px;
+
+  /* ---------- Spacing (structural) ---------- */
+  --sec-py: 72px;    /* .sec — section vertical rhythm */
+  --wrap-px: 40px;   /* .wrap — horizontal content gutter */
+  --sh-mb: 40px;     /* .sh  — section-header → content */
+
+  /* ---------- Spacing (inline utilities) ---------- */
+  --mt4: 4px; --mt8: 8px; --mt12: 12px; --mt16: 16px; --mt24: 24px;
+  --mb8: 8px; --mb16: 16px;
+
+  /* ---------- Layout ---------- */
+  --maxw: 1240px;
+  --bp-tablet: 900px;
+  --bp-mobile: 700px;
+
+  /* ---------- Chart defaults ---------- */
+  --chart-text: #8892b0;
+  --chart-grid: rgba(255,255,255,0.055);
+
+  /* ============================================================
+     TYPE — base stack & smoothing
+     ============================================================ */
+  --font-sans:     "Inter", "Helvetica Neue LT Std", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans-alt: "Helvetica Neue LT Std", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display-outline: "Helvetica Neue LT Std Outline", "Helvetica Neue LT Std", sans-serif;
+  --font-mono:     "Cascadia Code", "Consolas", ui-monospace, Menlo, monospace;
+
+  --fs-base: 15px;
+  --lh-base: 1.6;
+
+  /* Semantic type ramp */
+  --fs-display:  clamp(3.2rem, 7vw, 6rem);     /* 96px cap */
+  --lh-display:  0.92;
+  --tr-display:  -0.04em;
+
+  --fs-title:    clamp(1.6rem, 3.5vw, 2.4rem); /* 38.4 cap */
+  --lh-title:    1.1;
+  --tr-title:    -0.03em;
+
+  --fs-heading:  clamp(1.08rem, 2vw, 1.35rem); /* 21.6 cap */
+  --lh-heading:  1.6;
+  --tr-heading:  -0.01em;
+
+  --fs-label:    0.65rem;
+  --tr-label:    0.15em;
+
+  --fs-num-lg:   clamp(2.2rem, 4vw, 3.6rem);   /* hero stats */
+  --fs-num-md:   clamp(1.5rem, 3vw, 2.1rem);   /* section stats */
+
+  --fs-body:     1rem;
+  --lh-body:     1.7;
+
+  --fs-callout:  1.1rem;
+  --lh-callout:  1.58;
+
+  --fs-code:     11.5px;
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+}
+
+/* ============================================================
+   Semantic type classes
+   ============================================================ */
+.t-display {
+  font-size: var(--fs-display);
+  font-weight: 900;
+  line-height: var(--lh-display);
+  letter-spacing: var(--tr-display);
+  color: var(--text);
+}
+.t-title {
+  font-size: var(--fs-title);
+  font-weight: 800;
+  line-height: var(--lh-title);
+  letter-spacing: var(--tr-title);
+  color: var(--text);
+}
+.t-heading {
+  font-size: var(--fs-heading);
+  font-weight: 700;
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tr-heading);
+  color: var(--text);
+}
+.t-label, .eyebrow {
+  font-size: var(--fs-label);
+  font-weight: 800;
+  letter-spacing: var(--tr-label);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.t-num-lg { font-size: var(--fs-num-lg); font-weight: 900; letter-spacing: -0.04em; color: var(--text); line-height: 1; }
+.t-num-md { font-size: var(--fs-num-md); font-weight: 800; letter-spacing: -0.03em; color: var(--text); line-height: 1; }
+.t-body {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--muted-2);
+}
+.t-callout {
+  font-size: var(--fs-callout);
+  font-weight: 600;
+  line-height: var(--lh-callout);
+  color: var(--text);
+}
+.t-gradient {
+  background: var(--grad-hero);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+code, .code, .t-code {
+  font-family: var(--font-mono);
+  font-size: var(--fs-code);
+  color: var(--blue);
+  background: var(--blue-t);
+  padding: 2px 7px;
+  border-radius: var(--r-sm);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   Cards
+   ============================================================ */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-2xl);
+  padding: 28px;
+}
+.scard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.spot-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-2xl);
+  overflow: hidden;
+}
+.spot-card > .image { background: var(--surface); height: 120px; }
+.spot-card > .body  { padding: 24px; }
+
+/* Accent-top-border card variant */
+.card-accent {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--blue);
+  border-radius: var(--r-xl);
+  padding: 22px 24px;
+}
+.card-accent.green  { border-top-color: var(--green); }
+.card-accent.amber  { border-top-color: var(--amber); }
+.card-accent.purple { border-top-color: var(--purple); }
+
+/* ============================================================
+   Pills, tags, badges
+   ============================================================ */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--blue-t);
+  color: var(--blue);
+  border: 1px solid rgba(59,130,246,0.2);
+}
+.pill.green  { background: var(--green-t);  color: var(--green);  border-color: rgba(16,185,129,0.25); }
+.pill.amber  { background: var(--amber-t);  color: var(--amber);  border-color: rgba(245,158,11,0.25); }
+.pill.purple { background: var(--purple-t); color: var(--purple); border-color: rgba(168,85,247,0.25); }
+
+.tag {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: var(--card);
+  color: var(--muted-2);
+  border: 1px solid var(--border-2);
+}
+.tag.confirmed  { color: var(--green);  border-color: rgba(16,185,129,0.3); }
+.tag.opportunity { color: var(--amber); border-color: rgba(245,158,11,0.3); }
+
+.sample-badge {
+  display: inline-flex;
+  padding: 7px 14px;
+  border-radius: var(--r-pill);
+  background: var(--amber-t);
+  color: var(--amber);
+  border: 1px solid rgba(245,158,11,0.2);
+  font-size: 9.9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   Insight callouts (vertical accent rule)
+   ============================================================ */
+.insight {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: var(--r-xl);
+  padding: 20px 24px;
+}
+.insight.green  { border-left-color: var(--green);  }
+.insight.amber  { border-left-color: var(--amber);  }
+.insight.purple { border-left-color: var(--purple); }
+.insight > .eyebrow { display:block; margin-bottom: 6px; }
+.insight > .body    { color: var(--muted-2); font-size: 14px; line-height: 1.6; }
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 80ms ease;
+}
+.btn-primary   { background: var(--blue); color: #fff; }
+.btn-primary:hover   { background: #5096ff; }
+.btn-primary:active  { transform: translateY(1px); background: #2f6fd8; }
+
+.btn-secondary { background: transparent; color: var(--text); border-color: var(--border-2); }
+.btn-secondary:hover { border-color: var(--muted-2); color: #fff; }
+
+.btn-ghost    { background: transparent; color: var(--muted-2); }
+.btn-ghost:hover { color: var(--text); }
+
+/* ============================================================
+   Tables (.tbl / .tbl-wrap)
+   ============================================================ */
+.tbl-wrap { overflow-x: auto; border-radius: var(--r-2xl); border: 1px solid var(--border); background: var(--card); }
+.tbl { width: 100%; border-collapse: collapse; font-size: 14px; }
+.tbl thead th {
+  text-align: left;
+  padding: 14px 20px;
+  font-size: 10.4px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  background: var(--card);
+}
+.tbl tbody td {
+  padding: 16px 20px;
+  color: var(--muted-2);
+  border-bottom: 1px solid var(--border);
+}
+.tbl tbody tr:last-child td { border-bottom: none; }
+.tbl tbody tr:hover { background: rgba(59,130,246,0.03); }
+.tbl tbody td.strong { color: var(--text); font-weight: 600; }
+
+/* ============================================================
+   Layout utilities
+   ============================================================ */
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--wrap-px); }
+.sec  { padding: var(--sec-py) var(--wrap-px); }
+.sh   { margin-bottom: var(--sh-mb); }
+
+.g2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+.g3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.g4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+.spot-grid   { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; }
+.gallery-grid { columns: 3; column-gap: 16px; }
+@media (max-width: 900px) {
+  .g3, .g4, .g2 { grid-template-columns: 1fr 1fr; }
+  .gallery-grid { columns: 2; }
+}
+@media (max-width: 700px) {
+  .g2, .g3, .g4 { grid-template-columns: 1fr; }
+  .gallery-grid { columns: 1; }
+}
+
+/* Margin utilities */
+.mt4{margin-top:4px}.mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mt24{margin-top:24px}
+.mb8{margin-bottom:8px}.mb16{margin-bottom:16px}
+
+/* Chart wrappers */
+.chart-wrap      { position: relative; height: 320px; }
+.chart-wrap-tall { position: relative; height: 520px; }

@@ -1,0 +1,50 @@
+# ============================================================
+# Vatico — workspace gitignore
+# Keep working artifacts on disk locally, off the deploy/repo.
+# ============================================================
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# --- Cursor / SpecStory transcript scratch (already untracked) ---
+.specstory/
+
+# --- Original archive bundle (10 MB, the source of preview/) ---
+Vatico Website.zip
+*.zip
+
+# --- Internal strategy / brand-voice documents (workspace root) ---
+capabilities-deck.md
+positioning-playbook.md
+
+# --- Working artifacts inside preview/ that the live page does not need ---
+# Alternate / archived HTML versions
+preview/Vatico Website (Standalone).html
+preview/Vatico Website Standalone Src.html
+preview/Vatico Website v1.html
+
+# CSS / JS that the live index.html does not reference
+preview/colors_and_type_standalone.css
+preview/footprint.js
+
+# Design-iteration screenshots and pasted reference PNGs
+preview/screenshots/
+preview/uploads/
+
+# --- Local screenshot scratch from MCP tooling ---
+hero-*.png
+hero-*.jpg
+*-screenshot-*.png
+
+# --- Node / build (in case anything is added later) ---
+node_modules/
+dist/
+.wrangler/
+.dev.vars
+.env
+.env.local

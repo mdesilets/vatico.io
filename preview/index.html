@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vatico — The Aesthetics Index</title>
+<meta name="description" content="The Aesthetics Index. A continuous, structured read on the state of the medical aesthetics market. From category anecdote to category strategy, in days not quarters.">
+<link rel="stylesheet" href="colors_and_type.css">
+<link rel="stylesheet" href="site.css?v=12">
+<link rel="icon" href="assets/vatico-logo-white.svg">
+</head>
+<body>
+
+<template id="__bundler_thumbnail" data-bg-color="#08090d">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#08090d"/>
+    <g fill="#8892b0" opacity="0.5">
+      <circle cx="220" cy="300" r="3"/><circle cx="360" cy="260" r="2"/><circle cx="480" cy="340" r="3"/>
+      <circle cx="600" cy="280" r="2"/><circle cx="760" cy="320" r="3"/><circle cx="880" cy="260" r="2"/>
+      <circle cx="980" cy="360" r="3"/><circle cx="280" cy="500" r="2"/><circle cx="440" cy="540" r="3"/>
+      <circle cx="620" cy="480" r="2"/><circle cx="820" cy="520" r="3"/><circle cx="940" cy="460" r="2"/>
+    </g>
+    <text x="600" y="420" fill="#e4e8f4" font-family="Inter, sans-serif" font-weight="900" font-size="88" letter-spacing="-3" text-anchor="middle">vatico</text>
+    <text x="600" y="470" fill="#8892b0" font-family="Inter, sans-serif" font-weight="600" font-size="22" letter-spacing="2" text-anchor="middle">THE AESTHETICS INDEX</text>
+  </svg>
+</template>
+
+<!-- Scroll progress -->
+<div class="scroll-rail" aria-hidden="true"></div>
+
+<!-- Fixed left rail — running section counter -->
+<aside class="rail" aria-hidden="true">
+  <div class="rail-mark" data-label="index"></div>
+</aside>
+
+<!-- Nav -->
+<nav class="nav" aria-label="Primary">
+  <a href="#top" class="nav-logo" aria-label="Vatico">
+    <img src="assets/vatico-logo-white.svg" alt="Vatico">
+  </a>
+  <div class="nav-right">
+    <a href="mailto:hello@vatico.io" class="nav-email">hello@vatico.io</a>
+  </div>
+</nav>
+
+<!-- ============================================================
+     00 — COVER
+     Eyebrow: none. Hero = the tagline. Definition line.
+     Capability + outcome. Status pill. Mark + ambient dot field.
+     ============================================================ -->
+<header class="hero" id="top">
+  <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <h1 class="hero-tagline">
+      <span class="line"><span class="gradient-ink">Clarity,</span></span>
+      <span class="line">for an industry</span>
+      <span class="line">built on</span>
+      <span class="line">appearances.</span>
+    </h1>
+
+    <div class="hero-defn">
+      Vatico is the market intelligence layer<br>for medical aesthetics.
+    </div>
+
+    <div class="hero-outcome">
+      From category anecdote to category strategy. <em>In days, not quarters.</em>
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <div class="hero-foot-l">
+      <span class="hf-num">00</span>
+      <span class="hf-sep"></span>
+      <span class="hf-label">the aesthetics index</span>
+    </div>
+    <a href="#asset" class="hero-foot-r" aria-label="Continue to the asset">
+      <span class="hf-lead">next</span>
+      <span class="hf-sep"></span>
+      <span class="hf-next-num">01</span>
+      <span class="hf-next-label">the asset</span>
+      <span class="hf-arrow" aria-hidden="true">↓</span>
+    </a>
+  </div>
+</header>
+
+<!-- ============================================================
+     01 — THE ASSET
+     The Aesthetics Index (as wordmark / artifact)
+     Corpus claim body. Pattern C closing.
+     ============================================================ -->
+<section class="section sec-asset" id="asset" data-index="01">
+  <div class="sec-head">
+    <div class="eyebrow"><span class="eyebrow-num">01</span>&nbsp;·&nbsp;the asset</div>
+  </div>
+
+  <div class="asset-wordmark reveal">
+    <div class="asset-line-1">The</div>
+    <div class="asset-line-2">Aesthetics</div>
+    <div class="asset-line-3">Index.</div>
+  </div>
+
+  <div class="asset-body-grid">
+    <div class="asset-body reveal">
+      <p>
+        A continuous, structured read on the state of the medical aesthetics market —
+        composed at the practice level, rolled up by brand, by category, by geography,
+        by trailing window.
+      </p>
+      <p>
+        The Index is built on a canonical record of every operational practice in the
+        category, a formal ontology of every manufacturer, brand, and product currently
+        in market, and continuous observation across the channels practices broadcast on.
+      </p>
+    </div>
+
+    <aside class="asset-meta reveal delay-1" aria-label="Index composition">
+      <div class="asset-meta-row">
+        <span class="asset-meta-label">composed at</span>
+        <span class="asset-meta-val">the practice level</span>
+      </div>
+      <div class="asset-meta-row">
+        <span class="asset-meta-label">rolled up by</span>
+        <span class="asset-meta-val">brand · category · geography · trailing window</span>
+      </div>
+      <div class="asset-meta-row">
+        <span class="asset-meta-label">cadence</span>
+        <span class="asset-meta-val">continuous</span>
+      </div>
+      <div class="asset-meta-row">
+        <span class="asset-meta-label">standard</span>
+        <span class="asset-meta-val">canonical &nbsp;·&nbsp; under change control</span>
+      </div>
+    </aside>
+  </div>
+
+  <div class="asset-close reveal delay-2">
+    <div class="asset-close-rule"></div>
+    <p class="asset-close-body">
+      The <em>only continuous read</em> on the medical aesthetics market
+      that holds <span class="ink-blue">the clinical decision</span>
+      and <span class="ink-purple">the consumer feeling</span>
+      on the same axis.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     02 — THE ALTERNATIVE
+     Name the enemy. Three-fragment headline stacked.
+     "From X to Y, fast" closing.
+     ============================================================ -->
+<section class="section sec-alt" id="alternative" data-index="02">
+  <div class="sec-head">
+    <div class="eyebrow"><span class="eyebrow-num">02</span>&nbsp;·&nbsp;what aesthetics is decided on today</div>
+  </div>
+
+  <div class="alt-stack">
+    <h2 class="alt-fragment reveal">Quarterly surveys.</h2>
+    <h2 class="alt-fragment reveal delay-1">Agency decks.</h2>
+    <h2 class="alt-fragment reveal delay-2">Field-rep anecdote.</h2>
+  </div>
+
+  <div class="alt-body-wrap">
+    <p class="alt-body reveal delay-2">
+      A multi-billion-dollar consumer category, decided on the inputs of a
+      private-equity diligence binder from two quarters ago. Brands manage their
+      portfolios on field intuition. Manufacturers manage launches on attribution
+      that arrives a year late. Operators acquire chains on the same anecdote
+      everyone else has access to. The category outgrew its tools years ago and
+      has been operating without replacements.
+    </p>
+  </div>
+
+  <div class="alt-close reveal delay-3">
+    <div class="alt-close-row">
+      <span class="alt-close-strike">The Aesthetics Index is the alternative.</span>
+    </div>
+    <div class="alt-close-row big">
+      From <span class="ink-strike">category anecdote</span>
+      <span class="alt-arrow">→</span>
+      <span class="ink-blue">category strategy</span>,
+      <span class="alt-coda">in days, not quarters.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     03 — IN THE INDEX
+     Six Pattern B entries. Bold head · body · italic consequence.
+     Two columns of three. No icons, no accents, no dividers.
+     ============================================================ -->
+<section class="section sec-catalog" id="catalog" data-index="03">
+  <div class="sec-head">
+    <div class="eyebrow"><span class="eyebrow-num">03</span>&nbsp;·&nbsp;what the Index holds</div>
+    <h2 class="sec-h2 reveal">Six things, held continuously.</h2>
+  </div>
+
+  <div class="catalog-grid">
+    <article class="entry reveal">
+      <div class="entry-head">
+        <span class="entry-num">i.</span>
+        <h3 class="entry-title">Practice record.</h3>
+      </div>
+      <p class="entry-body">
+        Every operational practice in the category, identified durably and held
+        through rebrand, ownership change, and chain consolidation. Multi-location
+        chains are held as chains, not as duplicates.
+      </p>
+      <p class="entry-consequence"><em>Diligence on a chain takes hours, not weeks.</em></p>
+    </article>
+
+    <article class="entry reveal delay-1">
+      <div class="entry-head">
+        <span class="entry-num">ii.</span>
+        <h3 class="entry-title">Industry ontology.</h3>
+      </div>
+      <p class="entry-body">
+        Every manufacturer, brand, brand family, product, generic equivalent,
+        category, and subcategory currently in market — held as a formal model
+        under change control.
+      </p>
+      <p class="entry-consequence"><em>Every query is asked in the language the category already speaks.</em></p>
+    </article>
+
+    <article class="entry reveal delay-2">
+      <div class="entry-head">
+        <span class="entry-num">iii.</span>
+        <h3 class="entry-title">Channel observation.</h3>
+      </div>
+      <p class="entry-body">
+        Continuous monitoring of the public-facing channels practices broadcast
+        on. Per-channel cadence. No gaps.
+      </p>
+      <p class="entry-consequence"><em>Activity is read the week it happens, not the quarter it surfaces.</em></p>
+    </article>
+
+    <article class="entry reveal">
+      <div class="entry-head">
+        <span class="entry-num">iv.</span>
+        <h3 class="entry-title">Event extraction.</h3>
+      </div>
+      <p class="entry-body">
+        Each clinical and commercial decision a practice makes — adoption,
+        displacement, service addition, device acquisition, rebrand, closure —
+        captured as a timestamped event attached to the practice's record.
+      </p>
+      <p class="entry-consequence"><em>Trajectories, not snapshots. A record, not a directory.</em></p>
+    </article>
+
+    <article class="entry reveal delay-1">
+      <div class="entry-head">
+        <span class="entry-num">v.</span>
+        <h3 class="entry-title">Brand-level rollups.</h3>
+      </div>
+      <p class="entry-body">
+        Practice-mention share, displacement velocity, adoption curves,
+        whitespace — sliced by metro, manufacturer, vertical, or arbitrary
+        cohort. Trailing windows configurable.
+      </p>
+      <p class="entry-consequence"><em>Share is read the way ad spend is read: continuously, comparably, at the resolution of the decision.</em></p>
+    </article>
+
+    <article class="entry reveal delay-2">
+      <div class="entry-head">
+        <span class="entry-num">vi.</span>
+        <h3 class="entry-title">Supply against demand.</h3>
+      </div>
+      <p class="entry-body">
+        Practice-side observation paired with consumer-side observation at
+        metro resolution. Where the category is asked for, read against where
+        it is offered.
+      </p>
+      <p class="entry-consequence"><em>Vacancies and saturations are visible before they're announced.</em></p>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================
+     04 — MONDAY MORNING
+     Six action lines. Each opens with a verb. Type only.
+     ============================================================ -->
+<section class="section sec-actions" id="actions" data-index="04">
+  <div class="sec-head">
+    <div class="eyebrow"><span class="eyebrow-num">04</span>&nbsp;·&nbsp;Monday morning, with the Index</div>
+    <h2 class="sec-h2 reveal">What the Index lets you do.</h2>
+  </div>
+
+  <ol class="actions-list">
+    <li class="action reveal">
+      <span class="action-verb">Spot</span>
+      the brand cresting in a metro before your competitor does.
+    </li>
+    <li class="action reveal delay-1">
+      <span class="action-verb">Quantify</span>
+      the practices that switched away from your menu last quarter, with the
+      brand they switched to and the week they made the move.
+    </li>
+    <li class="action reveal delay-2">
+      <span class="action-verb">Find</span>
+      the metros where category demand outruns practice supply — and the
+      practices best positioned to absorb it.
+    </li>
+    <li class="action reveal">
+      <span class="action-verb">Read</span>
+      what the consolidator did to the chain after they bought it: every menu
+      change, every new device, every rebrand.
+    </li>
+    <li class="action reveal delay-1">
+      <span class="action-verb">Identify</span>
+      the practices that look like your best customers and that you've never
+      sold into.
+    </li>
+    <li class="action reveal delay-2">
+      <span class="action-verb">Track</span>
+      the displacement front in energy devices across the trailing six quarters.
+    </li>
+  </ol>
+</section>
+
+<!-- ============================================================
+     05 — WHO READS
+     Three named buyer segments. Insider vocabulary carries it.
+     ============================================================ -->
+<section class="section sec-readers" id="readers" data-index="05">
+  <div class="sec-head">
+    <div class="eyebrow"><span class="eyebrow-num">05</span>&nbsp;·&nbsp;who reads it</div>
+    <h2 class="sec-h2 reveal">Read by the parties who decide the category.</h2>
+  </div>
+
+  <div class="readers-grid">
+    <article class="reader reveal">
+      <h3 class="reader-name">Manufacturers.</h3>
+      <p class="reader-body">
+        Neuromodulator and dermal-filler portfolios. Biostimulator and
+        energy-device manufacturers. Skincare houses.
+      </p>
+      <div class="reader-tags">
+        <span>adoption</span>
+        <span>displacement</span>
+        <span>white-space</span>
+        <span>field-force prioritization</span>
+      </div>
+    </article>
+
+    <article class="reader reveal delay-1">
+      <h3 class="reader-name">Operators.</h3>
+      <p class="reader-body">
+        Multi-location chains, professional rollups, and the strategic
+        acquirers underwriting them.
+      </p>
+      <div class="reader-tags">
+        <span>diligence</span>
+        <span>post-close integration</span>
+        <span>menu surveillance</span>
+        <span>competitive positioning</span>
+      </div>
+    </article>
+
+    <article class="reader reveal delay-2">
+      <h3 class="reader-name">Analysts.</h3>
+      <p class="reader-body">
+        Equity, M&amp;A, and category research.
+      </p>
+      <div class="reader-tags">
+        <span>share</span>
+        <span>motion</span>
+        <span>structural reads on a category without a public dataset</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================
+     06 — POSTURE
+     One Index. Same standard for every reader.
+     ============================================================ -->
+<section class="section sec-posture" id="posture" data-index="06">
+  <div class="sec-head">
+    <div class="eyebrow"><span class="eyebrow-num">06</span>&nbsp;·&nbsp;the posture</div>
+  </div>
+
+  <h2 class="posture-title reveal">
+    One Index.<br>
+    Read by all sides.<br>
+    <span class="dim">Held to the same standard for every reader.</span>
+  </h2>
+
+  <div class="posture-body reveal delay-1">
+    <p>
+      Vatico is structurally indifferent to which brand wins any individual contest.
+    </p>
+    <ul class="posture-list">
+      <li>Every practice is held to the same record.</li>
+      <li>Every observation is on the same cadence.</li>
+      <li>Every query is asked through the same ontology.</li>
+      <li>Every change to the underlying model is held under change control with an audit trail.</li>
+    </ul>
+    <p>The value of the Index depends on this. So does its longevity.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     07 — WHY NOW / THE INFLECTION
+     Palantir consequence move.
+     ============================================================ -->
+<section class="section sec-inflection" id="inflection" data-index="07">
+  <div class="sec-head">
+    <div class="eyebrow"><span class="eyebrow-num">07</span>&nbsp;·&nbsp;the inflection</div>
+    <h2 class="sec-h2 reveal">The category outgrew its tools.</h2>
+  </div>
+
+  <div class="inflection-body reveal delay-1">
+    <p>
+      For a decade, every clinical and commercial decision in this category has
+      been broadcast in public. The raw material has existed.
+    </p>
+    <p>
+      <strong>What changed:</strong> the category is consolidating into national
+      chains and professional rollups, and the operators underwriting that
+      consolidation are arriving from categories where a market intelligence
+      layer is already a precondition.
+    </p>
+    <p class="inflection-punch">
+      The tolerance for operating without one has ended.
+    </p>
+  </div>
+
+  <div class="inflection-close reveal delay-2">
+    <div class="inflection-categories">
+      <span class="cat">pharma</span>
+      <span class="cat">finance</span>
+      <span class="cat">retail</span>
+      <span class="cat cat-gap">aesthetics <span class="cat-mark">( the gap )</span></span>
+    </div>
+    <p class="inflection-correction">
+      Every other high-stakes consumer category has the intelligence layer it needs.<br>
+      Aesthetics has been the exception.<br>
+      <span class="ink-blue"><strong>The Index is the correction.</strong></span>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     08 — THE DOOR
+     Echo the cover. hello@vatico.com as largest element after mark.
+     Bookend: Clarity, for an industry built on appearances.
+     ============================================================ -->
+<section class="section sec-door" id="door" data-index="08">
+  <canvas class="door-canvas" id="door-canvas" aria-hidden="true"></canvas>
+  <div class="door-glow" aria-hidden="true"></div>
+
+  <div class="door-inner">
+    <div class="eyebrow"><span class="eyebrow-num">08</span></div>
+
+    <a class="door-email reveal delay-1" href="mailto:hello@vatico.io">
+      hello@vatico.io
+      <span class="door-arrow">↗</span>
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <a href="#top" class="footer-mark" aria-label="Vatico — home">
+      <img src="assets/vatico-logo-white.svg" alt="Vatico">
+    </a>
+    <div class="footer-signoff">
+      <span class="gradient-ink">Clarity,</span> for an industry built on appearances.
+    </div>
+  </div>
+
+  <div class="footer-rule"></div>
+
+  <div class="footer-bottom">
+    <nav class="footer-links" aria-label="Site">
+      <a href="#asset"><span class="fl-num">01</span> The Asset</a>
+      <a href="#catalog"><span class="fl-num">03</span> In the Index</a>
+      <a href="#actions"><span class="fl-num">04</span> Monday morning</a>
+      <a href="#readers"><span class="fl-num">05</span> Readers</a>
+      <a href="mailto:hello@vatico.io" class="fl-write"><span class="fl-num">08</span> Write</a>
+    </nav>
+    <div class="footer-copy">© 2026 Vatico</div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="hero-field.js"></script>
+<script src="site.js?v=8"></script>
+
+</body>
+</html>
