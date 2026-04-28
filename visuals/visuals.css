@@ -790,13 +790,23 @@
   .viz-cap-sub  { font-size: 0.88rem; }
 }
 
-/* V03 ontology — keep frame readable on phones.
-   The JS layout still simulates at full node count (followup),
-   but the frame itself shouldn't dominate the scroll. */
+/* V03 ontology — mobile cinematic reel.
+   On phones the desktop force graph hands off to a canvas-painted
+   timeline reel (see runReel() in visual-03-ontology.js). The reel
+   needs the canvas to render full-bleed, unobstructed by the desktop
+   chrome (filter chips, stats overlay, zoom controls, discoverability
+   hint). The bottom-left info card slot (.viz-overlay-bl) stays
+   visible — the reel drives it via crossFadeCardTo() to mirror the
+   active node, so it's the only chrome the reel actually wants. */
 @media (max-width: 768px) {
-  .viz-frame-ontology { height: 460px; max-height: 70vh; }
-  /* Ontology filter chips wrap and get touch-friendly spacing. */
-  #ontology-filter { gap: 0.45rem; }
+  .viz-frame-ontology .viz-overlay-tl,
+  .viz-frame-ontology .viz-overlay-tr,
+  .viz-frame-ontology .viz-zoom-controls,
+  .viz-frame-ontology .viz-onto-hint { display: none; }
+  .viz-frame-ontology { aspect-ratio: auto; height: 480px; max-height: 78vh; }
+}
+@media (max-width: 480px) {
+  .viz-frame-ontology { height: 440px; }
 }
 
 /* V06 share-of-voice — truncate the DMA leader rail to top 8
@@ -845,7 +855,6 @@
   .sec-signal { padding: 56px 0 40px; }
   .sec-signal-head { gap: 24px; }
   .sov-bars, .sov-lines { height: 200px; }
-  .viz-frame-ontology { height: 380px; }
   .tw-table .tw-row:nth-child(n+9)   { display: none; }
   .ws-table .ws-row:not(.ws-row-head):nth-child(n+10) { display: none; }
   .sov-dma .sov-dma-cell:nth-child(n+7) { display: none; }

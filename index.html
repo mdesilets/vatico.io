@@ -49,8 +49,8 @@
      in viewport, but it's also a relatively heavy file. The media=print
      trick lets the browser fetch it without blocking render, then the
      onload handler swaps media back to all so it actually applies. -->
-<link rel="stylesheet" href="visuals/visuals.css?v=8" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="visuals/visuals.css?v=8"></noscript>
+<link rel="stylesheet" href="visuals/visuals.css?v=10" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="visuals/visuals.css?v=10"></noscript>
 
 <link rel="icon" href="/assets/vatico-logo-white.svg">
 
@@ -263,7 +263,7 @@
     <figcaption class="viz-cap" id="viz-ontology-cap">
       <span class="viz-cap-num">fig.&nbsp;01</span>
       <span class="viz-cap-title">The ontology, drawn.</span>
-      <span class="viz-cap-sub">Six verticals · manufacturers · brands · products. Hover any node.</span>
+      <span class="viz-cap-sub">Six verticals · manufacturers · brands · products. Interactive on desktop · cinematic on mobile.</span>
     </figcaption>
     <div class="viz-frame viz-frame-ontology">
       <canvas id="ontology-canvas"></canvas>
@@ -280,11 +280,13 @@
       </div>
       <div class="viz-overlay viz-overlay-bl" id="ontology-label"></div>
       <noscript>
-        Interactive force-directed graph of the Vatico ontology: six
+        Interactive force-directed graph of the Vatico ontology — six
         verticals (Injectable, Laser, Body Contouring, Skin Treatment,
         Wellness, Cosmetic) connected to manufacturers, brand families,
-        and individual products. Filter chips at the top right scope the
-        view to one vertical.
+        and individual products. On desktop, hover any node and use the
+        filter chips at the top right to scope the view to one vertical.
+        On mobile, an animated cinematic plays the emergence of the
+        ontology in a continuous loop.
       </noscript>
     </div>
   </figure>
@@ -738,7 +740,7 @@
 <!-- Scripts -->
 <script src="hero-field.js"></script>
 <script src="visuals/visual-02-ingest.js?v=7"></script>
-<script src="visuals/visual-03-ontology.js?v=3"></script>
+<script src="visuals/visual-03-ontology.js?v=13"></script>
 <script src="visuals/visual-05-timeline.js?v=4"></script>
 <script src="visuals/visual-06-sov.js?v=3"></script>
 <script src="visuals/visual-07-whitespace.js?v=5"></script>

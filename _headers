@@ -14,6 +14,13 @@
 # IP claim travels with every response so it covers files that
 # can't carry an inline _license block (array-root JSON like
 # dma-leader.json, monthly-by-brand.json, event-stream.sample.json).
+#
+# This wildcard intentionally covers BOTH:
+#   - data/ontology.json       (full tree, fetched by desktop V03)
+#   - data/ontology.reel.json  (curated subset, fetched by mobile V03)
+# Both get the same protective headers. The mobile reel additionally
+# benefits from the file itself being a curated subset (no product
+# names, top-N mfrs/brands only) — see .tools/derive_reel_json.py.
 # ============================================================
 /data/*
   X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, notranslate, noimageindex
