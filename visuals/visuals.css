@@ -115,12 +115,97 @@
 
 /* ===== Visual 03 — Ontology ===== */
 .viz-frame-ontology {
-  height: 640px;
+  /* Near-square so the circular force layout fills the frame instead
+     of leaving wide rectangular dead space on left/right. 5:4 with a
+     viewport-height cap so it doesn't dominate the scroll on tall
+     monitors. */
+  aspect-ratio: 5 / 4;
   max-height: 78vh;
 }
 .viz-frame-ontology canvas {
   position: absolute; inset: 0; width: 100%; height: 100%;
   display: block;
+  cursor: grab;
+}
+.viz-frame-ontology canvas:active { cursor: grabbing; }
+.viz-overlay-br { bottom: 0.85rem; right: 0.95rem; }
+
+/* Floating zoom controls (bottom-right of the ontology frame). */
+.viz-zoom-controls {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.viz-zoom-controls button {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #b8bdcf;
+  background: rgba(8,9,13,0.85);
+  border: 1px solid #1c2032;
+  border-radius: 2px;
+  padding: 0;
+  cursor: pointer;
+  transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+.viz-zoom-controls button:hover {
+  color: #e4e8f4;
+  border-color: #2a2f47;
+  background: rgba(20,22,34,0.95);
+}
+
+/* First-paint hint, fades after 5s (JS-toggled .fade-out). */
+.viz-onto-hint {
+  position: absolute;
+  bottom: 0.95rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5a6180;
+  background: rgba(8,9,13,0.85);
+  border: 1px solid #1c2032;
+  border-radius: 2px;
+  padding: 0.4rem 0.7rem;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 600ms ease;
+}
+.viz-onto-hint.fade-out { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .viz-onto-hint { transition: none; }
+}
+
+/* Hover info panel (replaces the plain bottom-left label). */
+.onto-info-name {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: -0.005em;
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+.onto-info-meta {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8892b0;
+  margin-bottom: 4px;
+}
+.onto-info-trail {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.66rem;
+  color: #5a6180;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
 }
 #ontology-label {
   font-family: 'Inter', system-ui, sans-serif;
@@ -130,10 +215,17 @@
   background: rgba(8,9,13,0.92);
   border: 1px solid #1c2032;
   border-radius: 2px;
-  padding: 0.5rem 0.7rem;
-  min-height: 1rem;
+  padding: 0.55rem 0.75rem;
   pointer-events: none;
-  max-width: 24rem;
+  max-width: 28rem;
+  transition: opacity 120ms ease;
+}
+/* Hide the panel completely when nothing is hovered (info panel is
+   populated via innerHTML, so :empty matches the no-hover state). */
+#ontology-label:empty {
+  border-color: transparent;
+  background: transparent;
+  padding: 0;
 }
 
 /* ===== Visual 05 — Timeline ===== */

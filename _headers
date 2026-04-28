@@ -3,25 +3,18 @@
 #
 # Path matching is order-independent; more-specific patterns win.
 # Headers are applied to static-asset responses AFTER the
-# functions/preview/_middleware.js gate calls next().
+# functions/_middleware.js gate calls next().
+#
+# The previous /preview/* paths now 301 to root via _redirects, so the
+# only paths that ever produce static-asset responses are root-relative.
 
 # ============================================================
 # Data files — ontology, monthly-by-brand, sov, dma, etc.
-# Both the gated path (today) and the eventual public path.
 #
 # IP claim travels with every response so it covers files that
 # can't carry an inline _license block (array-root JSON like
 # dma-leader.json, monthly-by-brand.json, event-stream.sample.json).
 # ============================================================
-/preview/data/*
-  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, notranslate, noimageindex
-  Cache-Control: private, no-store, max-age=0, must-revalidate
-  Referrer-Policy: no-referrer
-  X-Content-Type-Options: nosniff
-  Cross-Origin-Resource-Policy: same-origin
-  X-Copyright: (c) 2026 Vatico, LLC. All rights reserved. Proprietary research data. Not for redistribution, commercial use, scraping, or AI/ML training. Licensing: hello@vatico.io
-  Link: <https://vatico.io>; rel="license"; title="Vatico, LLC Proprietary"
-
 /data/*
   X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, notranslate, noimageindex
   Cache-Control: private, no-store, max-age=0, must-revalidate
@@ -35,24 +28,16 @@
 # Visual rendering JS — not data, but the logic that paints it.
 # Keep out of search indexes; let the browser cache normally.
 # ============================================================
-/preview/visuals/*
-  X-Robots-Tag: noindex, nofollow
-  X-Content-Type-Options: nosniff
-  Cross-Origin-Resource-Policy: same-origin
-
 /visuals/*
   X-Robots-Tag: noindex, nofollow
   X-Content-Type-Options: nosniff
   Cross-Origin-Resource-Policy: same-origin
 
 # ============================================================
-# Reviewer uploads (designer reference material).
+# Reviewer uploads (designer reference material). Targeted for
+# removal once Phase B.1 ships; rule kept until then so the
+# revert path stays clean.
 # ============================================================
-/preview/uploads/*
-  X-Robots-Tag: noindex, nofollow, noarchive
-  Cache-Control: private, no-store
-  X-Content-Type-Options: nosniff
-
 /uploads/*
   X-Robots-Tag: noindex, nofollow, noarchive
   Cache-Control: private, no-store
