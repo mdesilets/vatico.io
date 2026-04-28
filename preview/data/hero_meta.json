@@ -1,0 +1,21 @@
+{
+  "_license": {
+    "owner": "Vatico, LLC",
+    "copyright": "© 2026 Vatico, LLC. All rights reserved.",
+    "notice": "Proprietary research data. Not for redistribution, commercial use, scraping, or AI/ML training. Licensing inquiries: hello@vatico.io",
+    "url": "https://vatico.io"
+  },
+  "extracted_utc": "2026-04-27T22:12:59.542147+00:00",
+  "source_table": "public.locations",
+  "rows_seen": 52446,
+  "rows_kept": 52370,
+  "anonymization": "lat/lng rounded to 4 decimals (~11m); all identifying fields stripped",
+  "by_vertical": {
+    "body_contouring": 2420,
+    "cosmetic": 19771,
+    "injectable": 16963,
+    "laser": 3659,
+    "skin_treatment": 7532,
+    "wellness": 2025
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "injectable",
+    "label": "Injectable",
+    "color_hex": "#e74c3c"
+  },
+  {
+    "id": "laser",
+    "label": "Laser",
+    "color_hex": "#9b59b6"
+  },
+  {
+    "id": "body_contouring",
+    "label": "Body Contouring",
+    "color_hex": "#f39c12"
+  },
+  {
+    "id": "skin_treatment",
+    "label": "Skin Treatment",
+    "color_hex": "#3498db"
+  },
+  {
+    "id": "wellness",
+    "label": "Wellness",
+    "color_hex": "#2ecc71"
+  },
+  {
+    "id": "cosmetic",
+    "label": "Cosmetic",
+    "color_hex": "#e67e22"
+  }
+]

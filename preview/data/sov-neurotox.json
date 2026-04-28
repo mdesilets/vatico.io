@@ -1,0 +1,741 @@
+{
+  "_license": {
+    "owner": "Vatico, LLC",
+    "copyright": "© 2026 Vatico, LLC. All rights reserved.",
+    "notice": "Proprietary research data. Not for redistribution, commercial use, scraping, or AI/ML training. Licensing inquiries: hello@vatico.io",
+    "url": "https://vatico.io"
+  },
+  "brands": [
+    {
+      "brand": "Botox",
+      "manufacturer": "Allergan/AbbVie",
+      "color_hex": "#3B82F6"
+    },
+    {
+      "brand": "Dysport",
+      "manufacturer": "Galderma",
+      "color_hex": "#A855F7"
+    },
+    {
+      "brand": "Xeomin",
+      "manufacturer": "Merz",
+      "color_hex": "#00A3E0"
+    },
+    {
+      "brand": "Jeuveau",
+      "manufacturer": "Evolus",
+      "color_hex": "#10B981"
+    },
+    {
+      "brand": "Daxxify",
+      "manufacturer": "Revance",
+      "color_hex": "#F59E0B"
+    },
+    {
+      "brand": "Letybo",
+      "manufacturer": "Hugel",
+      "color_hex": "#64748B"
+    }
+  ],
+  "monthly": [
+    {
+      "month": "2025-03",
+      "brand": "Botox",
+      "practice_count": 64,
+      "share": 0.8889
+    },
+    {
+      "month": "2025-03",
+      "brand": "Dysport",
+      "practice_count": 8,
+      "share": 0.1111
+    },
+    {
+      "month": "2025-03",
+      "brand": "Xeomin",
+      "practice_count": 6,
+      "share": 0.0833
+    },
+    {
+      "month": "2025-03",
+      "brand": "Jeuveau",
+      "practice_count": 7,
+      "share": 0.0972
+    },
+    {
+      "month": "2025-03",
+      "brand": "Daxxify",
+      "practice_count": 4,
+      "share": 0.0556
+    },
+    {
+      "month": "2025-03",
+      "brand": "Letybo",
+      "practice_count": 0,
+      "share": 0.0
+    },
+    {
+      "month": "2025-04",
+      "brand": "Botox",
+      "practice_count": 1077,
+      "share": 0.9166
+    },
+    {
+      "month": "2025-04",
+      "brand": "Dysport",
+      "practice_count": 121,
+      "share": 0.103
+    },
+    {
+      "month": "2025-04",
+      "brand": "Xeomin",
+      "practice_count": 42,
+      "share": 0.0357
+    },
+    {
+      "month": "2025-04",
+      "brand": "Jeuveau",
+      "practice_count": 31,
+      "share": 0.0264
+    },
+    {
+      "month": "2025-04",
+      "brand": "Daxxify",
+      "practice_count": 23,
+      "share": 0.0196
+    },
+    {
+      "month": "2025-04",
+      "brand": "Letybo",
+      "practice_count": 3,
+      "share": 0.0026
+    },
+    {
+      "month": "2025-05",
+      "brand": "Botox",
+      "practice_count": 1226,
+      "share": 0.9108
+    },
+    {
+      "month": "2025-05",
+      "brand": "Dysport",
+      "practice_count": 146,
+      "share": 0.1085
+    },
+    {
+      "month": "2025-05",
+      "brand": "Xeomin",
+      "practice_count": 44,
+      "share": 0.0327
+    },
+    {
+      "month": "2025-05",
+      "brand": "Jeuveau",
+      "practice_count": 35,
+      "share": 0.026
+    },
+    {
+      "month": "2025-05",
+      "brand": "Daxxify",
+      "practice_count": 30,
+      "share": 0.0223
+    },
+    {
+      "month": "2025-05",
+      "brand": "Letybo",
+      "practice_count": 7,
+      "share": 0.0052
+    },
+    {
+      "month": "2025-06",
+      "brand": "Botox",
+      "practice_count": 1190,
+      "share": 0.8981
+    },
+    {
+      "month": "2025-06",
+      "brand": "Dysport",
+      "practice_count": 161,
+      "share": 0.1215
+    },
+    {
+      "month": "2025-06",
+      "brand": "Xeomin",
+      "practice_count": 43,
+      "share": 0.0325
+    },
+    {
+      "month": "2025-06",
+      "brand": "Jeuveau",
+      "practice_count": 22,
+      "share": 0.0166
+    },
+    {
+      "month": "2025-06",
+      "brand": "Daxxify",
+      "practice_count": 44,
+      "share": 0.0332
+    },
+    {
+      "month": "2025-06",
+      "brand": "Letybo",
+      "practice_count": 9,
+      "share": 0.0068
+    },
+    {
+      "month": "2025-07",
+      "brand": "Botox",
+      "practice_count": 1293,
+      "share": 0.901
+    },
+    {
+      "month": "2025-07",
+      "brand": "Dysport",
+      "practice_count": 169,
+      "share": 0.1178
+    },
+    {
+      "month": "2025-07",
+      "brand": "Xeomin",
+      "practice_count": 46,
+      "share": 0.0321
+    },
+    {
+      "month": "2025-07",
+      "brand": "Jeuveau",
+      "practice_count": 35,
+      "share": 0.0244
+    },
+    {
+      "month": "2025-07",
+      "brand": "Daxxify",
+      "practice_count": 43,
+      "share": 0.03
+    },
+    {
+      "month": "2025-07",
+      "brand": "Letybo",
+      "practice_count": 15,
+      "share": 0.0105
+    },
+    {
+      "month": "2025-08",
+      "brand": "Botox",
+      "practice_count": 1375,
+      "share": 0.9028
+    },
+    {
+      "month": "2025-08",
+      "brand": "Dysport",
+      "practice_count": 186,
+      "share": 0.1221
+    },
+    {
+      "month": "2025-08",
+      "brand": "Xeomin",
+      "practice_count": 34,
+      "share": 0.0223
+    },
+    {
+      "month": "2025-08",
+      "brand": "Jeuveau",
+      "practice_count": 42,
+      "share": 0.0276
+    },
+    {
+      "month": "2025-08",
+      "brand": "Daxxify",
+      "practice_count": 28,
+      "share": 0.0184
+    },
+    {
+      "month": "2025-08",
+      "brand": "Letybo",
+      "practice_count": 12,
+      "share": 0.0079
+    },
+    {
+      "month": "2025-09",
+      "brand": "Botox",
+      "practice_count": 1487,
+      "share": 0.8996
+    },
+    {
+      "month": "2025-09",
+      "brand": "Dysport",
+      "practice_count": 229,
+      "share": 0.1385
+    },
+    {
+      "month": "2025-09",
+      "brand": "Xeomin",
+      "practice_count": 50,
+      "share": 0.0302
+    },
+    {
+      "month": "2025-09",
+      "brand": "Jeuveau",
+      "practice_count": 42,
+      "share": 0.0254
+    },
+    {
+      "month": "2025-09",
+      "brand": "Daxxify",
+      "practice_count": 44,
+      "share": 0.0266
+    },
+    {
+      "month": "2025-09",
+      "brand": "Letybo",
+      "practice_count": 6,
+      "share": 0.0036
+    },
+    {
+      "month": "2025-10",
+      "brand": "Botox",
+      "practice_count": 1782,
+      "share": 0.8901
+    },
+    {
+      "month": "2025-10",
+      "brand": "Dysport",
+      "practice_count": 270,
+      "share": 0.1349
+    },
+    {
+      "month": "2025-10",
+      "brand": "Xeomin",
+      "practice_count": 72,
+      "share": 0.036
+    },
+    {
+      "month": "2025-10",
+      "brand": "Jeuveau",
+      "practice_count": 44,
+      "share": 0.022
+    },
+    {
+      "month": "2025-10",
+      "brand": "Daxxify",
+      "practice_count": 49,
+      "share": 0.0245
+    },
+    {
+      "month": "2025-10",
+      "brand": "Letybo",
+      "practice_count": 19,
+      "share": 0.0095
+    },
+    {
+      "month": "2025-11",
+      "brand": "Botox",
+      "practice_count": 1843,
+      "share": 0.896
+    },
+    {
+      "month": "2025-11",
+      "brand": "Dysport",
+      "practice_count": 266,
+      "share": 0.1293
+    },
+    {
+      "month": "2025-11",
+      "brand": "Xeomin",
+      "practice_count": 78,
+      "share": 0.0379
+    },
+    {
+      "month": "2025-11",
+      "brand": "Jeuveau",
+      "practice_count": 49,
+      "share": 0.0238
+    },
+    {
+      "month": "2025-11",
+      "brand": "Daxxify",
+      "practice_count": 62,
+      "share": 0.0301
+    },
+    {
+      "month": "2025-11",
+      "brand": "Letybo",
+      "practice_count": 11,
+      "share": 0.0053
+    },
+    {
+      "month": "2025-12",
+      "brand": "Botox",
+      "practice_count": 1881,
+      "share": 0.8932
+    },
+    {
+      "month": "2025-12",
+      "brand": "Dysport",
+      "practice_count": 264,
+      "share": 0.1254
+    },
+    {
+      "month": "2025-12",
+      "brand": "Xeomin",
+      "practice_count": 66,
+      "share": 0.0313
+    },
+    {
+      "month": "2025-12",
+      "brand": "Jeuveau",
+      "practice_count": 40,
+      "share": 0.019
+    },
+    {
+      "month": "2025-12",
+      "brand": "Daxxify",
+      "practice_count": 71,
+      "share": 0.0337
+    },
+    {
+      "month": "2025-12",
+      "brand": "Letybo",
+      "practice_count": 13,
+      "share": 0.0062
+    },
+    {
+      "month": "2026-01",
+      "brand": "Botox",
+      "practice_count": 2120,
+      "share": 0.8826
+    },
+    {
+      "month": "2026-01",
+      "brand": "Dysport",
+      "practice_count": 386,
+      "share": 0.1607
+    },
+    {
+      "month": "2026-01",
+      "brand": "Xeomin",
+      "practice_count": 75,
+      "share": 0.0312
+    },
+    {
+      "month": "2026-01",
+      "brand": "Jeuveau",
+      "practice_count": 60,
+      "share": 0.025
+    },
+    {
+      "month": "2026-01",
+      "brand": "Daxxify",
+      "practice_count": 83,
+      "share": 0.0346
+    },
+    {
+      "month": "2026-01",
+      "brand": "Letybo",
+      "practice_count": 16,
+      "share": 0.0067
+    },
+    {
+      "month": "2026-02",
+      "brand": "Botox",
+      "practice_count": 2655,
+      "share": 0.8927
+    },
+    {
+      "month": "2026-02",
+      "brand": "Dysport",
+      "practice_count": 494,
+      "share": 0.1661
+    },
+    {
+      "month": "2026-02",
+      "brand": "Xeomin",
+      "practice_count": 119,
+      "share": 0.04
+    },
+    {
+      "month": "2026-02",
+      "brand": "Jeuveau",
+      "practice_count": 79,
+      "share": 0.0266
+    },
+    {
+      "month": "2026-02",
+      "brand": "Daxxify",
+      "practice_count": 127,
+      "share": 0.0427
+    },
+    {
+      "month": "2026-02",
+      "brand": "Letybo",
+      "practice_count": 14,
+      "share": 0.0047
+    },
+    {
+      "month": "2026-03",
+      "brand": "Botox",
+      "practice_count": 4192,
+      "share": 0.9007
+    },
+    {
+      "month": "2026-03",
+      "brand": "Dysport",
+      "practice_count": 905,
+      "share": 0.1945
+    },
+    {
+      "month": "2026-03",
+      "brand": "Xeomin",
+      "practice_count": 298,
+      "share": 0.064
+    },
+    {
+      "month": "2026-03",
+      "brand": "Jeuveau",
+      "practice_count": 221,
+      "share": 0.0475
+    },
+    {
+      "month": "2026-03",
+      "brand": "Daxxify",
+      "practice_count": 277,
+      "share": 0.0595
+    },
+    {
+      "month": "2026-03",
+      "brand": "Letybo",
+      "practice_count": 46,
+      "share": 0.0099
+    },
+    {
+      "month": "2026-04",
+      "brand": "Botox",
+      "practice_count": 1836,
+      "share": 0.9166
+    },
+    {
+      "month": "2026-04",
+      "brand": "Dysport",
+      "practice_count": 314,
+      "share": 0.1568
+    },
+    {
+      "month": "2026-04",
+      "brand": "Xeomin",
+      "practice_count": 125,
+      "share": 0.0624
+    },
+    {
+      "month": "2026-04",
+      "brand": "Jeuveau",
+      "practice_count": 66,
+      "share": 0.033
+    },
+    {
+      "month": "2026-04",
+      "brand": "Daxxify",
+      "practice_count": 80,
+      "share": 0.0399
+    },
+    {
+      "month": "2026-04",
+      "brand": "Letybo",
+      "practice_count": 18,
+      "share": 0.009
+    }
+  ],
+  "trailing_windows": [
+    {
+      "window": "30d",
+      "brand": "Botox",
+      "manufacturer": "Allergan/AbbVie",
+      "practice_count": 1836,
+      "share": 0.9166,
+      "color_hex": "#3B82F6"
+    },
+    {
+      "window": "30d",
+      "brand": "Dysport",
+      "manufacturer": "Galderma",
+      "practice_count": 314,
+      "share": 0.1568,
+      "color_hex": "#A855F7"
+    },
+    {
+      "window": "30d",
+      "brand": "Xeomin",
+      "manufacturer": "Merz",
+      "practice_count": 125,
+      "share": 0.0624,
+      "color_hex": "#00A3E0"
+    },
+    {
+      "window": "30d",
+      "brand": "Jeuveau",
+      "manufacturer": "Evolus",
+      "practice_count": 66,
+      "share": 0.033,
+      "color_hex": "#10B981"
+    },
+    {
+      "window": "30d",
+      "brand": "Daxxify",
+      "manufacturer": "Revance",
+      "practice_count": 80,
+      "share": 0.0399,
+      "color_hex": "#F59E0B"
+    },
+    {
+      "window": "30d",
+      "brand": "Letybo",
+      "manufacturer": "Hugel",
+      "practice_count": 18,
+      "share": 0.009,
+      "color_hex": "#64748B"
+    },
+    {
+      "window": "90d",
+      "brand": "Botox",
+      "manufacturer": "Allergan/AbbVie",
+      "practice_count": 6193,
+      "share": 0.9221,
+      "color_hex": "#3B82F6"
+    },
+    {
+      "window": "90d",
+      "brand": "Dysport",
+      "manufacturer": "Galderma",
+      "practice_count": 1468,
+      "share": 0.2186,
+      "color_hex": "#A855F7"
+    },
+    {
+      "window": "90d",
+      "brand": "Xeomin",
+      "manufacturer": "Merz",
+      "practice_count": 466,
+      "share": 0.0694,
+      "color_hex": "#00A3E0"
+    },
+    {
+      "window": "90d",
+      "brand": "Jeuveau",
+      "manufacturer": "Evolus",
+      "practice_count": 331,
+      "share": 0.0493,
+      "color_hex": "#10B981"
+    },
+    {
+      "window": "90d",
+      "brand": "Daxxify",
+      "manufacturer": "Revance",
+      "practice_count": 425,
+      "share": 0.0633,
+      "color_hex": "#F59E0B"
+    },
+    {
+      "window": "90d",
+      "brand": "Letybo",
+      "manufacturer": "Hugel",
+      "practice_count": 74,
+      "share": 0.011,
+      "color_hex": "#64748B"
+    },
+    {
+      "window": "180d",
+      "brand": "Botox",
+      "manufacturer": "Allergan/AbbVie",
+      "practice_count": 7899,
+      "share": 0.9345,
+      "color_hex": "#3B82F6"
+    },
+    {
+      "window": "180d",
+      "brand": "Dysport",
+      "manufacturer": "Galderma",
+      "practice_count": 1973,
+      "share": 0.2334,
+      "color_hex": "#A855F7"
+    },
+    {
+      "window": "180d",
+      "brand": "Xeomin",
+      "manufacturer": "Merz",
+      "practice_count": 629,
+      "share": 0.0744,
+      "color_hex": "#00A3E0"
+    },
+    {
+      "window": "180d",
+      "brand": "Jeuveau",
+      "manufacturer": "Evolus",
+      "practice_count": 440,
+      "share": 0.0521,
+      "color_hex": "#10B981"
+    },
+    {
+      "window": "180d",
+      "brand": "Daxxify",
+      "manufacturer": "Revance",
+      "practice_count": 567,
+      "share": 0.0671,
+      "color_hex": "#F59E0B"
+    },
+    {
+      "window": "180d",
+      "brand": "Letybo",
+      "manufacturer": "Hugel",
+      "practice_count": 103,
+      "share": 0.0122,
+      "color_hex": "#64748B"
+    },
+    {
+      "window": "365d",
+      "brand": "Botox",
+      "manufacturer": "Allergan/AbbVie",
+      "practice_count": 9648,
+      "share": 0.9494,
+      "color_hex": "#3B82F6"
+    },
+    {
+      "window": "365d",
+      "brand": "Dysport",
+      "manufacturer": "Galderma",
+      "practice_count": 2558,
+      "share": 0.2517,
+      "color_hex": "#A855F7"
+    },
+    {
+      "window": "365d",
+      "brand": "Xeomin",
+      "manufacturer": "Merz",
+      "practice_count": 801,
+      "share": 0.0788,
+      "color_hex": "#00A3E0"
+    },
+    {
+      "window": "365d",
+      "brand": "Jeuveau",
+      "manufacturer": "Evolus",
+      "practice_count": 583,
+      "share": 0.0574,
+      "color_hex": "#10B981"
+    },
+    {
+      "window": "365d",
+      "brand": "Daxxify",
+      "manufacturer": "Revance",
+      "practice_count": 702,
+      "share": 0.0691,
+      "color_hex": "#F59E0B"
+    },
+    {
+      "window": "365d",
+      "brand": "Letybo",
+      "manufacturer": "Hugel",
+      "practice_count": 156,
+      "share": 0.0154,
+      "color_hex": "#64748B"
+    }
+  ],
+  "share_definition": "share = (unique practices mentioning brand in window) / (unique practices mentioning any neurotoxin in window)"
+}

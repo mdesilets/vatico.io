@@ -1,0 +1,407 @@
+{
+  "_license": {
+    "owner": "Vatico, LLC",
+    "copyright": "© 2026 Vatico, LLC. All rights reserved.",
+    "notice": "Proprietary research data. Not for redistribution, commercial use, scraping, or AI/ML training. Licensing inquiries: hello@vatico.io",
+    "url": "https://vatico.io"
+  },
+  "extracted_utc": "2026-04-28T12:36:32.343829+00:00",
+  "source_tables": [
+    "taxonomy_manufacturers",
+    "taxonomy_brands",
+    "taxonomy_products"
+  ],
+  "kind_column_present": true,
+  "node_counts_by_type": {
+    "root": 1,
+    "vertical": 6,
+    "manufacturer": 147,
+    "brand": 262,
+    "product": 294
+  },
+  "node_counts_by_vertical": {
+    "Injectable": {
+      "manufacturers": 11,
+      "brands": 22,
+      "products": 45
+    },
+    "Laser": {
+      "manufacturers": 15,
+      "brands": 53,
+      "products": 53
+    },
+    "Body Contouring": {
+      "manufacturers": 17,
+      "brands": 30,
+      "products": 29
+    },
+    "Skin Treatment": {
+      "manufacturers": 40,
+      "brands": 85,
+      "products": 94
+    },
+    "Wellness": {
+      "manufacturers": 32,
+      "brands": 38,
+      "products": 38
+    },
+    "Cosmetic": {
+      "manufacturers": 32,
+      "brands": 34,
+      "products": 35
+    }
+  },
+  "quality_warnings": [
+    {
+      "code": "orphan_brands",
+      "severity": "high",
+      "summary": "41 brand(s) have no manufacturer_id and are bucketed under 'Independent / Unattributed'. Backfill at source.",
+      "counts_by_category": {
+        "Skin Treatment": 37,
+        "Injectable": 2,
+        "Cosmetic": 1,
+        "Wellness": 1
+      },
+      "rows": [
+        {
+          "id": "adipeau",
+          "name": "Adipeau",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "alumiermd",
+          "name": "AlumierMD",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "anfisa",
+          "name": "Anfisa",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "ariessence",
+          "name": "Ariessence",
+          "category": "Injectable",
+          "product_children": 1
+        },
+        {
+          "id": "auralux",
+          "name": "AuraLux",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "avene",
+          "name": "Avène",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "blomdahl",
+          "name": "Blomdahl",
+          "category": "Cosmetic",
+          "product_children": 1
+        },
+        {
+          "id": "circadia",
+          "name": "Circadia",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "derma_made",
+          "name": "Derma Made Skin Care",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "dermalogica",
+          "name": "Dermalogica",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "dermodality",
+          "name": "Dermodality",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "dmk",
+          "name": "DMK",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "environ",
+          "name": "Environ",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "epicutis",
+          "name": "Epicutis",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "epionce",
+          "name": "Epionce",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "face_reality",
+          "name": "Face Reality",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "factorfive",
+          "name": "FactorFive",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "hydrinity",
+          "name": "Hydrinity",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "hyperice",
+          "name": "Hyperice",
+          "category": "Wellness",
+          "product_children": 1
+        },
+        {
+          "id": "image_skincare",
+          "name": "IMAGE Skincare",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "jasi",
+          "name": "JASI",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "js_skincare",
+          "name": "JS Skincare",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "jtav",
+          "name": "JTAV",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "kerafactor",
+          "name": "KeraFactor",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "lumohs",
+          "name": "lumohs",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "neova",
+          "name": "NEOVA",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "noon_aesthetics",
+          "name": "NOON Aesthetics",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "noravite",
+          "name": "Noravite",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "omnilux",
+          "name": "Omnilux",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "ourself",
+          "name": "Ourself",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "pavise",
+          "name": "Pavise",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "plated_skin_science",
+          "name": "Plated Skin Science",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "procell",
+          "name": "Procell",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "rejuran",
+          "name": "Rejuran",
+          "category": "Injectable",
+          "product_children": 1
+        },
+        {
+          "id": "revceuticals",
+          "name": "RevCeuticals",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "siv",
+          "name": "SIV",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "societe",
+          "name": "Societe",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "toskani",
+          "name": "Toskani",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "vi_derm",
+          "name": "VI Derm",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "vivant",
+          "name": "Vivant",
+          "category": "Skin Treatment",
+          "product_children": 1
+        },
+        {
+          "id": "zemits",
+          "name": "Zemits",
+          "category": "Skin Treatment",
+          "product_children": 1
+        }
+      ]
+    },
+    {
+      "code": "brands_in_dropped_category",
+      "severity": "medium",
+      "summary": "3 brand(s) sit in a category not in the marketing VERTICALS list and were excluded from the tree.",
+      "counts_by_category": {
+        "Supplement": 3
+      },
+      "rows": [
+        {
+          "id": "designs_for_health",
+          "name": "Designs for Health",
+          "category": "Supplement"
+        },
+        {
+          "id": "nutrafi",
+          "name": "NutraFi",
+          "category": "Supplement"
+        },
+        {
+          "id": "xtresse",
+          "name": "Xtresse",
+          "category": "Supplement"
+        }
+      ]
+    },
+    {
+      "code": "non_branded_filtered",
+      "severity": "info",
+      "summary": "10 brand row(s) excluded because kind != 'branded' (generics / procedures).",
+      "rows": [
+        {
+          "id": "compounded_semaglutide",
+          "name": "Compounded Semaglutide",
+          "category": "Wellness",
+          "kind": "generic"
+        },
+        {
+          "id": "glutathione_iv_push",
+          "name": "Glutathione IV Push",
+          "category": "Wellness",
+          "kind": "procedure"
+        },
+        {
+          "id": "high_dose_vitamin_c_iv",
+          "name": "High-Dose Vitamin C IV",
+          "category": "Wellness",
+          "kind": "procedure"
+        },
+        {
+          "id": "nad_iv_therapy",
+          "name": "NAD+ IV Therapy",
+          "category": "Wellness",
+          "kind": "procedure"
+        },
+        {
+          "id": "phentermine",
+          "name": "Phentermine",
+          "category": "Wellness",
+          "kind": "generic"
+        },
+        {
+          "id": "prf___platelet_rich_fibrin",
+          "name": "PRF - Platelet-Rich Fibrin",
+          "category": "Injectable",
+          "kind": "generic"
+        },
+        {
+          "id": "prp_brand",
+          "name": "PRP",
+          "category": "Injectable",
+          "kind": "generic"
+        },
+        {
+          "id": "scalp_micropigmentation",
+          "name": "Scalp Micropigmentation",
+          "category": "Cosmetic",
+          "kind": "procedure"
+        },
+        {
+          "id": "tri_immune_boost_injection",
+          "name": "Tri-Immune Boost Injection",
+          "category": "Wellness",
+          "kind": "procedure"
+        },
+        {
+          "id": "vitamin_b12___lipo_injections",
+          "name": "Vitamin B12 / Lipo Injections",
+          "category": "Wellness",
+          "kind": "procedure"
+        }
+      ]
+    }
+  ]
+}

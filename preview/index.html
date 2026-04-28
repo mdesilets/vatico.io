@@ -7,6 +7,7 @@
 <meta name="description" content="The Aesthetics Index. A continuous, structured read on the state of the medical aesthetics market. From category anecdote to category strategy, in days not quarters.">
 <link rel="stylesheet" href="colors_and_type.css">
 <link rel="stylesheet" href="site.css?v=12">
+<link rel="stylesheet" href="visuals/visuals.css?v=6">
 <link rel="icon" href="assets/vatico-logo-white.svg">
 </head>
 <body>
@@ -86,6 +87,50 @@
 </header>
 
 <!-- ============================================================
+     0.5 — INGEST FLOW
+     Raw chatter → Vatico ontology → structured signal.
+     A live, animated "data inhale" that sits between the
+     hero and §01. Title + sub on the left, viz on the right.
+     ============================================================ -->
+<section class="sec-signal" aria-labelledby="sf-title">
+  <div class="sec-signal-head">
+    <div>
+      <div class="eyebrow"><span class="eyebrow-num">·</span>&nbsp;·&nbsp;the inhale</div>
+      <h2 class="sec-signal-title" id="sf-title">From the industry's <em>chatter</em><br>to a single, queryable taxonomy.</h2>
+    </div>
+    <p class="sec-signal-sub">Captions, reviews, transcripts, filings, decks. Every primary source the category produces, resolved against one structured ontology of practices, brands, and procedures.</p>
+  </div>
+
+  <p class="sr-only">
+    Visual: Vatico ingests captions, reviews, transcripts, filings, and decks
+    from the public channels practices broadcast on, and resolves every
+    mention against one structured ontology of practices, brands, and
+    procedures. The animation shows raw signal flowing left-to-right through
+    the Vatico ontology and out as resolved entities, brands, and procedures.
+  </p>
+
+  <div class="sf-stage" id="signal-flow" aria-hidden="true">
+    <canvas class="sf-canvas"></canvas>
+    <div class="sf-ingest">
+      <div class="sf-ingest-glyph"><span></span><span></span><span></span><span></span></div>
+      <div class="sf-ingest-label">VATICO<br><em>ontology</em></div>
+    </div>
+    <noscript>
+      Animated diagram: raw, unstructured public signal on the left
+      (captions, reviews, transcripts, filings, decks) flows through the
+      Vatico ontology in the center, and exits on the right as resolved
+      entities, brands, and procedures. The ingest is continuous.
+    </noscript>
+  </div>
+
+  <div class="sec-signal-foot">
+    <span><strong>raw</strong>&nbsp;· unstructured public signal</span>
+    <span class="sf-foot-arrow">→&nbsp;→&nbsp;→</span>
+    <span><strong>resolved</strong>&nbsp;· entities, brands, procedures</span>
+  </div>
+</section>
+
+<!-- ============================================================
      01 — THE ASSET
      The Aesthetics Index (as wordmark / artifact)
      Corpus claim body. Pattern C closing.
@@ -144,6 +189,43 @@
       on the same axis.
     </p>
   </div>
+
+  <!-- Visual 03 — Brand ontology force graph -->
+  <figure class="viz viz-ontology reveal delay-3" aria-labelledby="viz-ontology-cap">
+    <p class="sr-only">
+      Visual: A formal ontology of every manufacturer, brand, brand family,
+      product, generic equivalent, category, and subcategory currently in
+      market in U.S. medical aesthetics. Built once and maintained against
+      the live corpus. The force graph is the ontology, drawn.
+    </p>
+    <figcaption class="viz-cap" id="viz-ontology-cap">
+      <span class="viz-cap-num">fig.&nbsp;01</span>
+      <span class="viz-cap-title">The ontology, drawn.</span>
+      <span class="viz-cap-sub">Six verticals · manufacturers · brands · products. Hover any node.</span>
+    </figcaption>
+    <div class="viz-frame viz-frame-ontology">
+      <canvas id="ontology-canvas"></canvas>
+      <div class="viz-overlay viz-overlay-tl">
+        <div class="viz-stats" id="ontology-stats">loading…</div>
+      </div>
+      <div class="viz-overlay viz-overlay-tr" id="ontology-filter">
+        <button class="viz-chip" data-vert="Injectable"><i style="background:#e74c3c"></i>Injectable</button>
+        <button class="viz-chip" data-vert="Laser"><i style="background:#9b59b6"></i>Laser</button>
+        <button class="viz-chip" data-vert="Body Contouring"><i style="background:#f39c12"></i>Body Contouring</button>
+        <button class="viz-chip" data-vert="Skin Treatment"><i style="background:#3498db"></i>Skin Treatment</button>
+        <button class="viz-chip" data-vert="Wellness"><i style="background:#2ecc71"></i>Wellness</button>
+        <button class="viz-chip" data-vert="Cosmetic"><i style="background:#e67e22"></i>Cosmetic</button>
+      </div>
+      <div class="viz-overlay viz-overlay-bl" id="ontology-label"></div>
+      <noscript>
+        Interactive force-directed graph of the Vatico ontology: six
+        verticals (Injectable, Laser, Body Contouring, Skin Treatment,
+        Wellness, Cosmetic) connected to manufacturers, brand families,
+        and individual products. Filter chips at the top right scope the
+        view to one vertical.
+      </noscript>
+    </div>
+  </figure>
 </section>
 
 <!-- ============================================================
@@ -317,6 +399,80 @@
       the displacement front in energy devices across the trailing six quarters.
     </li>
   </ol>
+
+  <!-- Visual 05 — Trailing-window leaderboard -->
+  <figure class="viz viz-leaderboard reveal" id="timeline-root" aria-labelledby="viz-timeline-cap">
+    <p class="sr-only">
+      Visual: Trajectories, not snapshots. We track the market over time
+      as a continuous record, not a static directory. The leaderboard
+      shows practice-mention counts and within-vertical share for each
+      brand across the selected trailing window. Switch the window to
+      see the field re-rank itself in days, not quarters.
+    </p>
+    <figcaption class="viz-cap" id="viz-timeline-cap">
+      <span class="viz-cap-num">fig.&nbsp;02</span>
+      <span class="viz-cap-title">Brand leaderboard, by trailing window.</span>
+      <span class="viz-cap-sub">Practice-mention counts and within-vertical share. Switch the window to see how the field re-ranks itself in days, not quarters.</span>
+    </figcaption>
+    <div class="tw-tabs" aria-label="Trailing window">
+      <span class="tw-tabs-label">window</span>
+      <button data-window="30d" class="active">30d</button>
+      <button data-window="90d">90d</button>
+      <button data-window="180d">180d</button>
+      <button data-window="365d">365d</button>
+    </div>
+    <div class="tw-table-head">
+      <div class="tw-rank">#</div>
+      <div class="tw-brand">Brand</div>
+      <div class="tw-vert">Vertical</div>
+      <div class="tw-bar-h">Practices, normalized</div>
+      <div class="tw-count">Count</div>
+      <div class="tw-share">Share</div>
+    </div>
+    <div class="tw-table"></div>
+    <div class="timeline-meta viz-meta"></div>
+    <noscript>
+      Sortable leaderboard table: brand, vertical, normalized practice-mention
+      count bar, raw count, and within-vertical share, ranked by count for
+      the selected trailing window (30, 90, 180, or 365 days).
+    </noscript>
+  </figure>
+
+  <!-- Visual 06 — Share-of-voice in toxins -->
+  <figure class="viz viz-sov reveal" id="sov-root" aria-labelledby="viz-sov-cap">
+    <p class="sr-only">
+      Visual: The signal was always there. It just needed an instrument.
+      Practice-mention share among the six U.S. neurotoxins, month by
+      month, across the full operational corpus, with brand-level
+      trajectories and a leaderboard of the 24 largest DMAs.
+    </p>
+    <figcaption class="viz-cap" id="viz-sov-cap">
+      <span class="viz-cap-num">fig.&nbsp;03</span>
+      <span class="viz-cap-title">Share, the way ad spend is read.</span>
+      <span class="viz-cap-sub">National monthly share among neuromodulators · trend lines · DMA leaderboards.</span>
+    </figcaption>
+    <div class="sov-grid">
+      <div class="sov-panel sov-panel-bars">
+        <div class="sov-panel-title">Monthly share · trailing 18 months</div>
+        <div class="sov-bars"></div>
+      </div>
+      <div class="sov-panel sov-panel-lines">
+        <div class="sov-panel-title">Brand-level trajectories</div>
+        <div class="sov-lines"></div>
+      </div>
+    </div>
+    <div class="sov-panel sov-panel-dma">
+      <div class="sov-panel-title">DMA leaders · 24 largest markets</div>
+      <div class="sov-dma"></div>
+    </div>
+    <div class="sov-meta viz-meta"></div>
+    <noscript>
+      Three-panel chart: stacked monthly share bars across the trailing
+      18 months for the six U.S. neurotoxins; brand-level trajectory
+      lines over the same window; and a leaderboard of the 24 largest
+      U.S. DMAs showing the share-leading neurotoxin in each market.
+    </noscript>
+  </figure>
 </section>
 
 <!-- ============================================================
@@ -328,6 +484,35 @@
     <div class="eyebrow"><span class="eyebrow-num">05</span>&nbsp;·&nbsp;who reads it</div>
     <h2 class="sec-h2 reveal">Read by the parties who decide the category.</h2>
   </div>
+
+  <!-- Visual 07 — DMA whitespace leaderboard -->
+  <figure class="viz viz-leaderboard reveal" id="whitespace-root" aria-labelledby="viz-ws-cap">
+    <p class="sr-only">
+      Visual: Vacancies and saturations are visible before they're
+      announced. The leaderboard ranks U.S. designated market areas
+      (DMAs) by a z-score composite of consumer demand against practice
+      supply. Top-ranked DMAs are markets where the category is asked
+      for and underserved.
+    </p>
+    <figcaption class="viz-cap" id="viz-ws-cap">
+      <span class="viz-cap-num">fig.&nbsp;04</span>
+      <span class="viz-cap-title">Whitespace, by market.</span>
+      <span class="viz-cap-sub">A z-score composite of consumer demand against practice supply. Top-ranked DMAs are markets where the category is asked for and underserved.</span>
+    </figcaption>
+    <div class="ws-filter tw-tabs">
+      <span class="tw-tabs-label">sort by</span>
+      <button data-mode="whitespace" class="active">whitespace</button>
+      <button data-mode="demand">demand</button>
+      <button data-mode="supply">supply</button>
+    </div>
+    <div class="ws-table"></div>
+    <div class="ws-meta viz-meta"></div>
+    <noscript>
+      Sortable leaderboard table of U.S. DMAs by whitespace score
+      (consumer demand minus practice supply, normalized). Sort modes:
+      whitespace, demand, or supply.
+    </noscript>
+  </figure>
 
   <div class="readers-grid">
     <article class="reader reveal">
@@ -488,6 +673,11 @@
 
 <!-- Scripts -->
 <script src="hero-field.js"></script>
+<script src="visuals/visual-02-ingest.js?v=6"></script>
+<script src="visuals/visual-03-ontology.js?v=1"></script>
+<script src="visuals/visual-05-timeline.js?v=3"></script>
+<script src="visuals/visual-06-sov.js?v=2"></script>
+<script src="visuals/visual-07-whitespace.js?v=3"></script>
 <script src="site.js?v=8"></script>
 
 </body>

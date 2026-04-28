@@ -1,0 +1,49 @@
+{
+  "_license": {
+    "owner": "Vatico, LLC",
+    "copyright": "© 2026 Vatico, LLC. All rights reserved.",
+    "notice": "Proprietary research data. Not for redistribution, commercial use, scraping, or AI/ML training. Licensing inquiries: hello@vatico.io",
+    "url": "https://vatico.io"
+  },
+  "extracted_utc": "2026-04-27T22:19:03.978907+00:00",
+  "source_table": "public.signals",
+  "vertical": "Injectable",
+  "brand_filter": [
+    "Belotero",
+    "Botox",
+    "Daxxify",
+    "Dysport",
+    "Jeuveau",
+    "Juvederm",
+    "Letybo",
+    "RHA",
+    "Radiesse",
+    "Restylane",
+    "Sculptra",
+    "Xeomin"
+  ],
+  "trailing_months": 24,
+  "window": {
+    "start_month": "2024-04",
+    "end_month": "2026-04"
+  },
+  "signals_pages_read": 100,
+  "events_total_in_window": 15309,
+  "events_sampled": 5000,
+  "anonymization": "medspot_id → sha256(salt+id)[:6] (one-way, salt kept here)",
+  "anonymization_salt": "61d484c568fb00d1",
+  "brand_totals_in_window": {
+    "Botox": 9894,
+    "Dysport": 1596,
+    "Juvederm": 1147,
+    "Xeomin": 546,
+    "Restylane": 500,
+    "Radiesse": 500,
+    "Daxxify": 471,
+    "Jeuveau": 367,
+    "RHA": 168,
+    "Letybo": 75,
+    "Belotero": 40,
+    "Sculptra": 5
+  }
+}
