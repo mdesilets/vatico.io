@@ -20,69 +20,16 @@
   src: url("fonts/InterVariable-Italic.ttf") format("truetype-variations"),
        url("fonts/InterVariable-Italic.ttf") format("truetype");
 }
-/* Static fallbacks (covered weights 400/500/600/700/800/900 + italics) */
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/Inter-Regular.ttf")    format("truetype"); }
-@font-face { font-family: "Inter"; font-style: italic; font-weight: 400; font-display: swap; src: url("fonts/Inter-Italic.ttf")     format("truetype"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/Inter-Medium.ttf")     format("truetype"); }
-@font-face { font-family: "Inter"; font-style: italic; font-weight: 500; font-display: swap; src: url("fonts/Inter-MediumItalic.ttf") format("truetype"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/Inter-SemiBold.ttf")   format("truetype"); }
-@font-face { font-family: "Inter"; font-style: italic; font-weight: 600; font-display: swap; src: url("fonts/Inter-SemiBoldItalic.ttf") format("truetype"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/Inter-Bold.ttf")       format("truetype"); }
-@font-face { font-family: "Inter"; font-style: italic; font-weight: 700; font-display: swap; src: url("fonts/Inter-BoldItalic.ttf") format("truetype"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 800; font-display: swap; src: url("fonts/Inter-ExtraBold.ttf")  format("truetype"); }
-@font-face { font-family: "Inter"; font-style: italic; font-weight: 800; font-display: swap; src: url("fonts/Inter-ExtraBoldItalic.ttf") format("truetype"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 900; font-display: swap; src: url("fonts/Inter-Black.ttf")      format("truetype"); }
+/* No static-weight fallbacks. Variable Inter (above) covers the entire
+   100..900 range in one file. The browsers that don't support variable
+   fonts (<2% global, mostly IE11 holdouts) fall through to the system
+   stack defined on `body` in site.css. */
 
-/* ---------- Helvetica Neue LT Std (alt sans — full family) ---------- */
-/* Ultra Light 100 */
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 100; font-display: swap; src: url("fonts/HelveticaNeueLTStd-UltLt.otf") format("opentype"); }
-/* Thin 200 */
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 200; font-display: swap; src: url("fonts/HelveticaNeueLTStd-Th.otf")    format("opentype"); }
-/* Light 300 */
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 300; font-display: swap; src: url("fonts/HelveticaNeueLTStd-Lt.otf")    format("opentype"); }
-/* Roman 400 */
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 400; font-display: swap; src: url("fonts/HelveticaNeueLTStd-Roman.otf") format("opentype"); }
-/* Medium 500 */
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 500; font-display: swap; src: url("fonts/HelveticaNeueLTStd-Md.otf")    format("opentype"); }
-/* Black 900 */
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 900; font-display: swap; src: url("fonts/HelveticaNeueLTStd-Blk.otf")   format("opentype"); }
-
-/* Condensed width (stretch 75%) */
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 100; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-UltLtCn.otf") format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 100; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-UltLtCnO.otf") format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 200; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-ThCn.otf")    format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 200; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-ThCnO.otf")    format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 300; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-LtCn.otf")    format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 300; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-LtCnO.otf")    format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 400; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-Cn.otf")      format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 400; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-CnO.otf")     format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 500; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-MdCn.otf")    format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 500; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-MdCnO.otf")   format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 900; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-BlkCn.otf")   format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 900; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-BlkCnO.otf")  format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 950; font-stretch: 75%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-XBlkCn.otf")  format("opentype"); }
-
-/* Extended width (stretch 125%) */
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 100; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-UltLtEx.otf") format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 100; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-UltLtExO.otf") format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 200; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-ThEx.otf")    format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 200; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-ThExO.otf")    format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 300; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-LtEx.otf")    format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 300; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-LtExO.otf")   format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 400; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-Ex.otf")      format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 400; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-ExO.otf")     format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 500; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-MdEx.otf")    format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 500; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-MdExO.otf")   format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 700; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-BdEx.otf")    format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 700; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-BdExO.otf")   format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: normal;  font-weight: 900; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-BlkEx.otf")   format("opentype"); }
-@font-face { font-family: "Helvetica Neue LT Std"; font-style: italic;  font-weight: 900; font-stretch: 125%; font-display: swap; src: url("fonts/HelveticaNeueLTStd-BlkExO.otf")  format("opentype"); }
-
-/* Special — Bold Outline (decorative, weight 700 outline) */
-@font-face { font-family: "Helvetica Neue LT Std Outline"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/HelveticaNeueLTStd-BdOu.otf") format("opentype"); }
-
-/* ---------- Arial (web-safe fallback, bundled) ---------- */
-@font-face { font-family: "Arial"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/arial.ttf") format("truetype"); }
+/* ---------- Helvetica Neue LT Std + Arial @font-face declarations
+   removed: the underlying .otf / .ttf files were never bundled into
+   fonts/, so these blocks were silent 404s on every first paint.
+   Any CSS that names "Helvetica Neue", Helvetica, or Arial falls
+   through to the system-installed font of that name. ---------- */
 
 :root {
   /* ---------- Backgrounds & Surfaces ---------- */
@@ -98,7 +45,9 @@
 
   /* ---------- Text ---------- */
   --text:      #e4e8f4;   /* Primary foreground (near-white, cool) */
-  --muted:     #5a6180;   /* Eyebrow / label text */
+  --muted:     #7179a8;   /* Eyebrow / label text. Bumped from #5a6180
+                              (3.1:1 contrast against --bg, fails WCAG AA)
+                              to #7179a8 (~4.6:1, passes AA for small text). */
   --muted-2:   #8892b0;   /* Body-copy secondary */
 
   /* ---------- Accents ---------- */
@@ -427,11 +376,11 @@ code, .code, .t-code {
 .g4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
 .spot-grid   { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; }
 .gallery-grid { columns: 3; column-gap: 16px; }
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .g3, .g4, .g2 { grid-template-columns: 1fr 1fr; }
   .gallery-grid { columns: 2; }
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .g2, .g3, .g4 { grid-template-columns: 1fr; }
   .gallery-grid { columns: 1; }
 }

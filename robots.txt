@@ -3,9 +3,10 @@
 # aesthetics market. Crawling, scraping, indexing, or use of this
 # content for AI training is not authorized.
 #
-# These rules apply to both the gated /preview/* path used during
-# private review and to the public site root once the preview gate
-# is removed.
+# The site lives at /. The previous /preview/* path 301s to / and is
+# fully covered by these rules. The functions/_middleware.js gate
+# also returns 401 to bots while the password is still in front, so
+# this file is the second line of defense, not the first.
 
 # ---------- AI training crawlers — blocked site-wide ----------
 
@@ -85,15 +86,19 @@ User-agent: MJ12bot
 Disallow: /
 
 # ---------- General crawler policy ----------
-# Block direct fetches of the underlying data + rendering payloads
-# under both today's gated path and tomorrow's public root.
+# Block direct fetches of the underlying data + rendering payloads.
+# These rules cover the live root paths and intentionally omit
+# /preview/* (now a 301 chain — bots that respect Disallow won't
+# follow the redirect anyway, and bots that ignore Disallow get
+# blocked by the middleware while gated, then by these same root
+# rules once public).
 
 User-agent: *
-Disallow: /preview/data/
-Disallow: /preview/visuals/
-Disallow: /preview/uploads/
 Disallow: /data/
 Disallow: /visuals/
 Disallow: /uploads/
 Disallow: /functions/
 Allow: /
+
+# ---------- Sitemap ----------
+Sitemap: https://vatico.io/sitemap.xml

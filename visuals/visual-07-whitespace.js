@@ -42,7 +42,11 @@
       if (mode === 'whitespace') rows.sort((a,b) => b.white_space_score - a.white_space_score);
       else if (mode === 'demand') rows.sort((a,b) => b.consumer_demand_proxy - a.consumer_demand_proxy);
       else if (mode === 'supply') rows.sort((a,b) => (b.practice_supply_count||0) - (a.practice_supply_count||0));
-      rows = rows.slice(0, 30);
+      // Phones get top-10 only — matches the CSS truncation rule and
+      // saves us building 20 DOM rows that would only be visually
+      // hidden anyway. Tablet+ keeps the full top-30 view.
+      const cap = window.innerWidth < 768 ? 10 : 30;
+      rows = rows.slice(0, cap);
 
       const maxSupply = Math.max(...data.map(d => d.practice_supply_count || 0)) || 1;
       const maxDemand = Math.max(...data.map(d => d.consumer_demand_proxy || 0)) || 1;
@@ -96,6 +100,20 @@
     }
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
-  else init();
+  // Lazy-init: only construct the whitespace leaderboard when the
+  // figure is within 200px of the viewport. V07 is in §05.
+  function lazyInit() {
+    const root = document.getElementById('whitespace-root');
+    if (!root) return;
+    if (typeof IntersectionObserver === 'undefined') { init(); return; }
+    const io = new IntersectionObserver((entries, obs) => {
+      for (const e of entries) {
+        if (e.isIntersecting) { obs.disconnect(); init(); break; }
+      }
+    }, { rootMargin: '200px 0px' });
+    io.observe(root);
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', lazyInit);
+  else lazyInit();
 })();

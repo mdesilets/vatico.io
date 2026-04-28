@@ -1,0 +1,13 @@
+# Cloudflare Pages — _redirects
+#
+# Old gated path was /preview/*. The site has been promoted to root, with
+# the gate now scoped to / by functions/_middleware.js. Anyone hitting an
+# old /preview/* bookmark is moved to the equivalent root path with a
+# permanent (301) redirect so search engines and browsers update.
+#
+# Match order: most specific first. The :splat placeholder captures
+# everything matched by `*`.
+
+/preview      /        301
+/preview/     /        301
+/preview/*    /:splat  301

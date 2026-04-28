@@ -14,33 +14,34 @@ Thumbs.db
 # --- Cursor / SpecStory transcript scratch (already untracked) ---
 .specstory/
 
-# --- Original archive bundle (10 MB, the source of preview/) ---
-Vatico Website.zip
+# --- Original archive bundles ---
 *.zip
 
-# --- Internal strategy / brand-voice documents (workspace root) ---
+# --- Internal strategy / brand-voice documents ---
 capabilities-deck.md
 positioning-playbook.md
 
-# --- Working artifacts inside preview/ that the live page does not need ---
-# Alternate / archived HTML versions
-preview/Vatico Website (Standalone).html
-preview/Vatico Website Standalone Src.html
-preview/Vatico Website v1.html
-preview/index.v1a-backup.html
-
-# CSS / JS that the live index.html does not reference
-preview/colors_and_type_standalone.css
-preview/footprint.js
+# --- Files in the deploy tree the live page does not reference ---
+# CSS / JS that index.html does not <link>/<script>:
+colors_and_type_standalone.css
+footprint.js
 
 # Design-iteration screenshots and pasted reference PNGs
-preview/screenshots/
-preview/uploads/
+# (Phase B.1 will delete these from disk; ignored here so they
+# never accidentally get committed in the meantime.)
+screenshots/
+uploads/
 
 # --- Local screenshot scratch from MCP tooling ---
 hero-*.png
 hero-*.jpg
 *-screenshot-*.png
+
+# --- Asset-pack working tree (out of deploy) ---
+asset-pack/
+
+# --- Website-v2 source bundle (reference only) ---
+website-v2/
 
 # --- Node / build (in case anything is added later) ---
 node_modules/

@@ -1,6 +1,10 @@
 /**
- * Cloudflare Pages Function — gate every request under /preview/* behind a
- * single shared password set as the PREVIEW_PASSWORD environment variable.
+ * Cloudflare Pages Function — gate every request to the site behind a single
+ * shared password set as the PREVIEW_PASSWORD environment variable.
+ *
+ * Scope: site-wide. This file lives at `functions/_middleware.js` so it
+ * intercepts every route. The previous /preview/* path lives on as a 301
+ * (see _redirects), so any old bookmark still lands here.
  *
  * Auth flow:
  *   1. Compare submitted password (POST form `password`) against PREVIEW_PASSWORD.
@@ -11,6 +15,12 @@
  *
  * The cookie value is a hash, so the raw password is never written to disk or sent
  * back to the browser. Rotating PREVIEW_PASSWORD invalidates every existing cookie.
+ *
+ * The cookie name (`vatico_preview_auth`) and the env var name
+ * (`PREVIEW_PASSWORD`) are deliberately preserved from the previous /preview/*
+ * deployment so anyone already authed there does NOT get logged out by the
+ * scope move (cookie path widens from /preview to /, which is a strict
+ * superset).
  */
 
 const COOKIE_NAME = "vatico_preview_auth";
@@ -31,16 +41,16 @@ export const onRequest = async (context) => {
   const expectedToken = await sha256(password);
 
   // Explicit logout endpoint: clear cookie, send back to gate.
-  if (url.pathname === "/preview/__logout") {
-    const headers = new Headers({ Location: "/preview/" });
+  if (url.pathname === "/__logout") {
+    const headers = new Headers({ Location: "/" });
     headers.append(
       "Set-Cookie",
-      `${COOKIE_NAME}=; Path=/preview; Max-Age=0; HttpOnly; Secure; SameSite=Lax`
+      `${COOKIE_NAME}=; Path=/; Max-Age=0; HttpOnly; Secure; SameSite=Lax`
     );
     return new Response(null, { status: 303, headers });
   }
 
-  // Login attempt: any POST under /preview/* with a `password` form field.
+  // Login attempt: any POST anywhere on the site with a `password` form field.
   if (request.method === "POST") {
     const ct = request.headers.get("Content-Type") || "";
     const isForm =
@@ -54,7 +64,7 @@ export const onRequest = async (context) => {
         const headers = new Headers({ Location: url.pathname });
         headers.append(
           "Set-Cookie",
-          `${COOKIE_NAME}=${expectedToken}; Path=/preview; Max-Age=${COOKIE_MAX_AGE}; HttpOnly; Secure; SameSite=Lax`
+          `${COOKIE_NAME}=${expectedToken}; Path=/; Max-Age=${COOKIE_MAX_AGE}; HttpOnly; Secure; SameSite=Lax`
         );
         return new Response(null, { status: 303, headers });
       }
@@ -106,7 +116,7 @@ const htmlResponse = (html, status = 200) =>
   });
 
 // Inline Vatico wordmark — keeps the lock screen self-contained so it can render
-// before any /preview/* asset request would be served.
+// before any site asset request would be served.
 const VATICO_LOGO_SVG = `<svg viewBox="0 0 1310.58 350.5" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vatico"><g fill="currentColor"><path d="M633.53,287.91c11.69,23.65,41.58,18.89,62.22,8.6l11.7,41.46c-39.68,22.13-104,16.14-122.46-30.04-5.37-13.43-7.24-27.42-7.23-42.04l.02-113.8-38.21-.45.27-41.53,37.89-.17.06-74.65,51.18-9.21.13,83.95h163.13s.17,235.02.17,235.02l-51.19.15-.04-193.23-112.09-.12-.12,112.29c.88,8.41,2.31,16.03,4.58,23.77Z"/><path d="M509.19,345.04l-50.31.16-.84-33.62c-13.84,18.33-30.78,30.55-52.82,35.67-50.11,11.63-102.61-10.74-128.27-55.15-31.67-54.79-18.71-126.18,32.2-163.84,44.44-32.87,115.92-31.4,148.79,14.68l.99-32.94,50.23.15.05,234.89ZM396.23,304.23c24.92-3.64,44.17-17.48,54.36-39.59,13.03-28.25,9.37-61.15-8.92-86.19-13.04-17.86-32.07-27.04-54.11-27.93-27.53-1.12-52.5,12.11-65.66,36.81-11.56,21.69-13.24,47.78-4.82,70.98,11.91,32.85,43.99,51.06,79.15,45.92Z"/><path d="M1310.57,227.75c-.3,78.3-66.94,132.55-144.53,121.2-40.34-5.9-75-29.9-92.58-66.92-23.19-48.83-12.62-107.39,26.82-144.12,27.14-25.28,62.85-34.65,99.22-31.52,64.2,5.53,111.31,57.16,111.07,121.36ZM1248.6,269.52c15-28.9,13.65-63.44-4.08-89.73-13.46-19.97-34.08-29.13-57.63-29.31-25.78-.2-49.11,10.96-62.33,34-15.06,26.24-14.82,59.71-.11,86.04,13.13,23.51,36.16,35.23,62.47,34.91,26.02-.32,49.18-11.82,61.68-35.91Z"/><path d="M194.06,135.88c6.74-15.82,21.31-25.69,36.87-25.88,9.9-.12,18.63.1,28.25.68l-102.08,234.57-54.93-.24L0,110.33l34.16-.23c15.03,3.28,26.23,12.76,32.42,27.25l63.52,148.69,63.95-150.16Z"/><path d="M888.17,262.09c12.02,27.86,37.81,43.79,67.4,43.15,23.36.49,44.32-8.38,60.02-27.15l32.34,32.72c-28.5,30.89-69.05,43.97-110.12,38.46-42.74-5.74-79.48-30.16-97.71-69.72-22.07-47.9-11.11-105.51,27.44-141.37,48-44.66,135.99-44.32,180.27,6.05l-32.44,35.3c-14.71-19.26-35.67-29.05-59.78-29.11-28.61-.07-53.59,13.99-66.09,40.24-10.57,22.18-11.41,48.07-1.34,71.43Z"/><path d="M760.81.48c20.51-3.3,36.73,10.96,39.6,28.92,3.02,18.9-10.44,36.16-28.3,39.37-19.02,3.42-36.38-9.49-39.77-27.42-3.53-18.68,8.74-37.7,28.47-40.88Z"/></g></svg>`;
 
 const loginPage = ({ error }) => `<!DOCTYPE html>
