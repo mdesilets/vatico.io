@@ -103,6 +103,14 @@
     function buildGraph(tree) {
       nodes = []; edges = [];
       const cx = W / 2, cy = H / 2;
+      // On phones (<768 CSS px) the graph reads better as
+      // vertical → manufacturer → brand. Skipping product nodes (depth 4)
+      // drops ~500 simulation bodies and keeps the layout breathable on
+      // a small canvas. Source data is unchanged; the picker's
+      // node-type chip just won't show "product" until you're on a
+      // tablet/desktop. The small dot is what gets dropped, not the
+      // information.
+      const skipProducts = window.innerWidth < 768;
       const root = { id: 'root', label: 'Aesthetics Index', type: 'root', color: '#5a6180',
                      x: cx, y: cy, vx: 0, vy: 0, r: 7, fixed: true, depth: 0, vertical: null,
                      childCount: tree.children.length };
@@ -182,23 +190,25 @@
             nodes.push(bNode);
             edges.push({ a: parentNode, b: bNode, w: 0.12 });
 
-            (brand.children || []).forEach(prod => {
-              const pa = ba + (Math.random() - 0.5) * 0.6;
-              const pd = bd + 28 + Math.random() * 12;
-              const pNode = {
-                id: prod.id || (brand.label + '/' + prod.label),
-                label: prod.label, type: 'product',
-                color: vNode.color,
-                x: cx + Math.cos(pa) * pd, y: cy + Math.sin(pa) * pd,
-                vx: 0, vy: 0,
-                r: 1.5,
-                depth: 4, vertical: vert.label,
-                childCount: 0,
-                parentLabel: brand.label,
-              };
-              nodes.push(pNode);
-              edges.push({ a: bNode, b: pNode, w: 0.10 });
-            });
+            if (!skipProducts) {
+              (brand.children || []).forEach(prod => {
+                const pa = ba + (Math.random() - 0.5) * 0.6;
+                const pd = bd + 28 + Math.random() * 12;
+                const pNode = {
+                  id: prod.id || (brand.label + '/' + prod.label),
+                  label: prod.label, type: 'product',
+                  color: vNode.color,
+                  x: cx + Math.cos(pa) * pd, y: cy + Math.sin(pa) * pd,
+                  vx: 0, vy: 0,
+                  r: 1.5,
+                  depth: 4, vertical: vert.label,
+                  childCount: 0,
+                  parentLabel: brand.label,
+                };
+                nodes.push(pNode);
+                edges.push({ a: bNode, b: pNode, w: 0.10 });
+              });
+            }
           });
         });
       });
@@ -484,6 +494,86 @@
       dragState = null;
     });
 
+    // Touch: one-finger drag-pan, two-finger pinch-zoom anchored at the
+    // midpoint of the two fingers. The dblclick reset still works on
+    // touch (mobile browsers synthesize dblclick from a fast double-tap).
+    // touch-action: none on the canvas blocks the browser from
+    // intercepting these gestures for page scroll / native pinch-zoom.
+    canvas.style.touchAction = 'none';
+    let pinchState = null;
+    function touchPos(t) {
+      const rect = canvas.getBoundingClientRect();
+      return { x: t.clientX - rect.left, y: t.clientY - rect.top };
+    }
+    canvas.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1) {
+        const t = e.touches[0];
+        dragState = {
+          startMx: t.clientX, startMy: t.clientY,
+          startCamX: cam.x, startCamY: cam.y,
+          moved: false,
+        };
+        pinchState = null;
+      } else if (e.touches.length === 2) {
+        dragState = null;
+        const a = touchPos(e.touches[0]);
+        const b = touchPos(e.touches[1]);
+        pinchState = {
+          startDist: Math.hypot(b.x - a.x, b.y - a.y) || 1,
+          midX: (a.x + b.x) / 2,
+          midY: (a.y + b.y) / 2,
+          startCamX: cam.x, startCamY: cam.y, startCamZ: cam.z,
+        };
+      }
+    }, { passive: true });
+    canvas.addEventListener('touchmove', (e) => {
+      if (e.touches.length === 1 && dragState) {
+        e.preventDefault();
+        const t = e.touches[0];
+        const dx = t.clientX - dragState.startMx;
+        const dy = t.clientY - dragState.startMy;
+        if (Math.abs(dx) > 2 || Math.abs(dy) > 2) dragState.moved = true;
+        cam.x = dragState.startCamX + dx;
+        cam.y = dragState.startCamY + dy;
+        cam.tx = cam.x; cam.ty = cam.y;
+        dirty = true;
+      } else if (e.touches.length === 2 && pinchState) {
+        e.preventDefault();
+        const a = touchPos(e.touches[0]);
+        const b = touchPos(e.touches[1]);
+        const dist = Math.hypot(b.x - a.x, b.y - a.y) || 1;
+        const factor = dist / pinchState.startDist;
+        const newZ = clamp(pinchState.startCamZ * factor, ZOOM_MIN, ZOOM_MAX);
+        // Anchor zoom at the midpoint captured at touchstart so the
+        // gesture feels stable (matches wheel-zoom-at-cursor semantics).
+        const wx = (pinchState.midX - pinchState.startCamX) / pinchState.startCamZ;
+        const wy = (pinchState.midY - pinchState.startCamY) / pinchState.startCamZ;
+        cam.x = pinchState.midX - wx * newZ;
+        cam.y = pinchState.midY - wy * newZ;
+        cam.z = newZ;
+        cam.tx = cam.x; cam.ty = cam.y; cam.tz = cam.z;
+        dirty = true;
+      }
+    }, { passive: false });
+    function endTouch(e) {
+      if (e.touches.length === 0) {
+        dragState = null;
+        pinchState = null;
+      } else if (e.touches.length === 1) {
+        // Lifted one of two fingers; resume single-finger pan from
+        // the remaining finger's position (no jump).
+        pinchState = null;
+        const t = e.touches[0];
+        dragState = {
+          startMx: t.clientX, startMy: t.clientY,
+          startCamX: cam.x, startCamY: cam.y,
+          moved: false,
+        };
+      }
+    }
+    canvas.addEventListener('touchend', endTouch, { passive: true });
+    canvas.addEventListener('touchcancel', endTouch, { passive: true });
+
     // Wheel-zoom anchored at cursor. preventDefault so the page doesn't
     // scroll while the user is zooming the graph.
     canvas.addEventListener('wheel', (e) => {
@@ -547,16 +637,22 @@
         dirty = true;
       });
 
-      // Discoverability hint, fades after 5s.
+      // Discoverability hint, fades after 5s. Wording adapts to the
+      // input available: pinch/swipe on touch devices, scroll/drag
+      // otherwise. matchMedia('(pointer: coarse)') is the standard
+      // touch-primary signal.
       const hintEl = document.createElement('div');
       hintEl.className = 'viz-onto-hint';
-      hintEl.textContent = 'scroll to zoom \u00b7 drag to pan \u00b7 double-click to reset';
+      const isTouch = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+      hintEl.textContent = isTouch
+        ? 'pinch to zoom \u00b7 drag to pan \u00b7 double-tap to reset'
+        : 'scroll to zoom \u00b7 drag to pan \u00b7 double-click to reset';
       frame.appendChild(hintEl);
       setTimeout(() => hintEl.classList.add('fade-out'), 5000);
-      // Also fade the hint immediately on the first user interaction.
       const dismissHint = () => hintEl.classList.add('fade-out');
       canvas.addEventListener('mousedown', dismissHint, { once: true });
       canvas.addEventListener('wheel', dismissHint, { once: true });
+      canvas.addEventListener('touchstart', dismissHint, { once: true, passive: true });
     }
 
     fetch('data/ontology.json').then(r => r.json()).then(tree => {

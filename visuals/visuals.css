@@ -313,7 +313,7 @@
   gap: 1.25rem;
   margin-bottom: 1.25rem;
 }
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .sov-grid { grid-template-columns: 1fr; }
 }
 .sov-panel {
@@ -341,7 +341,7 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.7rem 1.5rem;
 }
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .sov-dma { grid-template-columns: 1fr; }
 }
 .sov-dma-cell {
@@ -544,7 +544,7 @@
 }
 .sec-signal-foot .sf-foot-arrow { color: var(--blue); letter-spacing: 0.25em; }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .sf-stage { height: 360px; }
   .sec-signal-foot { display: none; }
 }
@@ -752,7 +752,7 @@
   font-weight: 600;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .tw-table-head, .tw-row {
     grid-template-columns: 30px 1fr 70px 90px;
     gap: 0.5rem;
@@ -841,7 +841,7 @@
 
 /* Very narrow phones (<= 414px) — drop a second column anywhere
    we still ship a 2+ grid, and let the SoV bars breathe. */
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .sec-signal { padding: 56px 0 40px; }
   .sec-signal-head { gap: 24px; }
   .sov-bars, .sov-lines { height: 200px; }

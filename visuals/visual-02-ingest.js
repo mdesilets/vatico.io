@@ -27,7 +27,10 @@
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     let W = 0, H = 0;
-    const DPR = Math.min(window.devicePixelRatio || 1, 2);
+    // DPR cap: phones often report 3x. We never need more than 2x for
+    // pixel art; under 768px CSS we cap at 1.5 to halve fill cost.
+    const DPR_CAP = window.innerWidth < 768 ? 1.5 : 2;
+    const DPR = Math.min(window.devicePixelRatio || 1, DPR_CAP);
     let particles = [];
     let raf = null;
 
@@ -85,7 +88,12 @@
     }
 
     function build() {
-      const N = Math.min(1400, Math.max(600, Math.round((W * H) / 1100)));
+      // Particle budget scales with stage area. On phones (<480 CSS px)
+      // we halve the count: the small stage doesn't read as denser, and
+      // the per-frame cost drops in lockstep.
+      const mobileFactor = window.innerWidth < 480 ? 0.5 : 1;
+      const Nbase = Math.min(1400, Math.max(600, Math.round((W * H) / 1100)));
+      const N = Math.max(200, Math.round(Nbase * mobileFactor));
       particles = new Array(N);
       for (let i = 0; i < N; i++) {
         particles[i] = {};

@@ -46,34 +46,34 @@ todos:
     status: completed
   - id: phaseC-1-canonical-og-twitter
     content: Phase C.1 — Add canonical, og:* (title, description, image, url, type, site_name), twitter:card=summary_large_image + matching tags.
-    status: in_progress
+    status: completed
   - id: phaseC-2-og-image
     content: Phase C.2 — Generate 1200x630 og:image PNG (cover artwork, target <80KB).
-    status: pending
+    status: completed
   - id: phaseC-3-favicons-manifest
     content: Phase C.3 — Add apple-touch-icon (180x180), theme-color meta, manifest.webmanifest (icons 192/512), wire from <head>.
-    status: pending
+    status: completed
   - id: phaseC-4-jsonld
     content: Phase C.4 — Add JSON-LD Organization block (name, url, logo, sameAs[]).
-    status: pending
+    status: completed
   - id: phaseC-5-sitemap
     content: "Phase C.5 — Add sitemap.xml (single URL: https://vatico.io/)."
-    status: pending
+    status: completed
   - id: phaseD-1-v02-density
     content: "Phase D.1 — V02 ingest mobile: cap DPR to 1.5 below 768px, halve particle count below 480px."
-    status: pending
+    status: completed
   - id: phaseD-2-v03-mobile
     content: "Phase D.2 — V03 ontology mobile: drop depth-4 product nodes below 768px, wire pinch-zoom + one-finger pan to existing camera infra."
-    status: pending
+    status: completed
   - id: phaseD-3-v07-truncate
     content: "Phase D.3 — V07 whitespace: ensure JS-rendered list matches the CSS top-10 truncation rule below 768px."
-    status: pending
+    status: completed
   - id: phaseD-4-breakpoint-normalize
     content: "Phase D.4 — Collapse breakpoints (700/760/768/800/900) to 3-stop set: 480 / 768 / 1024."
-    status: pending
+    status: completed
   - id: phaseD-5-browserstack
     content: "Phase D.5 — BrowserStack MCP real-device pass: iPhone 14 Pro, iPhone SE, Pixel 7, iPad Air, MacBook Pro 14. Capture screenshots, log issues, fix in same PR."
-    status: pending
+    status: in_progress
   - id: phaseD-6-lighthouse
     content: "Phase D.6 — Chrome DevTools MCP Lighthouse smoke against deployed Cloudflare preview URL. Targets: Perf >=90, A11y >=95, SEO >=90 (gate-page measurement only while gated)."
     status: pending

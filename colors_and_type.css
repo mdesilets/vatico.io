@@ -374,11 +374,11 @@ code, .code, .t-code {
 .g4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
 .spot-grid   { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; }
 .gallery-grid { columns: 3; column-gap: 16px; }
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .g3, .g4, .g2 { grid-template-columns: 1fr 1fr; }
   .gallery-grid { columns: 2; }
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .g2, .g3, .g4 { grid-template-columns: 1fr; }
   .gallery-grid { columns: 1; }
 }
