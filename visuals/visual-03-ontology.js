@@ -828,12 +828,17 @@
   // Composition timeline (~54s):
   //   0-3s     wide hold (whole world visible)
   //   3-11s    Injectable chain  (Juvederm › Vollure XC)
-  //   11-19s   Laser chain       (AviClear)
-  //   19-27s   Body Contouring   (CoolSculpting Elite)
-  //   27-35s   Skin Treatment    (HydraFacial Syndeo)
-  //   35-43s   Wellness          (Ozempic Semaglutide)
-  //   43-51s   Cosmetic          (Natrelle Inspira)
+  //   11-19s   Laser chain       (Sciton › Halo › TRIBRID)
+  //   19-27s   Body Contouring   (Cutera › truSculpt › fleX)
+  //   27-35s   Skin Treatment    (Alma › Opus › Plasma)
+  //   35-43s   Wellness          (Ozempic › Semaglutide)
+  //   43-51s   Cosmetic          (Natrelle › Inspira)
   //   51-54s   tail back to wide → seamless wrap
+  //
+  // Chains are picked so brand and product labels are visibly
+  // distinct (e.g. "Halo › Halo TRIBRID", not "Halo › Halo") so
+  // each activation reads as a real progression to a specific
+  // product and not a redundant repeat of the brand name.
   //
   // Per 8s chain segment:
   //   0.0-1.5s   camera lerps toward vertical's node-frame
@@ -890,13 +895,18 @@
     // by walking parentMap up from the resolved product. If a named
     // product is missing, we fall back to rank-0 product in the
     // vertical so the reel never has a black gap.
+    //
+    // Picked so the brand label and product label are visibly
+    // different in every chain — e.g. "Halo" → "Halo TRIBRID", not
+    // "Halo" → "Halo" — so each activation reveals new information
+    // instead of repeating the brand name twice.
     const CHAIN_DEFS = [
-      { vertical: 'Injectable',      brand: 'Juvederm',            product: 'Juvederm Vollure XC' },
-      { vertical: 'Laser',           brand: 'AviClear',            product: 'AviClear' },
-      { vertical: 'Body Contouring', brand: 'CoolSculpting Elite', product: 'CoolSculpting Elite' },
-      { vertical: 'Skin Treatment',  brand: 'HydraFacial Syndeo',  product: 'HydraFacial Syndeo' },
-      { vertical: 'Wellness',        brand: 'Ozempic',             product: 'Ozempic (Semaglutide)' },
-      { vertical: 'Cosmetic',        brand: 'Natrelle',            product: 'Natrelle Inspira Silicone Implants' },
+      { vertical: 'Injectable',      brand: 'Juvederm',   product: 'Juvederm Vollure XC' },
+      { vertical: 'Laser',           brand: 'Halo',       product: 'Halo TRIBRID' },
+      { vertical: 'Body Contouring', brand: 'truSculpt',  product: 'truSculpt fleX' },
+      { vertical: 'Skin Treatment',  brand: 'Opus',       product: 'Opus Plasma' },
+      { vertical: 'Wellness',        brand: 'Ozempic',    product: 'Ozempic (Semaglutide)' },
+      { vertical: 'Cosmetic',        brand: 'Natrelle',   product: 'Natrelle Inspira Silicone Implants' },
     ];
     let chains = [];                              // resolved at boot
     let wideFrame = { x: 0, y: 0, z: 1 };         // wide camera pose
