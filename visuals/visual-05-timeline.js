@@ -60,6 +60,21 @@
     }
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
-  else init();
+  // Lazy-init: only construct the timeline when the figure is within
+  // 200px of the viewport. Saves work on first paint and keeps the
+  // V05 fetch out of the critical-path waterfall.
+  function lazyInit() {
+    const root = document.getElementById('timeline-root');
+    if (!root) return;
+    if (typeof IntersectionObserver === 'undefined') { init(); return; }
+    const io = new IntersectionObserver((entries, obs) => {
+      for (const e of entries) {
+        if (e.isIntersecting) { obs.disconnect(); init(); break; }
+      }
+    }, { rootMargin: '200px 0px' });
+    io.observe(root);
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', lazyInit);
+  else lazyInit();
 })();

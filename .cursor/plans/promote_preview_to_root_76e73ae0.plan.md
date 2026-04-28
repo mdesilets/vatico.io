@@ -13,28 +13,28 @@ todos:
     status: completed
   - id: phaseA-4-relocate-middleware
     content: Phase A.4 — Move functions/preview/_middleware.js to functions/_middleware.js. Update path scope (/preview/__logout → /__logout), cookie path (Path=/preview → Path=/). Cookie name stays the same so existing auth survives.
-    status: in_progress
+    status: completed
   - id: phaseA-5-redirects
     content: "Phase A.5 — Create _redirects at root: /preview/* /:splat 301 so old bookmarks land on the right page."
-    status: pending
+    status: completed
   - id: phaseA-6-update-headers
     content: "Phase A.6 — Update _headers: rewrite /preview/data/*, /preview/visuals/*, /preview/uploads/* paths to root-relative."
-    status: pending
+    status: completed
   - id: phaseA-7-update-robotstxt
     content: "Phase A.7 — Update robots.txt: drop /preview/ Disallow rules (gate handles it). Keep AI-crawler block list."
-    status: pending
+    status: completed
   - id: phaseA-8-deploy-and-smoke
     content: "Phase A.8 — Push branch, get Cloudflare Pages preview URL, smoke-test: gate appears at /, password unlocks, /preview/anything 301s to /anything, viz files load from new paths."
-    status: pending
+    status: completed
   - id: phaseB-1-drop-dead-weight
     content: Phase B.1 — Per-bucket sign-off, then delete uploads/ (3.1 MB) and screenshots/ (296 KB). Both verified zero refs.
-    status: pending
+    status: completed
   - id: phaseB-2-font-diet
     content: Phase B.2 — Drop 9 static Inter weight @font-face blocks, drop entire Helvetica Neue LT Std + Arial blocks (underlying files don't exist). Keep only InterVariable + InterVariable-Italic.
-    status: pending
+    status: completed
   - id: phaseB-3-preload-font
     content: Phase B.3 — Add <link rel=preload as=font> for InterVariable.ttf in <head>.
-    status: pending
+    status: in_progress
   - id: phaseB-4-defer-visuals-css
     content: Phase B.4 — Defer visuals.css with media=print onload swap pattern + noscript fallback.
     status: pending

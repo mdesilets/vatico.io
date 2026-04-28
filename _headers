@@ -34,14 +34,39 @@
   Cross-Origin-Resource-Policy: same-origin
 
 # ============================================================
-# Reviewer uploads (designer reference material). Targeted for
-# removal once Phase B.1 ships; rule kept until then so the
-# revert path stays clean.
+# Static assets that ship with a cache buster (the ?v=N query
+# string already varies on every meaningful change, so we can
+# safely tell the browser to keep them forever).
 # ============================================================
-/uploads/*
-  X-Robots-Tag: noindex, nofollow, noarchive
-  Cache-Control: private, no-store
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  Cross-Origin-Resource-Policy: same-origin
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/visuals/*.js
+  Cache-Control: public, max-age=31536000, immutable
+  X-Robots-Tag: noindex, nofollow
   X-Content-Type-Options: nosniff
+  Cross-Origin-Resource-Policy: same-origin
+
+/visuals/*.css
+  Cache-Control: public, max-age=31536000, immutable
+  X-Robots-Tag: noindex, nofollow
+  X-Content-Type-Options: nosniff
+
+/site.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/site.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/colors_and_type.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/hero-field.js
+  Cache-Control: public, max-age=31536000, immutable
 
 # ============================================================
 # Site-wide defaults.

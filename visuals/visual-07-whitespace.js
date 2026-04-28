@@ -96,6 +96,20 @@
     }
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
-  else init();
+  // Lazy-init: only construct the whitespace leaderboard when the
+  // figure is within 200px of the viewport. V07 is in §05.
+  function lazyInit() {
+    const root = document.getElementById('whitespace-root');
+    if (!root) return;
+    if (typeof IntersectionObserver === 'undefined') { init(); return; }
+    const io = new IntersectionObserver((entries, obs) => {
+      for (const e of entries) {
+        if (e.isIntersecting) { obs.disconnect(); init(); break; }
+      }
+    }, { rootMargin: '200px 0px' });
+    io.observe(root);
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', lazyInit);
+  else lazyInit();
 })();
