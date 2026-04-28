@@ -73,10 +73,10 @@ todos:
     status: completed
   - id: phaseD-5-browserstack
     content: "Phase D.5 — BrowserStack MCP real-device pass: iPhone 14 Pro, iPhone SE, Pixel 7, iPad Air, MacBook Pro 14. Capture screenshots, log issues, fix in same PR."
-    status: in_progress
+    status: cancelled
   - id: phaseD-6-lighthouse
     content: "Phase D.6 — Chrome DevTools MCP Lighthouse smoke against deployed Cloudflare preview URL. Targets: Perf >=90, A11y >=95, SEO >=90 (gate-page measurement only while gated)."
-    status: pending
+    status: completed
 isProject: false
 ---
 
