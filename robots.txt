@@ -99,3 +99,6 @@ Disallow: /visuals/
 Disallow: /uploads/
 Disallow: /functions/
 Allow: /
+
+# ---------- Sitemap ----------
+Sitemap: https://vatico.io/sitemap.xml

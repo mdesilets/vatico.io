@@ -6,6 +6,37 @@
 <title>Vatico — The Aesthetics Index</title>
 <meta name="description" content="The Aesthetics Index. A continuous, structured read on the state of the medical aesthetics market. From category anecdote to category strategy, in days not quarters.">
 
+<!-- Canonical + indexability. While the site is gated, the gate page
+     itself is noindex/nofollow (set by the middleware HTTP headers).
+     This canonical exists so any link share or future un-gated state
+     resolves to the same URL. -->
+<link rel="canonical" href="https://vatico.io/">
+
+<!-- OpenGraph (Facebook, LinkedIn, Slack, Discord, iMessage previews). -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vatico">
+<meta property="og:title" content="Vatico — The Aesthetics Index">
+<meta property="og:description" content="The market intelligence layer for medical aesthetics. From category anecdote to category strategy, in days not quarters.">
+<meta property="og:url" content="https://vatico.io/">
+<meta property="og:image" content="https://vatico.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vatico — The Aesthetics Index">
+
+<!-- Twitter / X card. summary_large_image renders the og:image at full
+     width below the headline. -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vatico — The Aesthetics Index">
+<meta name="twitter:description" content="The market intelligence layer for medical aesthetics. From category anecdote to category strategy, in days not quarters.">
+<meta name="twitter:image" content="https://vatico.io/assets/og-image.png">
+<meta name="twitter:image:alt" content="Vatico — The Aesthetics Index">
+
+<!-- Mobile/PWA chrome -->
+<meta name="theme-color" content="#08090d">
+<meta name="color-scheme" content="dark">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+
 <!-- Preload the variable Inter so the first paint doesn't FOUT/FOIT.
      `crossorigin` is required for fonts even on same-origin so the
      preloaded resource is reused by the @font-face fetcher. -->
@@ -21,7 +52,23 @@
 <link rel="stylesheet" href="visuals/visuals.css?v=7" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="visuals/visuals.css?v=7"></noscript>
 
-<link rel="icon" href="assets/vatico-logo-white.svg">
+<link rel="icon" href="/assets/vatico-logo-white.svg">
+
+<!-- JSON-LD: Organization. Keeps the entity-graph entry consistent
+     across Google/Bing/etc. once the gate comes off. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Vatico",
+  "legalName": "Vatico, LLC",
+  "url": "https://vatico.io/",
+  "logo": "https://vatico.io/assets/vatico-logo-white.svg",
+  "description": "The market intelligence layer for medical aesthetics. A continuous, structured read on category movement \u2014 brand share, manufacturer activity, regional whitespace \u2014 published in days, not quarters.",
+  "email": "hello@vatico.io",
+  "sameAs": []
+}
+</script>
 </head>
 <body>
 

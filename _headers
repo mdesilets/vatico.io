@@ -69,6 +69,14 @@
   Cache-Control: public, max-age=31536000, immutable
 
 # ============================================================
+# Web manifest needs the explicit MIME type so iOS / PWA installers
+# accept it. The `.webmanifest` extension isn't always auto-mapped.
+# ============================================================
+/manifest.webmanifest
+  Content-Type: application/manifest+json; charset=utf-8
+  Cache-Control: public, max-age=86400
+
+# ============================================================
 # Site-wide defaults.
 # Permissions-Policy denies hardware APIs we don't use.
 # Strict-Transport-Security pins HTTPS for two years incl. subdomains.

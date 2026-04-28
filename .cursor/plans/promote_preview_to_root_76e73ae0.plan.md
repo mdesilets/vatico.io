@@ -34,19 +34,19 @@ todos:
     status: completed
   - id: phaseB-3-preload-font
     content: Phase B.3 — Add <link rel=preload as=font> for InterVariable.ttf in <head>.
-    status: in_progress
+    status: completed
   - id: phaseB-4-defer-visuals-css
     content: Phase B.4 — Defer visuals.css with media=print onload swap pattern + noscript fallback.
-    status: pending
+    status: completed
   - id: phaseB-5-cache-headers
     content: Phase B.5 — Bump Cache-Control to public, max-age=31536000, immutable on /fonts/*, /assets/*, /visuals/*.{js,css} (versioned via ?v=N).
-    status: pending
+    status: completed
   - id: phaseB-6-lazy-init-viz
     content: Phase B.6 — Convert V05/V06/V07 init from DOMContentLoaded to IntersectionObserver-on-figure (V02/V03 already do this or are above-the-fold).
-    status: pending
+    status: completed
   - id: phaseC-1-canonical-og-twitter
     content: Phase C.1 — Add canonical, og:* (title, description, image, url, type, site_name), twitter:card=summary_large_image + matching tags.
-    status: pending
+    status: in_progress
   - id: phaseC-2-og-image
     content: Phase C.2 — Generate 1200x630 og:image PNG (cover artwork, target <80KB).
     status: pending
