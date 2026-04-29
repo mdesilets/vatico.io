@@ -1,0 +1,265 @@
+/* ============================================================
+   whitespace-reel.css — MapLibre-based pitch tool styling
+
+   The MapLibre canvas takes the whole stage. Vatico chrome
+   (watermark, info card, footer) floats on top in fixed-position
+   layers with safe-area padding. We hide MapLibre's default
+   attribution bar (we keep credit in the footer line), the
+   logo, and the navigation controls (passive flythrough only).
+   ============================================================ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  /* Production Consumer Finder background palette
+     (consumer-finder-client.tsx lines 545-548). */
+  background:
+    radial-gradient(circle at 18% 10%, rgba(96, 165, 250, 0.16), transparent 26%),
+    radial-gradient(circle at 80% 14%, rgba(167, 139, 250, 0.12), transparent 24%),
+    linear-gradient(180deg, #02050a 0%, #060a12 44%, #05070b 100%);
+  color: var(--text, #e4e8f4);
+  font-family: var(--font-sans, "Inter", system-ui, sans-serif);
+  overflow: hidden;
+  height: 100%;
+  min-height: 100dvh;
+}
+
+.reel-stage {
+  position: fixed;
+  inset: 0;
+  background: #05070b;
+}
+
+/* Cinematic vignette over the map — production
+   "map-shell::before" treatment. Drops viewer attention into the
+   center of frame, dims the periphery so the card + watermark
+   read against a darker background. */
+.reel-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  background:
+    linear-gradient(180deg, rgba(2, 6, 23, 0.10), rgba(2, 6, 23, 0.36)),
+    radial-gradient(circle at center, transparent 32%, rgba(2, 6, 23, 0.36) 100%);
+}
+
+#whitespace-map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #05070b;
+  /* Production uses filter: saturate(0.8) brightness(0.82) on top
+     of a deck.gl multi-layer composite, where the filter only
+     affects the basemap (deck.gl draws above the filtered DOM). We
+     don't have that separation here — applying the same filter
+     desaturates the dots too and reads as "faded/dull". A very
+     light brightness pull keeps the cinematic mood without
+     bleaching the dots. */
+  filter: brightness(0.92);
+}
+
+/* ---------------------------------------------------------------
+   MapLibre chrome — hide everything except the map itself.
+   We provide our own attribution in the footer (CARTO + OSM).
+   --------------------------------------------------------------- */
+.maplibregl-control-container {
+  display: none !important;
+}
+.maplibregl-canvas:focus { outline: none; }
+
+/* ---- Top-right watermark (matches reel.html) ---- */
+.reel-mark {
+  position: fixed;
+  top: max(1.25rem, env(safe-area-inset-top));
+  right: max(1.5rem, env(safe-area-inset-right));
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted, #7179a8);
+  z-index: 20;
+  pointer-events: none;
+  white-space: nowrap;
+  text-shadow: 0 0 18px rgba(8, 9, 13, 0.7);
+}
+.reel-mark .reel-mark-tag {
+  display: block;
+  font-size: 0.55rem;
+  letter-spacing: 0.22em;
+  color: #5a6180;
+  margin-top: 2px;
+}
+
+/* ---- Info card (bottom-left)
+       Panel chrome mirrors production (consumer-finder-client.tsx
+       --panel-bg, blur(18px), 0 28px 60px shadow). ---- */
+.reel-card {
+  position: fixed;
+  bottom: max(1.5rem, env(safe-area-inset-bottom, 0) + 0.75rem);
+  left:   max(1.5rem, env(safe-area-inset-left, 0));
+  background: rgba(10, 14, 22, 0.72);
+  backdrop-filter: blur(18px) saturate(1.05);
+  -webkit-backdrop-filter: blur(18px) saturate(1.05);
+  border: 1px solid rgba(148, 163, 184, 0.10);
+  border-radius: var(--r-xl, 14px);
+  padding: 14px 18px;
+  min-width: 240px;
+  max-width: min(28rem, calc(100vw - 3rem));
+  z-index: 15;
+  opacity: 0;
+  transition: opacity 160ms ease-out;
+  pointer-events: none;
+  font-family: var(--font-sans, "Inter", system-ui, sans-serif);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.22);
+}
+
+.reel-card-eyebrow {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--muted, #7179a8);
+  line-height: 1;
+}
+
+.reel-card-number {
+  margin-top: 8px;
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--text, #e4e8f4);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.reel-card-meta {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--muted-2, #8892b0);
+  letter-spacing: -0.005em;
+}
+
+.reel-card-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.reel-card-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(228, 232, 244, 0.35);
+  transition: color 200ms ease, opacity 200ms ease;
+}
+.reel-card-legend-item i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.4;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+.reel-card-legend-item.is-active {
+  color: var(--text, #e4e8f4);
+}
+.reel-card-legend-item.is-active i {
+  opacity: 1;
+  transform: scale(1.4);
+}
+
+/* ---- Bottom-right methodology footer ---- */
+.reel-footer {
+  position: fixed;
+  bottom: max(1.5rem, env(safe-area-inset-bottom, 0) + 0.75rem);
+  right:  max(1.5rem, env(safe-area-inset-right, 0));
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: #5a6180;
+  z-index: 14;
+  text-align: right;
+  pointer-events: none;
+  max-width: 18rem;
+  text-shadow: 0 0 18px rgba(8, 9, 13, 0.7);
+}
+.reel-footer .reel-footer-line {
+  display: block;
+  line-height: 1.5;
+}
+.reel-footer .reel-footer-line + .reel-footer-line {
+  margin-top: 2px;
+}
+.reel-footer .reel-attrib {
+  margin-top: 6px;
+  font-size: 0.5rem;
+  color: #444a64;
+  letter-spacing: 0.04em;
+}
+
+/* ---- Loading veil ---- */
+.reel-loading {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg, #08090d);
+  color: var(--muted, #7179a8);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  z-index: 30;
+  pointer-events: none;
+  transition: opacity 320ms ease-out;
+}
+.reel-loading.is-hidden { opacity: 0; }
+
+/* ---- Responsive tightening ---- */
+@media (max-width: 600px) {
+  .reel-card {
+    padding: 12px 14px;
+    min-width: 200px;
+    max-width: calc(100vw - 1.75rem);
+    bottom: max(0.75rem, env(safe-area-inset-bottom, 0) + 0.4rem);
+    left:   max(0.75rem, env(safe-area-inset-left, 0));
+  }
+  .reel-card-number { font-size: 2.2rem; }
+  .reel-card-meta   { font-size: 0.75rem; }
+  .reel-card-legend { gap: 4px 8px; margin-top: 10px; padding-top: 8px; }
+  .reel-card-legend-item { font-size: 0.55rem; }
+  .reel-mark { font-size: 0.58rem; right: max(0.85rem, env(safe-area-inset-right)); top: max(0.75rem, env(safe-area-inset-top)); }
+  .reel-mark .reel-mark-tag { display: none; }
+  .reel-footer {
+    bottom: max(0.6rem, env(safe-area-inset-bottom, 0) + 0.2rem);
+    right:  max(0.85rem, env(safe-area-inset-right, 0));
+    font-size: 0.55rem;
+    max-width: 12rem;
+  }
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+  .reel-footer {
+    bottom: auto;
+    top: max(2.5rem, env(safe-area-inset-top, 0) + 2rem);
+    right: max(0.85rem, env(safe-area-inset-right));
+    left: auto;
+    text-align: right;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reel-mark { color: var(--muted-2, #8892b0); }
+  .reel-card { transition: none; }
+}

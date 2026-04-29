@@ -1,0 +1,101 @@
+{
+  "extracted_utc": "2026-04-29T22:36:39.326609+00:00",
+  "dot_count": 52343,
+  "dot_count_mobile": 20000,
+  "locations_file": "data/locations.anon.json",
+  "locations_file_mobile": "data/locations.anon.mobile.json",
+  "verticals": [
+    {
+      "id": "injectable",
+      "label": "Injectable",
+      "color": "#3B82F6",
+      "counts": {
+        "country": 16955,
+        "nyc": 1596,
+        "manhattan": 276
+      }
+    },
+    {
+      "id": "laser",
+      "label": "Laser",
+      "color": "#EC4899",
+      "counts": {
+        "country": 3658,
+        "nyc": 514,
+        "manhattan": 110
+      }
+    },
+    {
+      "id": "body_contouring",
+      "label": "Body Contouring",
+      "color": "#F97316",
+      "counts": {
+        "country": 2420,
+        "nyc": 274,
+        "manhattan": 74
+      }
+    },
+    {
+      "id": "skin_treatment",
+      "label": "Skin Treatment",
+      "color": "#10B981",
+      "counts": {
+        "country": 7532,
+        "nyc": 576,
+        "manhattan": 69
+      }
+    },
+    {
+      "id": "wellness",
+      "label": "Wellness",
+      "color": "#A855F7",
+      "counts": {
+        "country": 2021,
+        "nyc": 131,
+        "manhattan": 21
+      }
+    },
+    {
+      "id": "cosmetic",
+      "label": "Cosmetic",
+      "color": "#94A3B8",
+      "counts": {
+        "country": 19757,
+        "nyc": 1775,
+        "manhattan": 307
+      }
+    }
+  ],
+  "zooms": [
+    {
+      "id": "country",
+      "name": "Nationwide",
+      "bbox_lnglat": [
+        -130.0,
+        17.0,
+        -65.0,
+        50.0
+      ]
+    },
+    {
+      "id": "nyc",
+      "name": "New York Metro",
+      "bbox_lnglat": [
+        -75.35768605670566,
+        39.501970229522954,
+        -71.85564660216022,
+        42.177518923792384
+      ]
+    },
+    {
+      "id": "manhattan",
+      "name": "Manhattan",
+      "bbox_lnglat": [
+        -74.02,
+        40.7,
+        -73.93,
+        40.83
+      ]
+    }
+  ]
+}

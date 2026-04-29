@@ -1,0 +1,17 @@
+/* ============================================================
+   reel-engine.css — minimal default styling for ReelEngine
+   consumers. Pulses are drawn in canvas (not CSS); the only
+   thing the engine touches in the DOM is the optional info-card
+   slot's opacity, so this file just establishes a sensible
+   transition default. Consumers extend with their own classes.
+   ============================================================ */
+
+/* The engine writes opacity inline every tick during a fade, so
+   the CSS transition is bypassed mid-fade. The transition still
+   applies for an idle->visible state change (e.g., reduced-motion
+   snap), and for any consumer-driven hover/focus state. */
+.reel-card {
+  opacity: 0;
+  transition: opacity 160ms ease-out;
+  pointer-events: none;
+}

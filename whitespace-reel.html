@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vatico — 52,000 Aesthetic Practices, Six Verticals, Down to the Street</title>
+
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#08090d">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="A flythrough of the Vatico aesthetic-medicine dataset: 52,000 practices, six verticals, from the country down to a single Manhattan block.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vatico — 52,000 Aesthetic Practices, Six Verticals, Down to the Street">
+<meta property="og:description" content="From all six verticals nationwide to a single Manhattan block — the Vatico aesthetic-medicine map at every zoom.">
+<meta property="og:image" content="og/whitespace-reel.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vatico — 52,000 Aesthetic Practices, Six Verticals, Down to the Street">
+<meta name="twitter:description" content="From all six verticals nationwide to a single Manhattan block — the Vatico aesthetic-medicine map at every zoom.">
+<meta name="twitter:image" content="og/whitespace-reel.png">
+
+<link rel="preload" as="font" href="fonts/InterVariable.ttf" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="colors_and_type.css?v=2">
+
+<!-- MapLibre GL JS — vector tile renderer. Pinned to a stable 4.x for
+     reproducibility; bumping is safe but verify the API hasn't shifted. -->
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+
+<link rel="stylesheet" href="visuals/whitespace-reel.css?v=5">
+
+<link rel="preload" as="fetch" type="application/json" href="data/whitespace-reel.json?v=4" crossorigin>
+</head>
+<body>
+
+<div class="reel-stage">
+  <div id="whitespace-map" role="img"
+       aria-label="Vatico aesthetic-medicine dataset reel — six verticals from nationwide to a single Manhattan block"></div>
+
+  <div id="whitespace-card" class="reel-card" aria-hidden="true"></div>
+
+  <div class="reel-mark">
+    Vatico
+    <span class="reel-mark-tag">The Aesthetics Index</span>
+  </div>
+
+  <div class="reel-footer">
+    <span class="reel-footer-line">52,370 indexed practices</span>
+    <span class="reel-footer-line">Six verticals · nationwide → Manhattan</span>
+    <span class="reel-attrib">Basemap © CARTO · © OpenStreetMap contributors</span>
+  </div>
+
+  <div class="reel-loading" id="whitespace-loading">Loading the map…</div>
+
+  <noscript>
+    <div style="position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;text-align:center;padding:2rem;color:#e4e8f4;background:#08090d">
+      <h1 style="margin:0;font:800 1.6rem/1.1 'Inter',sans-serif;letter-spacing:-0.02em">Vatico — Aesthetic Practices, Six Verticals</h1>
+      <p style="max-width:36rem;color:#8892b0;font:400 0.95rem/1.6 'Inter',sans-serif">
+        This pitch tool is an interactive flythrough; please enable JavaScript
+        to view it. A static rendering is available below:
+      </p>
+      <div style="max-width:90vw">
+        <object data="og/whitespace-reel.svg" type="image/svg+xml" style="display:block;width:min(900px, 100%);height:auto"></object>
+      </div>
+      <p style="color:#7179a8;font:0.8rem 'Inter',sans-serif">
+        Or download the share-card image:
+        <a href="og/whitespace-reel.png" style="color:#3B82F6;margin-left:0.5rem">whitespace-reel.png</a>
+      </p>
+    </div>
+  </noscript>
+</div>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="visuals/whitespace-reel.js?v=7"></script>
+
+</body>
+</html>
