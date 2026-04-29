@@ -1,11 +1,5 @@
 {
-  "_license": {
-    "owner": "Vatico, LLC",
-    "copyright": "© 2026 Vatico, LLC. All rights reserved.",
-    "notice": "Proprietary research data. Not for redistribution, commercial use, scraping, or AI/ML training. Licensing inquiries: hello@vatico.io",
-    "url": "https://vatico.io"
-  },
-  "extracted_utc": "2026-04-27T22:34:48.835561+00:00",
+  "extracted_utc": "2026-04-29T10:58:45.599095+00:00",
   "source_tables": [
     "public.locations",
     "public.trends_dma",
@@ -14,9 +8,30 @@
   "geo_source": "dashboard/public/nielsen-dma.geojson (Nielsen DMA boundary set)",
   "vertical_scope": "neurotoxin (Injectable subset)",
   "v1_scope_note": "Consumer-side demand signal currently exists only for the neurotoxin vertical (Google Trends across Botox/Daxxify/Belotero). Other verticals render with supply-only encoding until consumer signal coverage expands.",
-  "supply_definition": "count of locations with dma_code where any brand_profile.category == 'Injectable'",
-  "demand_definition": "Google Trends DMA index averaged across available neurotoxin keywords; each keyword is min-max normalized by its own observed max so absolute brand popularity does not dominate the cross-DMA score.",
-  "white_space_definition": "z-score(demand) - z-score(log10(1+supply)); bounded to [-3,+3]. Positive = under-served (demand outruns supply). Negative = saturated.",
+  "audit_doc": "docs/dma-whitespace-audit-2026-04.md",
+  "field_definitions": {
+    "total_locations_in_dma": "Count of rows in public.locations with dma_code = X. Includes locations regardless of enrichment status.",
+    "enriched_locations_in_dma": "Subset of total_locations_in_dma whose brand_profiles array is non-empty.",
+    "injectable_supply_count": "Subset of total_locations_in_dma where any brand_profiles[].category == 'Injectable'. This is the canonical 'supply' input to the white_space_score.",
+    "neurotox_supply_count": "Subset of total_locations_in_dma where any brand_profile matches one of the six neurotoxin brand IDs (botox, dysport, xeomin, jeuveau, daxxify, letybo) via brand_id / brand_name / brand. Mirrors the inclusion rule in dashboard/scripts/export-vatico-market-map.mjs::extractNeurotoxProfiles().",
+    "practice_supply_count": "Backward-compat alias of injectable_supply_count. Kept so existing downstream patches and renderers that read this field continue to work.",
+    "consumer_demand_proxy": "Google Trends DMA index averaged across available neurotoxin keywords; each keyword is min-max normalized by its own observed max.",
+    "supply_z": "z-score of log10(1 + injectable_supply_count) computed over the *eligible* DMA universe only (coverage_band in {high, medium}). Null for ineligible DMAs.",
+    "demand_z": "z-score of consumer_demand_proxy over the same eligible universe. Null for ineligible DMAs.",
+    "white_space_score": "demand_z - supply_z, bounded to [-3, +3]. Positive = under-served. Null for DMAs where coverage_band is 'low' or 'insufficient' \u2014 the underlying counts are too sparse to support a defensible score.",
+    "data_completeness_score": "enriched_locations_in_dma / total_locations_in_dma. 0..1. Render as a confidence badge in the front-end.",
+    "coverage_band": "One of {high (>=50 total locations), medium (>=15), low (>=5), insufficient (<5)}. See docs/dma-whitespace-audit-2026-04.md \u00a72.",
+    "low_confidence": "True iff coverage_band == 'low'. Renderer should dim or annotate these rows even though they receive a numeric supply count.",
+    "whitespace_eligible": "True iff coverage_band in {high, medium}. Renderers MUST restrict the whitespace leaderboard to eligible DMAs.",
+    "has_supply_data": "True iff injectable_supply_count > 0. Kept for backward compat; DO NOT use this as the sole filter \u2014 many high-coverage DMAs with real but small supply will pass, while insufficient-coverage DMAs with 0 will fail (correct outcome). Use whitespace_eligible for leaderboard inclusion.",
+    "has_demand_data": "True iff a Trends DMA signal was matched for this DMA."
+  },
+  "coverage_bands": {
+    "high": "total_locations_in_dma >= 50",
+    "medium": "15 <= total_locations_in_dma < 50",
+    "low": "5 <= total_locations_in_dma < 15",
+    "insufficient": "total_locations_in_dma < 5"
+  },
   "trend_keywords_used": [
     "Botox",
     "Dysport",
@@ -31,111 +46,186 @@
     "Botox": 100,
     "Daxxify": 41
   },
-  "rows": 209,
+  "neurotox_brand_ids_used": [
+    "botox",
+    "daxxify",
+    "dysport",
+    "jeuveau",
+    "letybo",
+    "xeomin"
+  ],
+  "rows": 210,
+  "rows_by_coverage_band": {
+    "high": 141,
+    "medium": 49,
+    "low": 15,
+    "insufficient": 5
+  },
+  "rows_eligible_for_leaderboard": 190,
   "with_demand_data": 208,
-  "with_supply_data": 163,
+  "with_supply_data": 208,
   "top_10_whitespace": [
     {
-      "dma_code": "549",
-      "dma_name": "Watertown, NY",
-      "white_space_score": 3.0
-    },
-    {
-      "dma_code": "552",
-      "dma_name": "Presque Isle, ME",
-      "white_space_score": 3.0
+      "dma_code": "638",
+      "dma_name": "St. Joseph, MO",
+      "white_space_score": 3.0,
+      "injectable_supply_count": 8,
+      "total_locations_in_dma": 18,
+      "coverage_band": "medium"
     },
     {
       "dma_code": "661",
       "dma_name": "San Angelo, TX",
-      "white_space_score": 3.0
-    },
-    {
-      "dma_code": "605",
-      "dma_name": "Topeka, KS",
-      "white_space_score": 2.961
-    },
-    {
-      "dma_code": "583",
-      "dma_name": "Alpena, MI",
-      "white_space_score": 2.936
+      "white_space_score": 3.0,
+      "injectable_supply_count": 11,
+      "total_locations_in_dma": 29,
+      "coverage_band": "medium"
     },
     {
       "dma_code": "705",
       "dma_name": "Wausau-Rhinelander, WI",
-      "white_space_score": 2.898
+      "white_space_score": 2.65,
+      "injectable_supply_count": 13,
+      "total_locations_in_dma": 37,
+      "coverage_band": "medium"
     },
     {
-      "dma_code": "536",
-      "dma_name": "Youngstown, OH",
-      "white_space_score": 2.804
+      "dma_code": "611",
+      "dma_name": "Rochester, MN-Mason City, IA-Austin, MN",
+      "white_space_score": 2.635,
+      "injectable_supply_count": 16,
+      "total_locations_in_dma": 40,
+      "coverage_band": "medium"
     },
     {
-      "dma_code": "717",
-      "dma_name": "Quincy, IL-Hannibal, MO-Keokuk, IA",
-      "white_space_score": 2.804
+      "dma_code": "624",
+      "dma_name": "Sioux City, IA",
+      "white_space_score": 2.577,
+      "injectable_supply_count": 20,
+      "total_locations_in_dma": 51,
+      "coverage_band": "high"
     },
     {
-      "dma_code": "596",
-      "dma_name": "Zanesville, OH",
-      "white_space_score": 2.773
+      "dma_code": "657",
+      "dma_name": "Sherman, TX-Ada, OK",
+      "white_space_score": 2.538,
+      "injectable_supply_count": 21,
+      "total_locations_in_dma": 59,
+      "coverage_band": "high"
+    },
+    {
+      "dma_code": "605",
+      "dma_name": "Topeka, KS",
+      "white_space_score": 2.501,
+      "injectable_supply_count": 17,
+      "total_locations_in_dma": 30,
+      "coverage_band": "medium"
+    },
+    {
+      "dma_code": "581",
+      "dma_name": "Terre Haute, IN",
+      "white_space_score": 2.45,
+      "injectable_supply_count": 12,
+      "total_locations_in_dma": 34,
+      "coverage_band": "medium"
+    },
+    {
+      "dma_code": "771",
+      "dma_name": "Yuma, AZ-El Centro, CA",
+      "white_space_score": 2.257,
+      "injectable_supply_count": 16,
+      "total_locations_in_dma": 35,
+      "coverage_band": "medium"
     },
     {
       "dma_code": "610",
       "dma_name": "Rockford, IL",
-      "white_space_score": 2.71
+      "white_space_score": 2.181,
+      "injectable_supply_count": 19,
+      "total_locations_in_dma": 34,
+      "coverage_band": "medium"
     }
   ],
   "bottom_10_whitespace": [
     {
-      "dma_code": "618",
-      "dma_name": "Houston, TX",
-      "white_space_score": -2.614
-    },
-    {
-      "dma_code": "528",
-      "dma_name": "Miami-Fort Lauderdale, FL",
-      "white_space_score": -2.63
+      "dma_code": "506",
+      "dma_name": "Boston, MA (Manchester, NH)",
+      "white_space_score": -2.515,
+      "injectable_supply_count": 679,
+      "total_locations_in_dma": 1288,
+      "coverage_band": "high"
     },
     {
       "dma_code": "524",
       "dma_name": "Atlanta, GA",
-      "white_space_score": -2.638
-    },
-    {
-      "dma_code": "623",
-      "dma_name": "Dallas-Ft. Worth, TX",
-      "white_space_score": -2.675
-    },
-    {
-      "dma_code": "506",
-      "dma_name": "Boston, MA (Manchester, NH)",
-      "white_space_score": -2.697
+      "white_space_score": -2.539,
+      "injectable_supply_count": 607,
+      "total_locations_in_dma": 1311,
+      "coverage_band": "high"
     },
     {
       "dma_code": "602",
       "dma_name": "Chicago, IL",
-      "white_space_score": -2.772
+      "white_space_score": -2.596,
+      "injectable_supply_count": 688,
+      "total_locations_in_dma": 1475,
+      "coverage_band": "high"
+    },
+    {
+      "dma_code": "753",
+      "dma_name": "Phoenix, AZ",
+      "white_space_score": -2.634,
+      "injectable_supply_count": 709,
+      "total_locations_in_dma": 1768,
+      "coverage_band": "high"
+    },
+    {
+      "dma_code": "623",
+      "dma_name": "Dallas-Ft. Worth, TX",
+      "white_space_score": -2.756,
+      "injectable_supply_count": 822,
+      "total_locations_in_dma": 1989,
+      "coverage_band": "high"
+    },
+    {
+      "dma_code": "528",
+      "dma_name": "Miami-Fort Lauderdale, FL",
+      "white_space_score": -2.781,
+      "injectable_supply_count": 727,
+      "total_locations_in_dma": 1791,
+      "coverage_band": "high"
     },
     {
       "dma_code": "501",
       "dma_name": "New York, NY",
-      "white_space_score": -3.0
+      "white_space_score": -3.0,
+      "injectable_supply_count": 1586,
+      "total_locations_in_dma": 3883,
+      "coverage_band": "high"
+    },
+    {
+      "dma_code": "627",
+      "dma_name": "Wichita Falls, TX-Lawton, OK",
+      "white_space_score": -3.0,
+      "injectable_supply_count": 16,
+      "total_locations_in_dma": 52,
+      "coverage_band": "high"
     },
     {
       "dma_code": "725",
       "dma_name": "Sioux Falls (Mitchell), SD",
-      "white_space_score": -3.0
-    },
-    {
-      "dma_code": "798",
-      "dma_name": "Glendive, MT",
-      "white_space_score": -3.0
+      "white_space_score": -3.0,
+      "injectable_supply_count": 34,
+      "total_locations_in_dma": 71,
+      "coverage_band": "high"
     },
     {
       "dma_code": "803",
       "dma_name": "Los Angeles, CA",
-      "white_space_score": -3.0
+      "white_space_score": -3.0,
+      "injectable_supply_count": 1729,
+      "total_locations_in_dma": 3699,
+      "coverage_band": "high"
     }
   ]
 }

@@ -1,5 +1,11 @@
 {
-  "extracted_utc": "2026-04-29T11:01:54.844207+00:00",
+  "_license": {
+    "owner": "Vatico, LLC",
+    "copyright": "© 2026 Vatico, LLC. All rights reserved.",
+    "notice": "Proprietary research data. Not for redistribution, commercial use, scraping, or AI/ML training. Licensing inquiries: hello@vatico.io",
+    "url": "https://vatico.io"
+  },
+  "extracted_utc": "2026-04-27T22:31:01.313902+00:00",
   "source_table": "public.signals",
   "source_companion": "docs/neurotoxin-data/vatico-market-intelligence-map-data.json",
   "brands": [
@@ -17,6 +23,6 @@
   "neurotoxin_events_matched": 39479,
   "monthly_rows": 84,
   "trailing_window_rows": 24,
-  "dma_leader_rows": 206,
+  "dma_leader_rows": 200,
   "share_definition": "share = (unique practices mentioning brand in window) / (unique practices mentioning any neurotoxin in window)"
 }

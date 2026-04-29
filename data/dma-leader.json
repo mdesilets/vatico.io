@@ -4,1159 +4,1369 @@
     "dma_name": "Los Angeles, CA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 473
+    "location_count": 1619
   },
   {
     "dma_code": "501",
     "dma_name": "New York, NY",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 400
+    "location_count": 1480
   },
   {
     "dma_code": "623",
     "dma_name": "Dallas-Ft. Worth, TX",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 246
+    "location_count": 777
   },
   {
     "dma_code": "753",
     "dma_name": "Phoenix, AZ",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 212
-  },
-  {
-    "dma_code": "506",
-    "dma_name": "Boston, MA (Manchester, NH)",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 211
+    "location_count": 666
   },
   {
     "dma_code": "602",
     "dma_name": "Chicago, IL",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 207
-  },
-  {
-    "dma_code": "618",
-    "dma_name": "Houston, TX",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 204
-  },
-  {
-    "dma_code": "751",
-    "dma_name": "Denver, CO",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 187
-  },
-  {
-    "dma_code": "524",
-    "dma_name": "Atlanta, GA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 158
-  },
-  {
-    "dma_code": "539",
-    "dma_name": "Tampa-St. Petersburg (Sarasota), FL",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 151
-  },
-  {
-    "dma_code": "807",
-    "dma_name": "San Francisco-Oakland-San Jose, CA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 149
-  },
-  {
-    "dma_code": "534",
-    "dma_name": "Orlando-Daytona Beach-Melbourne, FL",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 135
-  },
-  {
-    "dma_code": "505",
-    "dma_name": "Detroit, MI",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 118
+    "location_count": 652
   },
   {
     "dma_code": "528",
     "dma_name": "Miami-Fort Lauderdale, FL",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 112
+    "location_count": 646
+  },
+  {
+    "dma_code": "506",
+    "dma_name": "Boston, MA (Manchester, NH)",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 642
+  },
+  {
+    "dma_code": "618",
+    "dma_name": "Houston, TX",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 608
+  },
+  {
+    "dma_code": "524",
+    "dma_name": "Atlanta, GA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 562
+  },
+  {
+    "dma_code": "751",
+    "dma_name": "Denver, CO",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 545
+  },
+  {
+    "dma_code": "807",
+    "dma_name": "San Francisco-Oakland-San Jose, CA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 504
+  },
+  {
+    "dma_code": "539",
+    "dma_name": "Tampa-St. Petersburg (Sarasota), FL",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 499
   },
   {
     "dma_code": "511",
     "dma_name": "Washington, DC (Hagerstown, MD)",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 110
+    "location_count": 460
   },
   {
     "dma_code": "504",
     "dma_name": "Philadelphia, PA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 107
+    "location_count": 425
   },
   {
-    "dma_code": "770",
-    "dma_name": "Salt Lake City, UT",
+    "dma_code": "534",
+    "dma_name": "Orlando-Daytona Beach-Melbourne, FL",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 103
+    "location_count": 386
+  },
+  {
+    "dma_code": "505",
+    "dma_name": "Detroit, MI",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 375
   },
   {
     "dma_code": "819",
     "dma_name": "Seattle-Tacoma, WA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 99
-  },
-  {
-    "dma_code": "613",
-    "dma_name": "Minneapolis-St. Paul, MN",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 95
-  },
-  {
-    "dma_code": "548",
-    "dma_name": "West Palm Beach-Ft. Pierce, FL",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 94
+    "location_count": 332
   },
   {
     "dma_code": "825",
     "dma_name": "San Diego, CA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 87
+    "location_count": 305
   },
   {
-    "dma_code": "635",
-    "dma_name": "Austin, TX",
+    "dma_code": "548",
+    "dma_name": "West Palm Beach-Ft. Pierce, FL",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 83
+    "location_count": 303
   },
   {
-    "dma_code": "820",
-    "dma_name": "Portland, OR",
+    "dma_code": "770",
+    "dma_name": "Salt Lake City, UT",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 80
+    "location_count": 295
   },
   {
     "dma_code": "659",
     "dma_name": "Nashville, TN",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 79
+    "location_count": 281
+  },
+  {
+    "dma_code": "613",
+    "dma_name": "Minneapolis-St. Paul, MN",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 263
+  },
+  {
+    "dma_code": "635",
+    "dma_name": "Austin, TX",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 257
   },
   {
     "dma_code": "641",
     "dma_name": "San Antonio, TX",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 77
+    "location_count": 250
   },
   {
     "dma_code": "517",
     "dma_name": "Charlotte, NC",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 73
+    "location_count": 238
   },
   {
-    "dma_code": "510",
-    "dma_name": "Cleveland-Akron (Canton), OH",
+    "dma_code": "820",
+    "dma_name": "Portland, OR",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 64
+    "location_count": 238
   },
   {
     "dma_code": "862",
     "dma_name": "Sacramento-Stockton-Modesto, CA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 59
-  },
-  {
-    "dma_code": "839",
-    "dma_name": "Las Vegas, NV",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 58
-  },
-  {
-    "dma_code": "560",
-    "dma_name": "Raleigh-Durham (Fayetteville), NC",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 57
+    "location_count": 212
   },
   {
     "dma_code": "609",
     "dma_name": "St. Louis, MO",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 56
+    "location_count": 194
   },
   {
-    "dma_code": "533",
-    "dma_name": "Hartford & New Haven, CT",
+    "dma_code": "560",
+    "dma_name": "Raleigh-Durham (Fayetteville), NC",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 54
+    "location_count": 179
   },
   {
-    "dma_code": "561",
-    "dma_name": "Jacksonville, FL",
+    "dma_code": "510",
+    "dma_name": "Cleveland-Akron (Canton), OH",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 53
-  },
-  {
-    "dma_code": "535",
-    "dma_name": "Columbus, OH",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 51
-  },
-  {
-    "dma_code": "571",
-    "dma_name": "Ft. Myers-Naples, FL",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 51
-  },
-  {
-    "dma_code": "650",
-    "dma_name": "Oklahoma City, OK",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 49
+    "location_count": 178
   },
   {
     "dma_code": "512",
     "dma_name": "Baltimore, MD",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 48
+    "location_count": 172
   },
   {
     "dma_code": "616",
     "dma_name": "Kansas City, MO",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 46
+    "location_count": 161
+  },
+  {
+    "dma_code": "571",
+    "dma_name": "Ft. Myers-Naples, FL",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 158
+  },
+  {
+    "dma_code": "533",
+    "dma_name": "Hartford & New Haven, CT",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 154
+  },
+  {
+    "dma_code": "839",
+    "dma_name": "Las Vegas, NV",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 149
+  },
+  {
+    "dma_code": "561",
+    "dma_name": "Jacksonville, FL",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 148
   },
   {
     "dma_code": "527",
     "dma_name": "Indianapolis, IN",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 44
-  },
-  {
-    "dma_code": "515",
-    "dma_name": "Cincinnati, OH",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 42
-  },
-  {
-    "dma_code": "567",
-    "dma_name": "Greenville-Spartanburg, SC-Asheville, NC-Anderson,SC",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 42
+    "location_count": 143
   },
   {
     "dma_code": "508",
     "dma_name": "Pittsburgh, PA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 38
+    "location_count": 138
   },
   {
-    "dma_code": "529",
-    "dma_name": "Louisville, KY",
+    "dma_code": "535",
+    "dma_name": "Columbus, OH",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 35
+    "location_count": 134
   },
   {
-    "dma_code": "557",
-    "dma_name": "Knoxville, TN",
+    "dma_code": "515",
+    "dma_name": "Cincinnati, OH",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 33
-  },
-  {
-    "dma_code": "622",
-    "dma_name": "New Orleans, LA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 33
-  },
-  {
-    "dma_code": "521",
-    "dma_name": "Providence, RI-New Bedford, MA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 33
+    "location_count": 128
   },
   {
     "dma_code": "617",
     "dma_name": "Milwaukee, WI",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 32
+    "location_count": 118
   },
   {
     "dma_code": "790",
     "dma_name": "Albuquerque-Santa Fe, NM",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 31
+    "location_count": 116
   },
   {
-    "dma_code": "671",
-    "dma_name": "Tulsa, OK",
+    "dma_code": "650",
+    "dma_name": "Oklahoma City, OK",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 29
+    "location_count": 113
   },
   {
-    "dma_code": "541",
-    "dma_name": "Lexington, KY",
+    "dma_code": "557",
+    "dma_name": "Knoxville, TN",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 28
+    "location_count": 112
   },
   {
-    "dma_code": "563",
-    "dma_name": "Grand Rapids-Kalamazoo-Battle Creek, MI",
+    "dma_code": "567",
+    "dma_name": "Greenville-Spartanburg, SC-Asheville, NC-Anderson,SC",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 27
+    "location_count": 108
   },
   {
-    "dma_code": "507",
-    "dma_name": "Savannah, GA",
+    "dma_code": "521",
+    "dma_name": "Providence, RI-New Bedford, MA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 27
+    "location_count": 102
   },
   {
-    "dma_code": "866",
-    "dma_name": "Fresno-Visalia, CA",
+    "dma_code": "622",
+    "dma_name": "New Orleans, LA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 26
-  },
-  {
-    "dma_code": "640",
-    "dma_name": "Memphis, TN",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 25
-  },
-  {
-    "dma_code": "500",
-    "dma_name": "Portland-Auburn, ME",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 25
-  },
-  {
-    "dma_code": "519",
-    "dma_name": "Charleston, SC",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 24
-  },
-  {
-    "dma_code": "544",
-    "dma_name": "Norfolk-Portsmouth-Newport News, VA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 24
-  },
-  {
-    "dma_code": "789",
-    "dma_name": "Tucson (Sierra Vista), AZ",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 24
-  },
-  {
-    "dma_code": "881",
-    "dma_name": "Spokane, WA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 23
+    "location_count": 101
   },
   {
     "dma_code": "757",
     "dma_name": "Boise, ID",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 22
+    "location_count": 100
   },
   {
-    "dma_code": "752",
-    "dma_name": "Colorado Springs-Pueblo, CO",
+    "dma_code": "529",
+    "dma_name": "Louisville, KY",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 22
+    "location_count": 96
   },
   {
-    "dma_code": "679",
-    "dma_name": "Des Moines-Ames, IA",
+    "dma_code": "519",
+    "dma_name": "Charleston, SC",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 22
+    "location_count": 95
   },
   {
-    "dma_code": "518",
-    "dma_name": "Greensboro-High Point-Winston Salem, NC",
+    "dma_code": "544",
+    "dma_name": "Norfolk-Portsmouth-Newport News, VA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 22
-  },
-  {
-    "dma_code": "514",
-    "dma_name": "Buffalo, NY",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 21
-  },
-  {
-    "dma_code": "575",
-    "dma_name": "Chattanooga, TN",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 21
-  },
-  {
-    "dma_code": "765",
-    "dma_name": "El Paso, TX",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 21
-  },
-  {
-    "dma_code": "686",
-    "dma_name": "Mobile, AL-Pensacola (Ft. Walton Beach), FL",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 21
-  },
-  {
-    "dma_code": "652",
-    "dma_name": "Omaha, NE",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 21
-  },
-  {
-    "dma_code": "716",
-    "dma_name": "Baton Rouge, LA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 20
-  },
-  {
-    "dma_code": "538",
-    "dma_name": "Rochester, NY",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 20
-  },
-  {
-    "dma_code": "693",
-    "dma_name": "Little Rock-Pine Bluff, AR",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 18
-  },
-  {
-    "dma_code": "709",
-    "dma_name": "Tyler-Longview(Lufkin & Nacogdoches), TX",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 18
-  },
-  {
-    "dma_code": "669",
-    "dma_name": "Madison, WI",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 17
-  },
-  {
-    "dma_code": "678",
-    "dma_name": "Wichita-Hutchinson, KS Plus",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 17
-  },
-  {
-    "dma_code": "566",
-    "dma_name": "Harrisburg-Lancaster-Lebanon-York, PA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 16
-  },
-  {
-    "dma_code": "810",
-    "dma_name": "Yakima-Pasco-Richland-Kennewick, WA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 16
-  },
-  {
-    "dma_code": "546",
-    "dma_name": "Columbia, SC",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 15
+    "location_count": 90
   },
   {
     "dma_code": "556",
     "dma_name": "Richmond-Petersburg, VA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 15
+    "location_count": 86
   },
   {
-    "dma_code": "531",
-    "dma_name": "Tri-Cities, TN-VA",
+    "dma_code": "671",
+    "dma_name": "Tulsa, OK",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 15
+    "location_count": 82
   },
   {
-    "dma_code": "625",
-    "dma_name": "Waco-Temple-Bryan, TX",
+    "dma_code": "866",
+    "dma_name": "Fresno-Visalia, CA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 15
+    "location_count": 79
   },
   {
-    "dma_code": "550",
-    "dma_name": "Wilmington, NC",
+    "dma_code": "541",
+    "dma_name": "Lexington, KY",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 15
+    "location_count": 76
   },
   {
-    "dma_code": "532",
-    "dma_name": "Albany-Schenectady-Troy, NY",
+    "dma_code": "789",
+    "dma_name": "Tucson (Sierra Vista), AZ",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 14
+    "location_count": 76
   },
   {
-    "dma_code": "564",
-    "dma_name": "Charleston-Huntington, WV",
+    "dma_code": "507",
+    "dma_name": "Savannah, GA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 14
+    "location_count": 74
   },
   {
-    "dma_code": "649",
-    "dma_name": "Evansville, IN",
+    "dma_code": "686",
+    "dma_name": "Mobile, AL-Pensacola (Ft. Walton Beach), FL",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 14
+    "location_count": 72
   },
   {
-    "dma_code": "758",
-    "dma_name": "Idaho Falls-Pocatello, ID",
+    "dma_code": "514",
+    "dma_name": "Buffalo, NY",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 14
+    "location_count": 70
   },
   {
-    "dma_code": "633",
-    "dma_name": "Odessa-Midland, TX",
+    "dma_code": "693",
+    "dma_name": "Little Rock-Pine Bluff, AR",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 14
+    "location_count": 70
   },
   {
-    "dma_code": "573",
-    "dma_name": "Roanoke-Lynchburg, VA",
+    "dma_code": "500",
+    "dma_name": "Portland-Auburn, ME",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 14
+    "location_count": 69
   },
   {
-    "dma_code": "612",
-    "dma_name": "Shreveport, LA",
+    "dma_code": "566",
+    "dma_name": "Harrisburg-Lancaster-Lebanon-York, PA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 14
+    "location_count": 68
   },
   {
-    "dma_code": "637",
-    "dma_name": "Cedar Rapids-Waterloo-Iowa City & Dubuque, IA",
+    "dma_code": "765",
+    "dma_name": "El Paso, TX",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 13
+    "location_count": 67
   },
   {
-    "dma_code": "542",
-    "dma_name": "Dayton, OH",
+    "dma_code": "563",
+    "dma_name": "Grand Rapids-Kalamazoo-Battle Creek, MI",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 13
-  },
-  {
-    "dma_code": "724",
-    "dma_name": "Fargo-Valley City, ND",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 13
-  },
-  {
-    "dma_code": "513",
-    "dma_name": "Flint-Saginaw-Bay City, MI",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 13
-  },
-  {
-    "dma_code": "619",
-    "dma_name": "Springfield, MO",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 13
-  },
-  {
-    "dma_code": "670",
-    "dma_name": "Ft. Smith-Fayetteville-Springdale-Rogers, AR",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 12
-  },
-  {
-    "dma_code": "636",
-    "dma_name": "Harlingen-Weslaco-Brownsville-McAllen, TX",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 12
-  },
-  {
-    "dma_code": "632",
-    "dma_name": "Paducah, KY-Cape Girardeau, MO-Harrisburg, IL",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 12
-  },
-  {
-    "dma_code": "656",
-    "dma_name": "Panama City, FL",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 12
+    "location_count": 67
   },
   {
     "dma_code": "811",
     "dma_name": "Reno, NV",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 12
+    "location_count": 67
+  },
+  {
+    "dma_code": "881",
+    "dma_name": "Spokane, WA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 67
+  },
+  {
+    "dma_code": "518",
+    "dma_name": "Greensboro-High Point-Winston Salem, NC",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 66
+  },
+  {
+    "dma_code": "752",
+    "dma_name": "Colorado Springs-Pueblo, CO",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 64
+  },
+  {
+    "dma_code": "652",
+    "dma_name": "Omaha, NE",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 62
+  },
+  {
+    "dma_code": "532",
+    "dma_name": "Albany-Schenectady-Troy, NY",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 61
+  },
+  {
+    "dma_code": "679",
+    "dma_name": "Des Moines-Ames, IA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 61
+  },
+  {
+    "dma_code": "640",
+    "dma_name": "Memphis, TN",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 61
+  },
+  {
+    "dma_code": "716",
+    "dma_name": "Baton Rouge, LA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 56
+  },
+  {
+    "dma_code": "575",
+    "dma_name": "Chattanooga, TN",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 56
+  },
+  {
+    "dma_code": "709",
+    "dma_name": "Tyler-Longview(Lufkin & Nacogdoches), TX",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 53
+  },
+  {
+    "dma_code": "542",
+    "dma_name": "Dayton, OH",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 52
+  },
+  {
+    "dma_code": "636",
+    "dma_name": "Harlingen-Weslaco-Brownsville-McAllen, TX",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 52
   },
   {
     "dma_code": "855",
     "dma_name": "Santa Barbara-Santa Maria-San Luis Obispo, CA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 12
-  },
-  {
-    "dma_code": "555",
-    "dma_name": "Syracuse, NY",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 12
-  },
-  {
-    "dma_code": "520",
-    "dma_name": "Augusta, GA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 11
-  },
-  {
-    "dma_code": "642",
-    "dma_name": "Lafayette, LA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 11
+    "location_count": 52
   },
   {
     "dma_code": "828",
     "dma_name": "Monterey-Salinas, CA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 11
+    "location_count": 49
   },
   {
     "dma_code": "547",
     "dma_name": "Toledo, OH",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 11
-  },
-  {
-    "dma_code": "577",
-    "dma_name": "Wilkes Barre-Scranton, PA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 11
-  },
-  {
-    "dma_code": "648",
-    "dma_name": "Champaign & Springfield-Decatur, IL",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 10
-  },
-  {
-    "dma_code": "691",
-    "dma_name": "Huntsville-Decatur (Florence), AL",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 10
-  },
-  {
-    "dma_code": "570",
-    "dma_name": "Myrtle Beach-Florence, SC",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 10
-  },
-  {
-    "dma_code": "804",
-    "dma_name": "Palm Springs, CA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 10
-  },
-  {
-    "dma_code": "868",
-    "dma_name": "Chico-Redding, CA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 9
-  },
-  {
-    "dma_code": "801",
-    "dma_name": "Eugene, OR",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 9
-  },
-  {
-    "dma_code": "658",
-    "dma_name": "Green Bay-Appleton, WI",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 9
-  },
-  {
-    "dma_code": "718",
-    "dma_name": "Jackson, MS",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 9
-  },
-  {
-    "dma_code": "702",
-    "dma_name": "La Crosse-Eau Claire, WI",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 9
-  },
-  {
-    "dma_code": "503",
-    "dma_name": "Macon, GA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 9
-  },
-  {
-    "dma_code": "588",
-    "dma_name": "South Bend-Elkhart, IN",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 9
-  },
-  {
-    "dma_code": "605",
-    "dma_name": "Topeka, KS",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 9
-  },
-  {
-    "dma_code": "634",
-    "dma_name": "Amarillo, TX",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 8
-  },
-  {
-    "dma_code": "800",
-    "dma_name": "Bakersfield, CA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 8
+    "location_count": 49
   },
   {
     "dma_code": "630",
     "dma_name": "Birmingham (Anniston and Tuscaloosa), AL",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 8
+    "location_count": 47
   },
   {
-    "dma_code": "584",
-    "dma_name": "Charlottesville, VA",
+    "dma_code": "669",
+    "dma_name": "Madison, WI",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 8
+    "location_count": 47
   },
   {
-    "dma_code": "509",
-    "dma_name": "Ft. Wayne, IN",
+    "dma_code": "625",
+    "dma_name": "Waco-Temple-Bryan, TX",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 8
+    "location_count": 46
   },
   {
-    "dma_code": "773",
-    "dma_name": "Grand Junction-Montrose, CO",
+    "dma_code": "678",
+    "dma_name": "Wichita-Hutchinson, KS Plus",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 8
+    "location_count": 44
   },
   {
-    "dma_code": "551",
-    "dma_name": "Lansing, MI",
+    "dma_code": "570",
+    "dma_name": "Myrtle Beach-Florence, SC",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 8
+    "location_count": 43
   },
   {
-    "dma_code": "610",
-    "dma_name": "Rockford, IL",
+    "dma_code": "658",
+    "dma_name": "Green Bay-Appleton, WI",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 8
+    "location_count": 42
   },
   {
-    "dma_code": "725",
-    "dma_name": "Sioux Falls (Mitchell), SD",
+    "dma_code": "758",
+    "dma_name": "Idaho Falls-Pocatello, ID",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 8
+    "location_count": 42
   },
   {
-    "dma_code": "536",
-    "dma_name": "Youngstown, OH",
+    "dma_code": "550",
+    "dma_name": "Wilmington, NC",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 8
+    "location_count": 42
   },
   {
-    "dma_code": "771",
-    "dma_name": "Yuma, AZ-El Centro, CA",
+    "dma_code": "564",
+    "dma_name": "Charleston-Huntington, WV",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 8
+    "location_count": 41
   },
   {
-    "dma_code": "559",
-    "dma_name": "Bluefield-Beckley-Oak Hill, WV",
+    "dma_code": "546",
+    "dma_name": "Columbia, SC",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 7
+    "location_count": 41
+  },
+  {
+    "dma_code": "670",
+    "dma_name": "Ft. Smith-Fayetteville-Springdale-Rogers, AR",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 40
+  },
+  {
+    "dma_code": "538",
+    "dma_name": "Rochester, NY",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 39
+  },
+  {
+    "dma_code": "619",
+    "dma_name": "Springfield, MO",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 39
+  },
+  {
+    "dma_code": "513",
+    "dma_name": "Flint-Saginaw-Bay City, MI",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 38
+  },
+  {
+    "dma_code": "691",
+    "dma_name": "Huntsville-Decatur (Florence), AL",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 38
   },
   {
     "dma_code": "545",
     "dma_name": "Greenville-New Bern-Washington, NC",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 7
+    "location_count": 37
   },
   {
-    "dma_code": "722",
-    "dma_name": "Lincoln & Hastings-Kearney, NE",
+    "dma_code": "612",
+    "dma_name": "Shreveport, LA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 7
+    "location_count": 37
+  },
+  {
+    "dma_code": "656",
+    "dma_name": "Panama City, FL",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 36
+  },
+  {
+    "dma_code": "577",
+    "dma_name": "Wilkes Barre-Scranton, PA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 36
+  },
+  {
+    "dma_code": "649",
+    "dma_name": "Evansville, IN",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 35
   },
   {
     "dma_code": "762",
     "dma_name": "Missoula, MT",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 7
+    "location_count": 35
   },
   {
-    "dma_code": "657",
-    "dma_name": "Sherman, TX-Ada, OK",
+    "dma_code": "531",
+    "dma_name": "Tri-Cities, TN-VA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 7
+    "location_count": 35
   },
   {
-    "dma_code": "530",
-    "dma_name": "Tallahassee, FL-Thomasville, GA",
+    "dma_code": "810",
+    "dma_name": "Yakima-Pasco-Richland-Kennewick, WA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 7
+    "location_count": 34
   },
   {
-    "dma_code": "756",
-    "dma_name": "Billings, MT",
+    "dma_code": "637",
+    "dma_name": "Cedar Rapids-Waterloo-Iowa City & Dubuque, IA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 6
+    "location_count": 33
   },
   {
-    "dma_code": "600",
-    "dma_name": "Corpus Christi, TX",
+    "dma_code": "573",
+    "dma_name": "Roanoke-Lynchburg, VA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 6
+    "location_count": 33
   },
   {
-    "dma_code": "592",
-    "dma_name": "Gainesville, FL",
+    "dma_code": "725",
+    "dma_name": "Sioux Falls (Mitchell), SD",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 6
+    "location_count": 33
   },
   {
-    "dma_code": "813",
-    "dma_name": "Medford-Klamath Falls, OR",
+    "dma_code": "520",
+    "dma_name": "Augusta, GA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 6
+    "location_count": 32
   },
   {
-    "dma_code": "611",
-    "dma_name": "Rochester, MN-Mason City, IA-Austin, MN",
+    "dma_code": "801",
+    "dma_name": "Eugene, OR",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 6
+    "location_count": 32
   },
   {
-    "dma_code": "543",
-    "dma_name": "Springfield-Holyoke, MA",
+    "dma_code": "724",
+    "dma_name": "Fargo-Valley City, ND",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 6
+    "location_count": 32
   },
   {
-    "dma_code": "627",
-    "dma_name": "Wichita Falls, TX-Lawton, OK",
+    "dma_code": "555",
+    "dma_name": "Syracuse, NY",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 6
+    "location_count": 32
   },
   {
-    "dma_code": "692",
-    "dma_name": "Beaumont-Port Arthur, TX",
+    "dma_code": "722",
+    "dma_name": "Lincoln & Hastings-Kearney, NE",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 5
+    "location_count": 31
+  },
+  {
+    "dma_code": "632",
+    "dma_name": "Paducah, KY-Cape Girardeau, MO-Harrisburg, IL",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 31
+  },
+  {
+    "dma_code": "718",
+    "dma_name": "Jackson, MS",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 30
+  },
+  {
+    "dma_code": "536",
+    "dma_name": "Youngstown, OH",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 30
   },
   {
     "dma_code": "523",
     "dma_name": "Burlington, VT-Plattsburgh, NY",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 5
+    "location_count": 29
   },
   {
-    "dma_code": "754",
-    "dma_name": "Butte-Bozeman, MT",
+    "dma_code": "800",
+    "dma_name": "Bakersfield, CA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 5
+    "location_count": 28
   },
   {
-    "dma_code": "604",
-    "dma_name": "Columbia-Jefferson City, MO",
+    "dma_code": "633",
+    "dma_name": "Odessa-Midland, TX",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 5
+    "location_count": 28
   },
   {
-    "dma_code": "522",
-    "dma_name": "Columbus, GA",
+    "dma_code": "804",
+    "dma_name": "Palm Springs, CA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 5
+    "location_count": 28
+  },
+  {
+    "dma_code": "551",
+    "dma_name": "Lansing, MI",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 26
+  },
+  {
+    "dma_code": "675",
+    "dma_name": "Peoria-Bloomington, IL",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 26
+  },
+  {
+    "dma_code": "543",
+    "dma_name": "Springfield-Holyoke, MA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 26
   },
   {
     "dma_code": "682",
     "dma_name": "Davenport, IA-Rock Island-Moline, IL",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 5
+    "location_count": 25
   },
   {
-    "dma_code": "639",
-    "dma_name": "Jackson, TN",
+    "dma_code": "642",
+    "dma_name": "Lafayette, LA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 5
+    "location_count": 25
   },
   {
     "dma_code": "651",
     "dma_name": "Lubbock, TX",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 5
+    "location_count": 25
   },
   {
-    "dma_code": "687",
-    "dma_name": "Minot-Bismarck-Dickinson(Williston), ND",
+    "dma_code": "503",
+    "dma_name": "Macon, GA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 5
+    "location_count": 25
   },
   {
-    "dma_code": "628",
-    "dma_name": "Monroe, LA-El Dorado, AR",
+    "dma_code": "530",
+    "dma_name": "Tallahassee, FL-Thomasville, GA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 5
+    "location_count": 25
   },
   {
-    "dma_code": "698",
-    "dma_name": "Montgomery-Selma, AL",
+    "dma_code": "540",
+    "dma_name": "Traverse City-Cadillac, MI",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 5
+    "location_count": 25
   },
   {
-    "dma_code": "764",
-    "dma_name": "Rapid City, SD",
+    "dma_code": "756",
+    "dma_name": "Billings, MT",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 5
+    "location_count": 24
   },
   {
-    "dma_code": "624",
-    "dma_name": "Sioux City, IA",
+    "dma_code": "648",
+    "dma_name": "Champaign & Springfield-Decatur, IL",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 5
+    "location_count": 24
   },
   {
-    "dma_code": "705",
-    "dma_name": "Wausau-Rhinelander, WI",
+    "dma_code": "600",
+    "dma_name": "Corpus Christi, TX",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 5
+    "location_count": 24
   },
   {
-    "dma_code": "554",
-    "dma_name": "Wheeling, WV-Steubenville, OH",
+    "dma_code": "813",
+    "dma_name": "Medford-Klamath Falls, OR",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 5
+    "location_count": 24
   },
   {
-    "dma_code": "662",
-    "dma_name": "Abilene-Sweetwater, TX",
+    "dma_code": "588",
+    "dma_name": "South Bend-Elkhart, IN",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 4
+    "location_count": 24
   },
   {
     "dma_code": "821",
     "dma_name": "Bend, OR",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 4
+    "location_count": 23
   },
   {
-    "dma_code": "676",
-    "dma_name": "Duluth, MN-Superior, WI",
+    "dma_code": "574",
+    "dma_name": "Johnstown-Altoona, PA",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 4
-  },
-  {
-    "dma_code": "647",
-    "dma_name": "Greenwood-Greenville, MS",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 4
-  },
-  {
-    "dma_code": "569",
-    "dma_name": "Harrisonburg, VA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 4
-  },
-  {
-    "dma_code": "734",
-    "dma_name": "Jonesboro, AR",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 4
-  },
-  {
-    "dma_code": "603",
-    "dma_name": "Joplin, MO-Pittsburg, KS",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 4
-  },
-  {
-    "dma_code": "737",
-    "dma_name": "Mankato, MN",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 4
+    "location_count": 23
   },
   {
     "dma_code": "576",
     "dma_name": "Salisbury, MD",
     "leader_brand": null,
     "leader_share": 0,
+    "location_count": 23
+  },
+  {
+    "dma_code": "868",
+    "dma_name": "Chico-Redding, CA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 22
+  },
+  {
+    "dma_code": "592",
+    "dma_name": "Gainesville, FL",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 22
+  },
+  {
+    "dma_code": "692",
+    "dma_name": "Beaumont-Port Arthur, TX",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 21
+  },
+  {
+    "dma_code": "522",
+    "dma_name": "Columbus, GA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 21
+  },
+  {
+    "dma_code": "509",
+    "dma_name": "Ft. Wayne, IN",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 21
+  },
+  {
+    "dma_code": "634",
+    "dma_name": "Amarillo, TX",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 20
+  },
+  {
+    "dma_code": "657",
+    "dma_name": "Sherman, TX-Ada, OK",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 20
+  },
+  {
+    "dma_code": "610",
+    "dma_name": "Rockford, IL",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 19
+  },
+  {
+    "dma_code": "624",
+    "dma_name": "Sioux City, IA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 19
+  },
+  {
+    "dma_code": "676",
+    "dma_name": "Duluth, MN-Superior, WI",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 17
+  },
+  {
+    "dma_code": "687",
+    "dma_name": "Minot-Bismarck-Dickinson(Williston), ND",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 17
+  },
+  {
+    "dma_code": "605",
+    "dma_name": "Topeka, KS",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 17
+  },
+  {
+    "dma_code": "604",
+    "dma_name": "Columbia-Jefferson City, MO",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 16
+  },
+  {
+    "dma_code": "773",
+    "dma_name": "Grand Junction-Montrose, CO",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 16
+  },
+  {
+    "dma_code": "702",
+    "dma_name": "La Crosse-Eau Claire, WI",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 16
+  },
+  {
+    "dma_code": "611",
+    "dma_name": "Rochester, MN-Mason City, IA-Austin, MN",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 16
+  },
+  {
+    "dma_code": "627",
+    "dma_name": "Wichita Falls, TX-Lawton, OK",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 16
+  },
+  {
+    "dma_code": "754",
+    "dma_name": "Butte-Bozeman, MT",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 15
+  },
+  {
+    "dma_code": "764",
+    "dma_name": "Rapid City, SD",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 15
+  },
+  {
+    "dma_code": "771",
+    "dma_name": "Yuma, AZ-El Centro, CA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 15
+  },
+  {
+    "dma_code": "662",
+    "dma_name": "Abilene-Sweetwater, TX",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 14
+  },
+  {
+    "dma_code": "537",
+    "dma_name": "Bangor, ME",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 14
+  },
+  {
+    "dma_code": "746",
+    "dma_name": "Biloxi-Gulfport, MS",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 14
+  },
+  {
+    "dma_code": "759",
+    "dma_name": "Cheyenne, WY-Scottsbluff, NE",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 14
+  },
+  {
+    "dma_code": "559",
+    "dma_name": "Bluefield-Beckley-Oak Hill, WV",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 13
+  },
+  {
+    "dma_code": "628",
+    "dma_name": "Monroe, LA-El Dorado, AR",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 13
+  },
+  {
+    "dma_code": "710",
+    "dma_name": "Hattiesburg-Laurel, MS",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 12
+  },
+  {
+    "dma_code": "749",
+    "dma_name": "Laredo, TX",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 12
+  },
+  {
+    "dma_code": "584",
+    "dma_name": "Charlottesville, VA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 11
+  },
+  {
+    "dma_code": "603",
+    "dma_name": "Joplin, MO-Pittsburg, KS",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 11
+  },
+  {
+    "dma_code": "661",
+    "dma_name": "San Angelo, TX",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 11
+  },
+  {
+    "dma_code": "705",
+    "dma_name": "Wausau-Rhinelander, WI",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 11
+  },
+  {
+    "dma_code": "525",
+    "dma_name": "Albany, GA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 10
+  },
+  {
+    "dma_code": "736",
+    "dma_name": "Bowling Green, KY",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 10
+  },
+  {
+    "dma_code": "767",
+    "dma_name": "Casper-Riverton, WY",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 10
+  },
+  {
+    "dma_code": "673",
+    "dma_name": "Columbus-Tupelo-West Point, MS",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 10
+  },
+  {
+    "dma_code": "639",
+    "dma_name": "Jackson, TN",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 10
+  },
+  {
+    "dma_code": "734",
+    "dma_name": "Jonesboro, AR",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 10
+  },
+  {
+    "dma_code": "581",
+    "dma_name": "Terre Haute, IN",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 10
+  },
+  {
+    "dma_code": "569",
+    "dma_name": "Harrisonburg, VA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 9
+  },
+  {
+    "dma_code": "698",
+    "dma_name": "Montgomery-Selma, AL",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 9
+  },
+  {
+    "dma_code": "554",
+    "dma_name": "Wheeling, WV-Steubenville, OH",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 9
+  },
+  {
+    "dma_code": "582",
+    "dma_name": "Lafayette, IN",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 8
+  },
+  {
+    "dma_code": "737",
+    "dma_name": "Mankato, MN",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 8
+  },
+  {
+    "dma_code": "760",
+    "dma_name": "Twin Falls, ID",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 8
+  },
+  {
+    "dma_code": "644",
+    "dma_name": "Alexandria, LA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 7
+  },
+  {
+    "dma_code": "502",
+    "dma_name": "Binghamton, NY",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 7
+  },
+  {
+    "dma_code": "643",
+    "dma_name": "Lake Charles, LA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 7
+  },
+  {
+    "dma_code": "638",
+    "dma_name": "St. Joseph, MO",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 7
+  },
+  {
+    "dma_code": "526",
+    "dma_name": "Utica, NY",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 7
+  },
+  {
+    "dma_code": "516",
+    "dma_name": "Erie, PA",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 6
+  },
+  {
+    "dma_code": "766",
+    "dma_name": "Helena, MT",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 6
+  },
+  {
+    "dma_code": "597",
+    "dma_name": "Parkersburg, WV",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 6
+  },
+  {
+    "dma_code": "606",
+    "dma_name": "Dothan, AL",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 5
+  },
+  {
+    "dma_code": "647",
+    "dma_name": "Greenwood-Greenville, MS",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 5
+  },
+  {
+    "dma_code": "553",
+    "dma_name": "Marquette, MI",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 5
+  },
+  {
+    "dma_code": "626",
+    "dma_name": "Victoria, TX",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 5
+  },
+  {
+    "dma_code": "549",
+    "dma_name": "Watertown, NY",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 5
+  },
+  {
+    "dma_code": "565",
+    "dma_name": "Elmira, NY",
+    "leader_brand": null,
+    "leader_share": 0,
     "location_count": 4
   },
   {
-    "dma_code": "540",
-    "dma_name": "Traverse City-Cadillac, MI",
+    "dma_code": "755",
+    "dma_name": "Great Falls, MT",
+    "leader_brand": null,
+    "leader_share": 0,
+    "location_count": 4
+  },
+  {
+    "dma_code": "558",
+    "dma_name": "Lima, OH",
     "leader_brand": null,
     "leader_share": 0,
     "location_count": 4
@@ -1169,113 +1379,29 @@
     "location_count": 4
   },
   {
-    "dma_code": "537",
-    "dma_name": "Bangor, ME",
+    "dma_code": "802",
+    "dma_name": "Eureka, CA",
     "leader_brand": null,
     "leader_share": 0,
     "location_count": 3
   },
   {
-    "dma_code": "736",
-    "dma_name": "Bowling Green, KY",
+    "dma_code": "740",
+    "dma_name": "North Platte, NE",
     "leader_brand": null,
     "leader_share": 0,
     "location_count": 3
   },
   {
-    "dma_code": "759",
-    "dma_name": "Cheyenne, WY-Scottsbluff, NE",
+    "dma_code": "717",
+    "dma_name": "Quincy, IL-Hannibal, MO-Keokuk, IA",
     "leader_brand": null,
     "leader_share": 0,
     "location_count": 3
   },
   {
-    "dma_code": "606",
-    "dma_name": "Dothan, AL",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 3
-  },
-  {
-    "dma_code": "755",
-    "dma_name": "Great Falls, MT",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 3
-  },
-  {
-    "dma_code": "574",
-    "dma_name": "Johnstown-Altoona, PA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 3
-  },
-  {
-    "dma_code": "582",
-    "dma_name": "Lafayette, IN",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 3
-  },
-  {
-    "dma_code": "553",
-    "dma_name": "Marquette, MI",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 3
-  },
-  {
-    "dma_code": "675",
-    "dma_name": "Peoria-Bloomington, IL",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 3
-  },
-  {
-    "dma_code": "661",
-    "dma_name": "San Angelo, TX",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 3
-  },
-  {
-    "dma_code": "581",
-    "dma_name": "Terre Haute, IN",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 3
-  },
-  {
-    "dma_code": "760",
-    "dma_name": "Twin Falls, ID",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 3
-  },
-  {
-    "dma_code": "525",
-    "dma_name": "Albany, GA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 2
-  },
-  {
-    "dma_code": "644",
-    "dma_name": "Alexandria, LA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 2
-  },
-  {
-    "dma_code": "746",
-    "dma_name": "Biloxi-Gulfport, MS",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 2
-  },
-  {
-    "dma_code": "767",
-    "dma_name": "Casper-Riverton, WY",
+    "dma_code": "583",
+    "dma_name": "Alpena, MI",
     "leader_brand": null,
     "leader_share": 0,
     "location_count": 2
@@ -1288,113 +1414,29 @@
     "location_count": 2
   },
   {
-    "dma_code": "673",
-    "dma_name": "Columbus-Tupelo-West Point, MS",
+    "dma_code": "711",
+    "dma_name": "Meridian, MS",
     "leader_brand": null,
     "leader_share": 0,
     "location_count": 2
-  },
-  {
-    "dma_code": "565",
-    "dma_name": "Elmira, NY",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 2
-  },
-  {
-    "dma_code": "710",
-    "dma_name": "Hattiesburg-Laurel, MS",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 2
-  },
-  {
-    "dma_code": "643",
-    "dma_name": "Lake Charles, LA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 2
-  },
-  {
-    "dma_code": "749",
-    "dma_name": "Laredo, TX",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 2
-  },
-  {
-    "dma_code": "583",
-    "dma_name": "Alpena, MI",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 1
-  },
-  {
-    "dma_code": "502",
-    "dma_name": "Binghamton, NY",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 1
-  },
-  {
-    "dma_code": "802",
-    "dma_name": "Eureka, CA",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 1
-  },
-  {
-    "dma_code": "558",
-    "dma_name": "Lima, OH",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 1
-  },
-  {
-    "dma_code": "740",
-    "dma_name": "North Platte, NE",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 1
-  },
-  {
-    "dma_code": "597",
-    "dma_name": "Parkersburg, WV",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 1
   },
   {
     "dma_code": "552",
     "dma_name": "Presque Isle, ME",
     "leader_brand": null,
     "leader_share": 0,
-    "location_count": 1
+    "location_count": 2
   },
   {
-    "dma_code": "717",
-    "dma_name": "Quincy, IL-Hannibal, MO-Keokuk, IA",
+    "dma_code": "798",
+    "dma_name": "Glendive, MT",
     "leader_brand": null,
     "leader_share": 0,
     "location_count": 1
   },
   {
-    "dma_code": "638",
-    "dma_name": "St. Joseph, MO",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 1
-  },
-  {
-    "dma_code": "526",
-    "dma_name": "Utica, NY",
-    "leader_brand": null,
-    "leader_share": 0,
-    "location_count": 1
-  },
-  {
-    "dma_code": "549",
-    "dma_name": "Watertown, NY",
+    "dma_code": "631",
+    "dma_name": "Ottumwa, IA-Kirksville, MO",
     "leader_brand": null,
     "leader_share": 0,
     "location_count": 1

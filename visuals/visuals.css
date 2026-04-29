@@ -723,6 +723,14 @@
   letter-spacing: 0.06em;
   margin-top: 1px;
 }
+/* Coverage-band confidence chip on the rank subline.
+   See data/dma_meta.json::coverage_bands for thresholds. */
+.ws-name span .ws-band {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.ws-name span .ws-band-high   { color: #5fbcd3; }
+.ws-name span .ws-band-medium { color: #f3a533; }
 .ws-bar, .ws-score {
   position: relative;
   display: flex;

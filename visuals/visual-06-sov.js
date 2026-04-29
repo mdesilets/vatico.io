@@ -22,8 +22,8 @@
     let sov = null, dmaLeaders = null;
 
     Promise.all([
-      fetch('data/sov-neurotox.json').then(r => r.json()),
-      fetch('data/dma-leader.json').then(r => r.json()),
+      fetch('data/sov-neurotox.json?v=2').then(r => r.json()),
+      fetch('data/dma-leader.json?v=2').then(r => r.json()),
     ]).then(([s, dl]) => {
       sov = s;
       dmaLeaders = dl;
