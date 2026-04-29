@@ -44,11 +44,18 @@
                             : 'data/locations.anon.json') + '?v=3';
   const BOUNDARIES_URL = 'data/dma-boundaries.geojson?v=2';
 
-  // Beat durations.
-  const OPEN_MS = 1500;
-  const SOLO_MS = 1500;
-  const ALL_MS  = 2400;
-  const FLY_MS  = 2200;   // camera transition between zoom levels
+  // Beat durations. Bumped from the v1 pacing — Mike's feedback was
+  // it felt too snappy; the dataset deserves a beat to land.
+  const OPEN_MS = 2000;
+  const SOLO_MS = 2300;
+  const ALL_MS  = 3300;
+  const FLY_MS  = 2700;   // camera transition between zoom levels
+
+  // How long the per-dot cascade-in takes when a beat changes. Each
+  // feature carries a randomized `seq` (0..N) assigned at boot; the
+  // cascade animates an opacity gate over seq so dots stream in
+  // organically instead of all flipping on at once.
+  const CASCADE_MS = 800;
 
   // Per-zoom MapLibre camera. fitBounds (with the bbox we already
   // ship in the bundle) would also work, but explicit center+zoom
@@ -93,6 +100,11 @@
   const REDUCED_MOTION = window.matchMedia
     && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // Set at boot from the loaded GeoJSON. Needed by the cascade
+  // animation to map the eased 0..1 progress onto a `seq` threshold.
+  let TOTAL_DOTS = 0;
+  let cascadeRAF = null;
+
   // ---------------------------------------------------------------
   // Boot
   // ---------------------------------------------------------------
@@ -129,19 +141,32 @@
       colorById[verticals[i].id] = verticals[i].color || FALLBACK_COLORS[verticals[i].id];
     }
 
-    // Build a GeoJSON FeatureCollection from the compact location list.
+    // Build a GeoJSON FeatureCollection from the compact location
+    // list. Each feature gets a randomized `seq` (0..N-1) — used by
+    // the cascade animation as a per-dot reveal index. Fisher-Yates
+    // shuffle keeps the cascade order organic (no geographic bias,
+    // no vertical bias).
+    const N = locations.length;
+    const seqOrder = new Uint32Array(N);
+    for (let i = 0; i < N; i++) seqOrder[i] = i;
+    for (let i = N - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const tmp = seqOrder[i]; seqOrder[i] = seqOrder[j]; seqOrder[j] = tmp;
+    }
+
     const practices = {
       type: 'FeatureCollection',
-      features: new Array(locations.length),
+      features: new Array(N),
     };
-    for (let i = 0; i < locations.length; i++) {
+    for (let i = 0; i < N; i++) {
       const p = locations[i];
       practices.features[i] = {
         type: 'Feature',
         geometry: { type: 'Point', coordinates: [p.lng, p.lat] },
-        properties: { v: p.v },
+        properties: { v: p.v, seq: seqOrder[i] },
       };
     }
+    TOTAL_DOTS = N;
 
     const map = new maplibregl.Map({
       container: 'whitespace-map',
@@ -347,6 +372,67 @@
   }
 
   // ---------------------------------------------------------------
+  // Cascade animation
+  //
+  // Each beat we want the dots to "stream in" instead of all
+  // appearing at once. Per feature we shipped a randomized `seq`
+  // (0..N-1). The cascade animates a moving threshold; features
+  // with seq <= threshold pick up the target opacity, the rest stay
+  // at 0. Ease-out cubic so the leading edge accelerates and the
+  // trailing dots arrive in time without crawling.
+  //
+  // We rebuild the paint expression each rAF tick. setPaintProperty
+  // recompiles the expression but the per-feature evaluation is
+  // GPU-side, so the cost stays roughly constant in dot count.
+  // ---------------------------------------------------------------
+
+  function cancelCascade() {
+    if (cascadeRAF !== null) {
+      cancelAnimationFrame(cascadeRAF);
+      cascadeRAF = null;
+    }
+  }
+
+  function runCascade(map, dotsTarget, glowTarget, durationMs) {
+    cancelCascade();
+    if (!TOTAL_DOTS) {
+      map.setPaintProperty('practice-dots', 'circle-opacity', dotsTarget);
+      map.setPaintProperty('practice-glow', 'circle-opacity', glowTarget);
+      return;
+    }
+
+    const start = performance.now();
+
+    function gateExpr(target, threshold) {
+      return ['case',
+        ['<=', ['to-number', ['get', 'seq']], threshold],
+        target,
+        0,
+      ];
+    }
+
+    function tick(now) {
+      const t     = Math.min(1, (now - start) / durationMs);
+      const eased = 1 - Math.pow(1 - t, 3);
+      const threshold = eased * TOTAL_DOTS;
+
+      map.setPaintProperty('practice-dots', 'circle-opacity', gateExpr(dotsTarget, threshold));
+      map.setPaintProperty('practice-glow', 'circle-opacity', gateExpr(glowTarget, threshold));
+
+      if (t < 1) {
+        cascadeRAF = requestAnimationFrame(tick);
+      } else {
+        // Drop the gate — settle to plain target expressions so the
+        // hold portion of the beat doesn't keep recompiling paint.
+        map.setPaintProperty('practice-dots', 'circle-opacity', dotsTarget);
+        map.setPaintProperty('practice-glow', 'circle-opacity', glowTarget);
+        cascadeRAF = null;
+      }
+    }
+    cascadeRAF = requestAnimationFrame(tick);
+  }
+
+  // ---------------------------------------------------------------
   // Beats
   // ---------------------------------------------------------------
 
@@ -458,10 +544,21 @@
     }
 
     // Dot styling — both layers update in lockstep so the glow
-    // tracks whichever vertical is loud each beat.
-    map.setPaintProperty('practice-dots', 'circle-opacity', opacityExpression(activeId, isAll));
+    // tracks whichever vertical is loud each beat. Radius is updated
+    // instantly; opacity cascades in over CASCADE_MS using a
+    // per-feature `seq` gate so dots stream on instead of flashing
+    // on together.
+    const dotsTarget = opacityExpression(activeId, isAll);
+    const glowTarget = glowOpacityExpression(activeId, isAll);
     map.setPaintProperty('practice-dots', 'circle-radius',  radiusExpression(activeId, isAll));
-    map.setPaintProperty('practice-glow', 'circle-opacity', glowOpacityExpression(activeId, isAll));
+
+    if (instant || REDUCED_MOTION) {
+      cancelCascade();
+      map.setPaintProperty('practice-dots', 'circle-opacity', dotsTarget);
+      map.setPaintProperty('practice-glow', 'circle-opacity', glowTarget);
+    } else {
+      runCascade(map, dotsTarget, glowTarget, CASCADE_MS);
+    }
 
     // Card crossfade.
     if (cardSlot) {
