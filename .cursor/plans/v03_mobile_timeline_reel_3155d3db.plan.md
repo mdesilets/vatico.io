@@ -4,40 +4,40 @@ overview: "Replace the current single-chain ken-burns mobile reel with a continu
 todos:
   - id: virtual-layout
     content: Build graph at virtual desktop dims (1024x900). Compute wideFrame to fit world into mobile canvas. Update runReel boot + resize handler.
-    status: pending
+    status: completed
   - id: chain-defs
     content: Define 6 chain tuples. Resolver walks parentMap to fill in mfr. Pre-compute chain frames at boot.
-    status: pending
+    status: completed
   - id: drawgraph-progress
     content: "Add two additive opts to drawOntologyGraph for the mobile reel: chainProgress (slice ancestor chain) and edgeDrawProgress (animate chain-edge line growth). Both default off."
-    status: pending
+    status: completed
   - id: timeline-tick
     content: "Build timeline state machine: CYCLE_DURATION_S=48, segIdx, segElapsed, chainProgress, prevPose, edgeAnims. Continuous camera lerp + activation triggers at 1.5/2.8/4.1/5.4s per segment."
-    status: pending
+    status: completed
   - id: pulse-effect
     content: Implement spawnPulseAt + drawPulses. Expanding ring per activation, 700ms, additive blend, screen-space.
-    status: pending
+    status: completed
   - id: info-card-css
     content: Drop .viz-overlay-bl from the mobile-hide rule in visuals.css line 803 so the bottom-left card slot is visible at <=768px (it's the only chrome the reel needs).
-    status: pending
+    status: completed
   - id: info-card-formatter
     content: Inside runReel, write a self-contained formatCard(node) helper that returns the same .onto-info-name + .onto-info-meta + .onto-info-trail HTML structure (so existing CSS classes give it the right look). Mobile-only — no shared code.
-    status: pending
+    status: completed
   - id: info-card-crossfade
     content: "Implement crossFadeCardTo(node) in runReel: 160ms opacity-out, swap innerHTML via formatCard(node), opacity-in. Driven from tick when the active node changes."
-    status: pending
+    status: completed
   - id: seamless-loop
     content: Loop wrap zeroes state, camera already at wide. No flash/jump.
-    status: pending
+    status: completed
   - id: cache-bust
     content: Bump cache buster in index.html from ?v=11 to ?v=12.
-    status: pending
+    status: completed
   - id: test-mobile
     content: "Test mobile 390x844: full 48s cycle, all 6 chains, link draw, pulse, card, seamless loop."
-    status: pending
+    status: completed
   - id: test-reduced-motion
     content: "Force prefers-reduced-motion: static wide composition, no animation."
-    status: pending
+    status: completed
 isProject: false
 ---
 

@@ -1164,6 +1164,16 @@
 
     let raf = null;
     let running = false;
+    // First-boot vs resume distinction. The IntersectionObserver and
+    // visibilitychange hooks call start() every time the canvas
+    // re-enters the viewport / tab refocuses; without this flag, every
+    // such resume would wipe the timeline back to the wide opener.
+    let hasBootedReel = false;
+    // performance.now() at the moment we paused. On resume we shift
+    // every stored absolute timestamp forward by (now - pauseStartedAt)
+    // so the timeline (cycle, fade, pulses, edge draws) continues from
+    // exactly where it left off instead of jumping.
+    let pauseStartedAt = 0;
 
     function tick(now) {
       if (!running) return;
@@ -1324,26 +1334,44 @@
       if (running || !chains.length) return;
       running = true;
       const now = performance.now();
-      cycleStartMs = now;
-      fadeStartedAt = now;
-      cam.x = wideFrame.x;
-      cam.y = wideFrame.y;
-      cam.z = wideFrame.z;
-      currentSegIdx = -2;
-      currentChainProg = 0;
-      edgeAnims.clear();
-      pulses.length = 0;
-      activeNode = null;
-      lastCardId = null;
-      if (cardEl) {
-        cardEl.style.opacity = '0';
-        cardEl.innerHTML = '';
+      if (!hasBootedReel) {
+        // Cold start: initialize the timeline.
+        hasBootedReel = true;
+        cycleStartMs = now;
+        fadeStartedAt = now;
+        cam.x = wideFrame.x;
+        cam.y = wideFrame.y;
+        cam.z = wideFrame.z;
+        currentSegIdx = -2;
+        currentChainProg = 0;
+        edgeAnims.clear();
+        pulses.length = 0;
+        activeNode = null;
+        lastCardId = null;
+        if (cardEl) {
+          cardEl.style.opacity = '0';
+          cardEl.innerHTML = '';
+        }
+      } else if (pauseStartedAt) {
+        // Resume from a scroll-out or tab-hide. Shift every absolute
+        // timestamp forward by the paused duration so (now - ts) is
+        // identical to what it was at pause time. The cycle, the
+        // current segment, in-flight edge animations, live pulses,
+        // and the visible card are all preserved.
+        const delta = now - pauseStartedAt;
+        cycleStartMs += delta;
+        fadeStartedAt += delta;
+        for (let i = 0; i < pulses.length; i++) pulses[i].born += delta;
+        for (const anim of edgeAnims.values()) anim.startMs += delta;
+        pauseStartedAt = 0;
       }
       raf = requestAnimationFrame(tick);
     }
 
     function stop() {
+      if (!running) return;
       running = false;
+      pauseStartedAt = performance.now();
       if (raf) cancelAnimationFrame(raf);
       raf = null;
     }
