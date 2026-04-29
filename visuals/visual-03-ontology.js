@@ -408,7 +408,12 @@
     // matches desktop's (canvas pixels only, no proper nouns leak).
     // The "Big Bang" particle opener is preserved as a cold-open that
     // settles INTO the force-positioned graph.
-    if (window.innerWidth < 768) {
+    //
+    // The data-reel attribute on the canvas forces the reel path
+    // regardless of viewport width — used by the standalone widescreen
+    // showcase page (reel.html) so the same cinematic plays at desktop
+    // dimensions for previews, demos, and social shares.
+    if (canvas.hasAttribute('data-reel') || window.innerWidth < 768) {
       runReel(canvas);
       return;
     }

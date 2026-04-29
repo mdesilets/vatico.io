@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vatico — Brand Ontology Reel (Standalone)</title>
+
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#08090d">
+
+<link rel="preload" as="font" href="fonts/InterVariable.ttf" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="colors_and_type.css?v=2">
+<link rel="stylesheet" href="visuals/visuals.css?v=10">
+
+<style>
+  /* ============================================================
+     Standalone widescreen reel. Full-bleed canvas, no chrome,
+     no scroll. The reel adapts to the viewport's aspect ratio
+     so a 16:9 monitor renders at 16:9, a 21:9 ultra-wide at 21:9.
+     The world (1024x900) is more square than 16:9, so the camera
+     fits to height with horizontal slack — the wide pose centers
+     the world and chain frames zoom into product chains as usual.
+     ============================================================ */
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #08090d;
+    color: #e4e8f4;
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow: hidden;
+    height: 100%;
+  }
+  .reel-stage {
+    position: fixed;
+    inset: 0;
+    background: #08090d;
+  }
+  #ontology-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    touch-action: auto;
+  }
+  /* Override .viz-overlay-bl positioning to use viewport-relative
+     placement (the standalone has no .viz-frame parent). The card
+     CSS classes (.onto-info-name, .onto-info-meta, .onto-info-trail)
+     come from visuals.css so the look matches the embedded version. */
+  #ontology-label {
+    position: fixed;
+    bottom: 1.75rem;
+    left: 1.75rem;
+    pointer-events: none;
+    max-width: 32rem;
+    z-index: 10;
+    opacity: 0;
+  }
+
+  /* Tiny watermark in the top-right so the standalone reads as
+     "Vatico" at a glance when shared as a screen recording. */
+  .reel-mark {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.75rem;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 0.66rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #5a6180;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  /* Reduced-motion users get the static wide composition. The
+     watermark stays visible. */
+  @media (prefers-reduced-motion: reduce) {
+    .reel-mark { color: #8892b0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="reel-stage">
+  <canvas id="ontology-canvas" data-reel
+          aria-label="Vatico aesthetics ontology reel — six verticals, manufacturers, brands, products"></canvas>
+  <div id="ontology-label"></div>
+  <div class="reel-mark">Vatico — The Aesthetics Index</div>
+</div>
+
+<script src="visuals/visual-03-ontology.js?v=17"></script>
+
+</body>
+</html>

@@ -1,0 +1,793 @@
+{
+  "_license": {
+    "owner": "Vatico, LLC",
+    "copyright": "(c) 2026 Vatico, LLC. All rights reserved.",
+    "notice": "Proprietary research data. Not for redistribution, commercial use, scraping, or AI/ML training. Licensing inquiries: hello@vatico.io",
+    "url": "https://vatico.io"
+  },
+  "_generated": "2026-04-28T17:13:22Z",
+  "_source": "data/ontology.json",
+  "_curation": {
+    "topMfrsPerVertical": 5,
+    "topBrandsPerMfr": 3,
+    "topProductsPerBrand": 2,
+    "excludesUnattributed": true,
+    "productNamesIncluded": true,
+    "productNamesNote": "Up to TOP_PRODUCTS_PER_BRAND named products surface for the deepest zoom beat. Each loop highlights one brand, so total exposure across the cycle is small (~12 names) and limited to widely-published trademarked product names."
+  },
+  "totals": {
+    "verticals": 6,
+    "manufacturers": 147,
+    "brands": 262,
+    "products": 294
+  },
+  "verticals": [
+    {
+      "label": "Injectable",
+      "color": "#e74c3c",
+      "mfrCount": 11,
+      "brandCount": 22,
+      "productCount": 45,
+      "topMfrs": [
+        {
+          "label": "Allergan/AbbVie",
+          "brandCount": 3,
+          "productCount": 10,
+          "topBrands": [
+            {
+              "label": "Juvederm",
+              "productCount": 8,
+              "topProducts": [
+                "Juvederm (Product Line)",
+                "Juvederm Ultra Plus XC"
+              ]
+            },
+            {
+              "label": "Botox",
+              "productCount": 1,
+              "topProducts": [
+                "Botox (onabotulinumtoxinA)"
+              ]
+            },
+            {
+              "label": "Kybella",
+              "productCount": 1,
+              "topProducts": [
+                "Kybella (deoxycholic acid)"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Evolus",
+          "brandCount": 3,
+          "productCount": 4,
+          "topBrands": [
+            {
+              "label": "Evolysse",
+              "productCount": 2,
+              "topProducts": [
+                "Evolysse Form",
+                "Evolysse Smooth"
+              ]
+            },
+            {
+              "label": "Evolus",
+              "productCount": 1,
+              "topProducts": [
+                "Evolus (Product Line)"
+              ]
+            },
+            {
+              "label": "Jeuveau",
+              "productCount": 1,
+              "topProducts": [
+                "Jeuveau (prabotulinumtoxinA)"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Galderma",
+          "brandCount": 3,
+          "productCount": 11,
+          "topBrands": [
+            {
+              "label": "Restylane",
+              "productCount": 9,
+              "topProducts": [
+                "Restylane",
+                "Restylane (Product Line)"
+              ]
+            },
+            {
+              "label": "Dysport",
+              "productCount": 1,
+              "topProducts": [
+                "Dysport (abobotulinumtoxinA)"
+              ]
+            },
+            {
+              "label": "Sculptra Aesthetic",
+              "productCount": 1,
+              "topProducts": [
+                "Sculptra Aesthetic"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Merz",
+          "brandCount": 3,
+          "productCount": 5,
+          "topBrands": [
+            {
+              "label": "Belotero",
+              "productCount": 2,
+              "topProducts": [
+                "Belotero Balance",
+                "Belotero Balance+"
+              ]
+            },
+            {
+              "label": "Radiesse",
+              "productCount": 2,
+              "topProducts": [
+                "Radiesse",
+                "Radiesse (Hyperdilute)"
+              ]
+            },
+            {
+              "label": "Xeomin",
+              "productCount": 1,
+              "topProducts": [
+                "Xeomin (incobotulinumtoxinA)"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Revance",
+          "brandCount": 2,
+          "productCount": 6,
+          "topBrands": [
+            {
+              "label": "RHA",
+              "productCount": 5,
+              "topProducts": [
+                "RHA 2",
+                "RHA 3"
+              ]
+            },
+            {
+              "label": "Daxxify",
+              "productCount": 1,
+              "topProducts": [
+                "Daxxify (daxibotulinumtoxinA-lanm)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Laser",
+      "color": "#9b59b6",
+      "mfrCount": 15,
+      "brandCount": 53,
+      "productCount": 53,
+      "topMfrs": [
+        {
+          "label": "Cutera",
+          "brandCount": 7,
+          "productCount": 6,
+          "topBrands": [
+            {
+              "label": "AviClear",
+              "productCount": 1,
+              "topProducts": [
+                "AviClear"
+              ]
+            },
+            {
+              "label": "CoolGlide",
+              "productCount": 1,
+              "topProducts": [
+                "CoolGlide"
+              ]
+            },
+            {
+              "label": "Cutera",
+              "productCount": 1,
+              "topProducts": [
+                "Cutera (Product Line)"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Cynosure Lutronic (Hahn & Company)",
+          "brandCount": 7,
+          "productCount": 7,
+          "topBrands": [
+            {
+              "label": "Clarity II",
+              "productCount": 1,
+              "topProducts": [
+                "Clarity II"
+              ]
+            },
+            {
+              "label": "Cynosure",
+              "productCount": 1,
+              "topProducts": [
+                "Cynosure (Product Line)"
+              ]
+            },
+            {
+              "label": "Icon",
+              "productCount": 1,
+              "topProducts": [
+                "Icon"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Sciton",
+          "brandCount": 7,
+          "productCount": 8,
+          "topBrands": [
+            {
+              "label": "Halo",
+              "productCount": 2,
+              "topProducts": [
+                "Halo",
+                "Halo TRIBRID"
+              ]
+            },
+            {
+              "label": "BBL HERO / HEROic",
+              "productCount": 1,
+              "topProducts": [
+                "BBL HERO / HEROic"
+              ]
+            },
+            {
+              "label": "Contour TRL",
+              "productCount": 1,
+              "topProducts": [
+                "Contour TRL (Erbium)"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Candela",
+          "brandCount": 6,
+          "productCount": 6,
+          "topBrands": [
+            {
+              "label": "Candela",
+              "productCount": 1,
+              "topProducts": [
+                "Candela (Product Line)"
+              ]
+            },
+            {
+              "label": "CO2RE",
+              "productCount": 1,
+              "topProducts": [
+                "CO2RE"
+              ]
+            },
+            {
+              "label": "GentleMax Pro Plus",
+              "productCount": 1,
+              "topProducts": [
+                "GentleMax Pro Plus"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Lumenis",
+          "brandCount": 6,
+          "productCount": 7,
+          "topBrands": [
+            {
+              "label": "Stellar M22",
+              "productCount": 2,
+              "topProducts": [
+                "Stellar M22 (IPL)",
+                "Stellar M22 (Multi-App)"
+              ]
+            },
+            {
+              "label": "AcuPulse",
+              "productCount": 1,
+              "topProducts": [
+                "AcuPulse"
+              ]
+            },
+            {
+              "label": "LightSheer",
+              "productCount": 1,
+              "topProducts": [
+                "LightSheer (Quattro)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Body Contouring",
+      "color": "#f39c12",
+      "mfrCount": 17,
+      "brandCount": 30,
+      "productCount": 29,
+      "topMfrs": [
+        {
+          "label": "InMode",
+          "brandCount": 6,
+          "productCount": 6,
+          "topBrands": [
+            {
+              "label": "AccuTite",
+              "productCount": 1,
+              "topProducts": [
+                "AccuTite"
+              ]
+            },
+            {
+              "label": "BodyTite",
+              "productCount": 1,
+              "topProducts": [
+                "BodyTite"
+              ]
+            },
+            {
+              "label": "EvolveX",
+              "productCount": 1,
+              "topProducts": [
+                "EvolveX (Tite/Trim/Tone)"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "BTL Industries",
+          "brandCount": 5,
+          "productCount": 5,
+          "topBrands": [
+            {
+              "label": "BTL",
+              "productCount": 1,
+              "topProducts": [
+                "BTL (Product Line)"
+              ]
+            },
+            {
+              "label": "Emsculpt NEO",
+              "productCount": 1,
+              "topProducts": [
+                "Emsculpt NEO"
+              ]
+            },
+            {
+              "label": "Emtone",
+              "productCount": 1,
+              "topProducts": [
+                "Emtone"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Candela",
+          "brandCount": 2,
+          "productCount": 2,
+          "topBrands": [
+            {
+              "label": "Profound RF",
+              "productCount": 1,
+              "topProducts": [
+                "Profound RF"
+              ]
+            },
+            {
+              "label": "UltraShape Power",
+              "productCount": 1,
+              "topProducts": [
+                "UltraShape Power"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Cynosure Lutronic (Hahn & Company)",
+          "brandCount": 2,
+          "productCount": 2,
+          "topBrands": [
+            {
+              "label": "SculpSure",
+              "productCount": 1,
+              "topProducts": [
+                "SculpSure"
+              ]
+            },
+            {
+              "label": "XERF",
+              "productCount": 1,
+              "topProducts": [
+                "XERF"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Merz",
+          "brandCount": 2,
+          "productCount": 2,
+          "topBrands": [
+            {
+              "label": "Cellfina",
+              "productCount": 1,
+              "topProducts": [
+                "Cellfina"
+              ]
+            },
+            {
+              "label": "Ultherapy",
+              "productCount": 1,
+              "topProducts": [
+                "Ultherapy"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Skin Treatment",
+      "color": "#3498db",
+      "mfrCount": 40,
+      "brandCount": 85,
+      "productCount": 94,
+      "topMfrs": [
+        {
+          "label": "Lumenis",
+          "brandCount": 3,
+          "productCount": 3,
+          "topBrands": [
+            {
+              "label": "Glo2Facial",
+              "productCount": 1,
+              "topProducts": [
+                "Glo2Facial"
+              ]
+            },
+            {
+              "label": "OxyGeneo",
+              "productCount": 1,
+              "topProducts": [
+                "OxyGeneo (Geneo X)"
+              ]
+            },
+            {
+              "label": "triLift",
+              "productCount": 1,
+              "topProducts": [
+                "triLift"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Allergan/AbbVie",
+          "brandCount": 2,
+          "productCount": 4,
+          "topBrands": [
+            {
+              "label": "SkinMedica",
+              "productCount": 3,
+              "topProducts": [
+                "SkinMedica (Product Line)",
+                "SkinMedica Professional Peels"
+              ]
+            },
+            {
+              "label": "DiamondGlow",
+              "productCount": 1,
+              "topProducts": [
+                "DiamondGlow"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "BTL Industries",
+          "brandCount": 2,
+          "productCount": 4,
+          "topBrands": [
+            {
+              "label": "Exion",
+              "productCount": 3,
+              "topProducts": [
+                "Exion Body",
+                "Exion Face"
+              ]
+            },
+            {
+              "label": "Emface",
+              "productCount": 1,
+              "topProducts": [
+                "Emface"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Colgate-Palmolive",
+          "brandCount": 2,
+          "productCount": 4,
+          "topBrands": [
+            {
+              "label": "EltaMD",
+              "productCount": 2,
+              "topProducts": [
+                "EltaMD (Product Line)",
+                "EltaMD UV Clear SPF 46"
+              ]
+            },
+            {
+              "label": "PCA Skin",
+              "productCount": 2,
+              "topProducts": [
+                "PCA Skin (Product Line)",
+                "PCA Skin Professional Peels"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Cynosure Lutronic (Hahn & Company)",
+          "brandCount": 2,
+          "productCount": 2,
+          "topBrands": [
+            {
+              "label": "Genius RF",
+              "productCount": 1,
+              "topProducts": [
+                "Genius RF"
+              ]
+            },
+            {
+              "label": "Potenza",
+              "productCount": 1,
+              "topProducts": [
+                "Potenza"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Wellness",
+      "color": "#2ecc71",
+      "mfrCount": 32,
+      "brandCount": 38,
+      "productCount": 38,
+      "topMfrs": [
+        {
+          "label": "Novo Nordisk",
+          "brandCount": 3,
+          "productCount": 3,
+          "topBrands": [
+            {
+              "label": "Ozempic",
+              "productCount": 1,
+              "topProducts": [
+                "Ozempic (Semaglutide)"
+              ]
+            },
+            {
+              "label": "Saxenda",
+              "productCount": 1,
+              "topProducts": [
+                "Saxenda (Liraglutide)"
+              ]
+            },
+            {
+              "label": "Wegovy",
+              "productCount": 1,
+              "topProducts": [
+                "Wegovy (Semaglutide)"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Eli Lilly",
+          "brandCount": 2,
+          "productCount": 2,
+          "topBrands": [
+            {
+              "label": "Mounjaro",
+              "productCount": 1,
+              "topProducts": [
+                "Mounjaro (Tirzepatide)"
+              ]
+            },
+            {
+              "label": "Zepbound",
+              "productCount": 1,
+              "topProducts": [
+                "Zepbound (Tirzepatide)"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Olympia Pharmaceuticals",
+          "brandCount": 2,
+          "productCount": 2,
+          "topBrands": [
+            {
+              "label": "IV Therapy Formulation Line",
+              "productCount": 1,
+              "topProducts": [
+                "IV Therapy Formulation Line"
+              ]
+            },
+            {
+              "label": "Myers' Cocktail IV Premix",
+              "productCount": 1,
+              "topProducts": [
+                "Myers' Cocktail IV Premix"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Venus Concept",
+          "brandCount": 2,
+          "productCount": 2,
+          "topBrands": [
+            {
+              "label": "ARTAS iX Robotic FUE",
+              "productCount": 1,
+              "topProducts": [
+                "ARTAS iX Robotic FUE"
+              ]
+            },
+            {
+              "label": "NeoGraft FUE System",
+              "productCount": 1,
+              "topProducts": [
+                "NeoGraft FUE System"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Vitality Connect",
+          "brandCount": 2,
+          "productCount": 2,
+          "topBrands": [
+            {
+              "label": "FemiWave",
+              "productCount": 1,
+              "topProducts": [
+                "FemiWave (Women)"
+              ]
+            },
+            {
+              "label": "GAINSWave",
+              "productCount": 1,
+              "topProducts": [
+                "GAINSWave (Men)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Cosmetic",
+      "color": "#e67e22",
+      "mfrCount": 32,
+      "brandCount": 34,
+      "productCount": 35,
+      "topMfrs": [
+        {
+          "label": "Allergan/AbbVie",
+          "brandCount": 3,
+          "productCount": 4,
+          "topBrands": [
+            {
+              "label": "Natrelle",
+              "productCount": 2,
+              "topProducts": [
+                "Natrelle Inspira Silicone Implants",
+                "Natrelle Saline Implants"
+              ]
+            },
+            {
+              "label": "Latisse",
+              "productCount": 1,
+              "topProducts": [
+                "Latisse (bimatoprost 0.03%)"
+              ]
+            },
+            {
+              "label": "REVOLVE Adipose System",
+              "productCount": 1,
+              "topProducts": [
+                "REVOLVE Adipose System"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Amiea (MT.DERM)",
+          "brandCount": 1,
+          "productCount": 1,
+          "topBrands": [
+            {
+              "label": "Amiea Genius PMU Machine",
+              "productCount": 1,
+              "topProducts": [
+                "Amiea Genius PMU Machine"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "AnteAGE",
+          "brandCount": 1,
+          "productCount": 1,
+          "topBrands": [
+            {
+              "label": "AnteAGE MDX Exosome Solution",
+              "productCount": 1,
+              "topProducts": [
+                "AnteAGE MDX Exosome Solution"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Aptos",
+          "brandCount": 1,
+          "productCount": 1,
+          "topBrands": [
+            {
+              "label": "Aptos Thread Lift",
+              "productCount": 1,
+              "topProducts": [
+                "Aptos Thread Lift"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "BeautyHealth",
+          "brandCount": 1,
+          "productCount": 1,
+          "topBrands": [
+            {
+              "label": "HydraFacial Booster Serums",
+              "productCount": 1,
+              "topProducts": [
+                "HydraFacial Booster Serums"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -114,20 +114,25 @@
 }
 
 /* ===== Visual 03 — Ontology ===== */
+/* The reel runs at every breakpoint, so the frame just adapts its
+   aspect ratio to match the device class. Mobile portrait gets a
+   tall 2:3 to match held-vertical phones; tablet gets a square so
+   the circular force layout fills it; desktop gets cinematic 16:9;
+   ultra-wide monitors get cinemascope 21:9. The 78vh cap on every
+   tier prevents the visualization from dominating tall monitors. */
 .viz-frame-ontology {
-  /* Near-square so the circular force layout fills the frame instead
-     of leaving wide rectangular dead space on left/right. 5:4 with a
-     viewport-height cap so it doesn't dominate the scroll on tall
-     monitors. */
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 2 / 3;
   max-height: 78vh;
 }
+@media (min-width: 600px)  { .viz-frame-ontology { aspect-ratio: 1 / 1;  } }
+@media (min-width: 1024px) { .viz-frame-ontology { aspect-ratio: 16 / 9; } }
+@media (min-width: 1600px) { .viz-frame-ontology { aspect-ratio: 21 / 9; } }
+
 .viz-frame-ontology canvas {
   position: absolute; inset: 0; width: 100%; height: 100%;
   display: block;
-  cursor: grab;
+  cursor: default;
 }
-.viz-frame-ontology canvas:active { cursor: grabbing; }
 .viz-overlay-br { bottom: 0.85rem; right: 0.95rem; }
 
 /* Floating zoom controls (bottom-right of the ontology frame). */
@@ -798,24 +803,18 @@
   .viz-cap-sub  { font-size: 0.88rem; }
 }
 
-/* V03 ontology — mobile cinematic reel.
-   On phones the desktop force graph hands off to a canvas-painted
-   timeline reel (see runReel() in visual-03-ontology.js). The reel
-   needs the canvas to render full-bleed, unobstructed by the desktop
-   chrome (filter chips, stats overlay, zoom controls, discoverability
-   hint). The bottom-left info card slot (.viz-overlay-bl) stays
-   visible — the reel drives it via crossFadeCardTo() to mirror the
-   active node, so it's the only chrome the reel actually wants. */
-@media (max-width: 768px) {
-  .viz-frame-ontology .viz-overlay-tl,
-  .viz-frame-ontology .viz-overlay-tr,
-  .viz-frame-ontology .viz-zoom-controls,
-  .viz-frame-ontology .viz-onto-hint { display: none; }
-  .viz-frame-ontology { aspect-ratio: auto; height: 480px; max-height: 78vh; }
-}
-@media (max-width: 480px) {
-  .viz-frame-ontology { height: 440px; }
-}
+/* V03 ontology — cinematic reel on every breakpoint.
+   The canvas-painted timeline (runReel() in visual-03-ontology.js)
+   runs at every viewport width now, gated by the data-reel attribute
+   on the canvas. The desktop interactive chrome (filter chips, stats,
+   zoom controls, discoverability hint) is leftover HTML from the old
+   interactive mode and gets hidden universally. The bottom-left info
+   card slot (.viz-overlay-bl) stays visible — the reel drives it via
+   crossFadeCardTo() to mirror the active node. */
+.viz-frame-ontology .viz-overlay-tl,
+.viz-frame-ontology .viz-overlay-tr,
+.viz-frame-ontology .viz-zoom-controls,
+.viz-frame-ontology .viz-onto-hint { display: none; }
 
 /* V06 share-of-voice — truncate the DMA leader rail to top 8
    below 768px so the section doesn't run on for 24 cells. */
